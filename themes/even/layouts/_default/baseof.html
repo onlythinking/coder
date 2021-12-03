@@ -15,6 +15,30 @@
 </head>
 <body>
   {{ partial "slideout.html" . }}
+  
+  {{ if .Site.Params.search.google.enable }}
+    {{ partial "search_google.html" . }}
+  {{ end }}
+
+  {{ if .Site.Params.forkMeOnGithub }}
+    <style>
+      .fork-me-on-github {
+        position: absolute; top: 0; left: 0; border: 0;
+      }
+      @media (max-width: 1080px) {
+        .fork-me-on-github {
+          display: none;
+        }
+      }
+    </style>
+
+    <a target="_bank" href="{{ .Site.Params.forkMeOnGithub }}">
+      <img class="fork-me-on-github"
+        src="/img/forkme_left_red.png"
+        alt="Fork me on GitHub">
+    </a>
+  {{ end }}
+
   <div class="container" id="mobile-panel">
     {{ if not .Params.hideHeaderAndFooter -}}
     <header id="header" class="header">

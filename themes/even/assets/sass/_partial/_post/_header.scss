@@ -1,6 +1,5 @@
 .post-header {
   margin-bottom: 20px;
-
   .post-title {
     margin: 0;
     font-size: $post-title-font-size;
@@ -27,7 +26,7 @@
         color: inherit;
 
         &::before {
-          content: '·';
+          content: "·";
         }
 
         &:hover {
@@ -38,9 +37,8 @@
 
     .more-meta {
       &::before {
-        content: '·';
+        content: "·";
       }
     }
-
   }
 }

@@ -1,0 +1,6 @@
+{{ if or .Params.qrCode (and .Site.Params.qrCode (ne .Params.qrCode false)) -}}
+<div class="qr_code" id="qr_code">
+  <img id="js_pc_qr_code_img" class="qr_code_pc_img" src="/img/qrcode.jpg">
+  <p style="text-align: center;">微信扫一扫<br>关注该公众号</p>
+</div>
+{{- end }}

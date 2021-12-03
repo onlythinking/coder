@@ -21,6 +21,16 @@
         <li class="mobile-menu-item">{{ .Name }}</li>
       </a>
     {{- end }}
+
+    {{ if .Site.Params.search.google.enable }}
+      <li class="mobile-menu-item">
+        <a id="openSearchMobile" class="mobile-menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            {{ partial "svg/search.svg" }}
+          </i>
+        </a>
+      </li>
+    {{ end }}
   </ul>
 
   {{ partial "header/language-selector.html" . }}

@@ -59,6 +59,12 @@
       border-bottom: 1px solid $deputy-color;
     }
 
+    .mobile-menu-item > a {
+      padding: 10px 30px;
+      display: block;
+      border-bottom: 1px solid $deputy-color;
+    }
+
     a {
       font-size: 18px;
       font-family: $global-serif-font-family;

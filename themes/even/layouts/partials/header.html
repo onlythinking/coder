@@ -17,5 +17,16 @@
         <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
       </li>
     {{- end }}
+
+    {{ if .Site.Params.search.google.enable }}
+    <li class="menu-item">
+      <a id="openSearch" class="menu-item-link menu-item-search" href="#">
+        <i class="iconfont">
+          {{ partial "svg/search.svg" }}
+        </i>
+      </a>
+    </li>
+  {{ end }}
+
   </ul>
 </nav>
