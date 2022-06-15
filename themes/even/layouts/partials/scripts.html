@@ -1,6 +1,6 @@
 <!-- highlight.js -->
 {{- if .Site.Params.highlightInClient -}}
-<script src="{{ " lib/highlight/highlight.pack.js?v=20171001" | relURL }}"></script>
+<script src="{{ "lib/highlight/highlight.pack.js?v=20171001" | relURL }}"></script>
 {{- end -}}
 
 <!-- core -->
@@ -33,34 +33,31 @@
 {{- end -}}
 
 <!-- flowchart -->
-{{- if and (or .Params.flowchartDiagrams.enable (and .Site.Params.flowchartDiagrams.enable (ne
-.Params.flowchartDiagrams.enable false))) (or .IsPage .IsHome) -}}
-<script>
-  { { - if .Params.flowchartDiagrams.options -} }
-  window.flowchartDiagramsOptions = {{ .Params.flowchartDiagrams.options | safeJS }};
-  { { - else if .Site.Params.flowchartDiagrams.options -} }
-  window.flowchartDiagramsOptions = {{ .Site.Params.flowchartDiagrams.options | safeJS }};
-  { { - end -} }
-</script>
-{{- if .Site.Params.publicCDN.enable -}}
-{{ .Site.Params.publicCDN.flowchartDiagramsJS | safeHTML }}
-{{- else -}}
-<script src="{{ " lib/flowchartDiagrams/raphael-2.2.7.min.js" | relURL }}"
-  integrity="sha256-67By+NpOtm9ka1R6xpUefeGOY8kWWHHRAKlvaTJ7ONI=" crossorigin="anonymous"></script>
-<script src="{{ " lib/flowchartDiagrams/flowchart-1.8.0.min.js" | relURL }}"
-  integrity="sha256-zNGWjubXoY6rb5MnmpBNefO0RgoVYfle9p0tvOQM+6k=" crossorigin="anonymous"></script>
-{{- end -}}
+{{- if and (or .Params.flowchartDiagrams.enable (and .Site.Params.flowchartDiagrams.enable (ne .Params.flowchartDiagrams.enable false))) (or .IsPage .IsHome) -}}
+  <script>
+    {{- if .Params.flowchartDiagrams.options -}}
+      window.flowchartDiagramsOptions = {{ .Params.flowchartDiagrams.options | safeJS }};
+    {{- else if .Site.Params.flowchartDiagrams.options -}}
+      window.flowchartDiagramsOptions = {{ .Site.Params.flowchartDiagrams.options | safeJS }};
+    {{- end -}}
+  </script>
+  {{- if .Site.Params.publicCDN.enable -}}
+    {{ .Site.Params.publicCDN.flowchartDiagramsJS | safeHTML }}
+  {{- else -}}
+    <script src="{{ "lib/flowchartDiagrams/raphael-2.2.7.min.js" | relURL }}" integrity="sha256-67By+NpOtm9ka1R6xpUefeGOY8kWWHHRAKlvaTJ7ONI=" crossorigin="anonymous"></script>
+    <script src="{{ "lib/flowchartDiagrams/flowchart-1.8.0.min.js" | relURL }}" integrity="sha256-zNGWjubXoY6rb5MnmpBNefO0RgoVYfle9p0tvOQM+6k=" crossorigin="anonymous"></script>
+  {{- end -}}
 {{- end -}}
 
 <!-- js-sequence-diagrams -->
 {{- if and (or .Params.sequenceDiagrams.enable (and .Site.Params.sequenceDiagrams.enable (ne
 .Params.sequenceDiagrams.enable false))) (or .IsPage .IsHome) -}}
 <script>
-  { { - if .Params.sequenceDiagrams.options -} }
-  window.sequenceDiagramsOptions = {{ .Params.sequenceDiagrams.options | safeJS }};
-  { { - else if .Site.Params.sequenceDiagrams.options -} }
-  window.sequenceDiagramsOptions = {{ .Site.Params.sequenceDiagrams.options | safeJS }};
-  { { - end -} }
+  {{- if .Params.sequenceDiagrams.options -}}
+    window.sequenceDiagramsOptions = {{ .Params.sequenceDiagrams.options | safeJS }};
+  {{- else if .Site.Params.sequenceDiagrams.options -}}
+    window.sequenceDiagramsOptions = {{ .Site.Params.sequenceDiagrams.options | safeJS }};
+  {{- end -}}
 </script>
 {{- if .Site.Params.publicCDN.enable -}}
 {{ .Site.Params.publicCDN.sequenceDiagramsJS | safeHTML }}

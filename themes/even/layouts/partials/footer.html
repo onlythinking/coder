@@ -49,6 +49,7 @@
   </span>
 </div>
 
+
 {{ if (findRE "<pre" .Content 1) }}
 {{ $jsCopy := resources.Get "js/copy-code-button.js" | minify }}
 <script src="{{ $jsCopy.RelPermalink }}"></script>

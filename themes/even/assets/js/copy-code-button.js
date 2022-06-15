@@ -20,7 +20,7 @@ document
 
 async function copyCodeToClipboard(button, highlightDiv) {
   const codeToCopy = highlightDiv.querySelector(
-    ":last-child > .chroma > code"
+    ":last-child > .highlight .code"
   ).innerText;
   try {
     var result = await navigator.permissions.query({ name: "clipboard-write" });
