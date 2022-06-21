@@ -5,7 +5,7 @@ description: "教你快速做出好看的 PPT"
 tags: ["revealjs","PPT"]
 categories: ["工具"]
 keywords: ["PPT","reveal.js","revealjs","reveal-md"]
-draft: true
+draft: false
 ---
 
 # 背景
