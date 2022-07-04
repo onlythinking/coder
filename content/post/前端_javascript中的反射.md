@@ -7,7 +7,7 @@ categories: ["前端"]
 keywords: ["JavaScript"]
 ---
 
-## 什么是反射
+# 什么是反射
 
 反射这个概念在很多编程语言中都存在，像Java，C#。
 
@@ -80,7 +80,7 @@ JavaScript在ES6提供了反射内置对象`Reflect`，但JavaScript里面的反
 - Reflect.getPrototypeOf(target)
 - Reflect.setPrototypeOf(target, prototype)
 
-### Reflect.get(target, name, receiver)
+## Reflect.get(target, name, receiver)
 
 `Reflect.get`方法查找并返回`target`对象的`name`属性，如果没有该属性，则返回`undefined`。
 
@@ -106,7 +106,7 @@ const receiverObj = {
 Reflect.get(obj, 'userInfo', receiverObj) // 小明 age is 22
 ```
 
-### Reflect.set(target, name, value, receiver)
+## Reflect.set(target, name, value, receiver)
 
 ```javascript
 const obj = {
@@ -129,7 +129,7 @@ obj.age         // 22
 receiverObj.age // 10
 ```
 
-### Reflect.has(obj, name)
+## Reflect.has(obj, name)
 
 `Reflect.has`方法相当于`name in obj`里面的`in`运算符。
 
@@ -141,7 +141,7 @@ obj in name // true
 Reflect.has(obj, 'name') // true
 ```
 
-### Reflect.deleteProperty(obj, name)
+## Reflect.deleteProperty(obj, name)
 
 `Reflect.deleteProperty`方法相当于`delete obj[name]`，用于删除对象的属性。如果删除成功，或者被删除的属性不存在，返回`true`；删除失败，被删除的属性依然存在，返回`false`。
 
@@ -153,7 +153,7 @@ delete obj.name
 Reflect.deleteProperty(obj, 'name')
 ```
 
-### Reflect.construct(target, args)
+## Reflect.construct(target, args)
 
 `Reflect.construct`方法等同于`new target(...args)`。
 
@@ -165,11 +165,11 @@ const user = new User('jack');
 Reflect.construct(User, ['jack']);
 ```
 
-### Reflect.getPrototypeOf(obj)
+## Reflect.getPrototypeOf(obj)
 
 `Reflect.getPrototypeOf`方法用于读取对象的`__proto__`属性。
 
-### Reflect.setPrototypeOf(obj, newProto)
+## Reflect.setPrototypeOf(obj, newProto)
 
 `Reflect.setPrototypeOf`方法用于设置目标对象的原型（prototype）。返回一个布尔值，表示是否设置成功。
 
@@ -181,7 +181,7 @@ Reflect.setPrototypeOf(obj, Array.prototype);
 obj.length // 0 
 ```
 
-### Reflect.apply(func, thisArg, args) 
+## Reflect.apply(func, thisArg, args) 
 
 `Reflect.apply`方法相当于`Function.prototype.apply.call(func, thisArg, args)`，用于绑定`this`对象后执行给定函数。
 
@@ -192,7 +192,7 @@ const min = Math.max.apply(Math, nums);
 const min = Reflect.apply(Math.min, Math, nums);
 ```
 
-### Reflect.defineProperty(target, propertyKey, attributes) 
+## Reflect.defineProperty(target, propertyKey, attributes) 
 
 `Reflect.defineProperty`方法相当于`Object.defineProperty`，用来为对象定义属性。
 
@@ -209,19 +209,19 @@ Reflect.defineProperty(obj, 'property', {
 });
 ```
 
-### Reflect.getOwnPropertyDescriptor(target, propertyKey)
+## Reflect.getOwnPropertyDescriptor(target, propertyKey)
 
 获取指定属性的描述对象。
 
-### Reflect.isExtensible (target)
+## Reflect.isExtensible (target)
 
 返回一个布尔值，表示当前对象是否可扩展。
 
-### Reflect.preventExtensions(target) 
+## Reflect.preventExtensions(target) 
 
 用于让一个对象变为不可扩展。它返回一个布尔值，表示是否操作成功。
 
-### Reflect.ownKeys (target)
+## Reflect.ownKeys (target)
 
 `Reflect.ownKeys`方法用于返回对象的所有属性。
 
@@ -239,7 +239,7 @@ Reflect.ownKeys(obj) // ['name', 'age', 'userInfo']
 
 
 
-## JavaScript中Proxy
+# JavaScript中Proxy
 
 代理在编程中很有用，它可以在目标对象之前增加一层“拦截”实现一些通用逻辑。
 
@@ -259,7 +259,7 @@ proxy.name // 'hi'
 
 ```
 
-#### Proxy中支持的拦截操作
+## Proxy中支持的拦截操作
 
 - handler.get(target, property, receiver)
 - handler.set(target, property, value, receiver)
@@ -276,7 +276,7 @@ proxy.name // 'hi'
 - handler.apply(target, thisArg, argumentsList)
 - handler.construct(target, argumentsList, newTarget)
 
-### get()
+## get()
 
 用于拦截某个属性的读取操作，可以接受三个参数，依次为目标对象、属性名和 proxy 实例本身，其中最后一个参数可选。
 
@@ -315,7 +315,7 @@ obj.name // hello
 obj.age // ReferenceError: age does not exist.
 ```
 
-### set()
+## set()
 
 用来拦截某个属性的赋值操作，可以接受四个参数，依次为目标对象、属性名、属性值和 Proxy 实例本身，其中最后一个参数可选。
 
@@ -337,7 +337,7 @@ obj.name = '123456' // RangeError: Cannot exceed 5 character.
 obj.age = 12 				// 12
 ```
 
-### has()
+## has()
 
 用来拦截`HasProperty`操作，即判断对象是否具有某个属性时，这个方法会生效。如`in`运算符。
 
@@ -359,19 +359,19 @@ var proxy = new Proxy(target, handler);
 
 
 
-### defineProperty()
+## defineProperty()
 
 `defineProperty()`方法拦截了`Object.defineProperty()`操作。
 
-### deleteProperty()
+## deleteProperty()
 
 用于拦截`delete`操作，如果这个方法抛出错误或者返回`false`，当前属性就无法被`delete`命令删除。
 
-### getOwnPropertyDescriptor()
+## getOwnPropertyDescriptor()
 
 `getOwnPropertyDescriptor()`方法拦截`Object.getOwnPropertyDescriptor()`，返回一个属性描述对象或者`undefined`。
 
-### getPrototypeOf() 
+## getPrototypeOf() 
 
 主要用来拦截获取对象原型，拦截的操作如下：
 
@@ -396,7 +396,7 @@ const p = new Proxy(obj, handler);
 console.log(Object.getPrototypeOf(p) === proto);    // true
 ```
 
-### setPrototypeOf() 
+## setPrototypeOf() 
 
 主要用来拦截`Object.setPrototypeOf()`方法。
 
@@ -415,7 +415,7 @@ Reflect.setPrototypeOf(p1, newProto); // returns false
 
 ```
 
-### isExtensible()
+## isExtensible()
 
 方法拦截`Object.isExtensible()`操作。
 
@@ -431,7 +431,7 @@ console.log(Object.isExtensible(p)); // "called"
                                      // true
 ```
 
-### ownKeys()
+## ownKeys()
 
 用来拦截对象自身属性的读取操作。具体来说，拦截以下操作。
 
@@ -451,7 +451,7 @@ const p = new Proxy({}, {
 console.log(Object.getOwnPropertyNames(p)); // "called"
 ```
 
-### preventExtensions()
+## preventExtensions()
 
 用来拦截`Object.preventExtensions()`。该方法必须返回一个布尔值，否则会被自动转为布尔值。
 
@@ -470,7 +470,7 @@ console.log(Object.preventExtensions(p)); // "called"
                                           // false
 ```
 
-### apply()
+## apply()
 
 `apply`方法拦截以下操作。
 
@@ -503,7 +503,7 @@ const p = new Proxy(target, handler);
 p(1,2,3) // "called: 1, 2, 3" 6
 ```
 
-### construct()
+## construct()
 
 用于拦截`new`命令，下面是拦截对象的写法：
 
@@ -542,7 +542,7 @@ new p() //目标对象不是函数，报错
 
 
 
-## 观察者模式
+# 观察者模式
 
 观察者是一种很常用的模式，它的定义是当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。
 
@@ -584,7 +584,7 @@ user.name = '小明'; // 小明, 20
 
 
 
-## 小结
+# 小结
 
 本文要点回顾，欢迎留言交流。
 

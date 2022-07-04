@@ -7,9 +7,9 @@ categories: ["前端"]
 keywords: ["JavaScript"]
 ---
 
-## 简介
 
-#### 什么是JavaScript？
+
+# 什么是JavaScript？
 
 **JavaScript (** **JS** ) 是一种具有**函数优先**的轻量级，解释型或即时编译型的编程语言。
 
@@ -35,9 +35,9 @@ JavaScript 的标准是**ECMAScript**截至 2012 年，所有的**现代浏览�
 
 
 
-## 基本语法
+# 基本语法
 
-#### 变量
+## 变量
 
 变量是对值的引用，JavaScript 的变量名区分大小写，`A`和`a`是两个不同的变量。
 
@@ -47,7 +47,7 @@ total = 1;
 var a,b; // 一个var后可以声明多个变量。
 ```
 
-**变量提升**
+## **变量提升**
 
 你可能很奇怪，执行下面代码没有报错。由于JavaScript引擎工作方式是先解析代码，获取所有被声明的变量，换句话说就是所有的变量的声明语句，都被提升到代码的头部。
 
@@ -56,7 +56,7 @@ console.log(a);
 var a = 1;
 ```
 
-**变量规则**
+## **变量规则**
 
 - 第一个字符任意 Unicode 字母（包括英文字母和其他语言的字母），以及美元符号（`$`）和下划线（`_`）
 
@@ -66,7 +66,7 @@ var a = 1;
 >
 > arguments、break、case、catch、class、const、continue、debugger、default、delete、do、else、enum、eval、export、extends、false、finally、for、function、if、implements、import、in、instanceof、interface、let、new、null、package、private、protected、public、return、static、super、switch、this、throw、true、try、typeof、var、void、while、with、yield。
 
-#### 语句
+## 语句
 
 JavaScript程序的执行单位行，一般情况一行就是一条语句，如果一行要写多个语句我们使用`;`表示语句结束。
 
@@ -74,7 +74,7 @@ JavaScript程序的执行单位行，一般情况一行就是一条语句，如�
 var total = 1 + 1; // 声明了一个变量total，然后将1+1的运算结果赋值给它。
 ```
 
-**注释**
+## **注释**
 
 ```javascript
 // 这是单行注释
@@ -86,7 +86,7 @@ var total = 1 + 1; // 声明了一个变量total，然后将1+1的运算结果�
 */
 ```
 
-**区块**
+## **区块**
 
 JavaScript使用大括号将多条语句包裹起来表示一个区块，注意`var`声明的变量不构成单独的作用域，这里区别于java。
 
@@ -97,7 +97,7 @@ JavaScript使用大括号将多条语句包裹起来表示一个区块，注意`
 a // 1
 ```
 
-**条件语句**
+## **条件语句**
 
 ```javascript
 // if结构
@@ -193,15 +193,15 @@ for (初始化表达式; 条件; 递增表达式) {
 
 
 
-## 数据类型
+# 数据类型
 
-**null和undefined**
+## **null和undefined**
 
 ● 变量没有初始化：undefined。
 
 ● 变量不可用：null。
 
-**数值**
+## **数值**
 
 整数和浮点数，JavaScript 内部，所有数字都是以64位浮点数形式储存，即使整数也是如此。
 
@@ -224,11 +224,11 @@ for (初始化表达式; 条件; 递增表达式) {
 - 十六进制：有前缀`0x`或`0X`的数值。
 - 二进制：有前缀`0b`或`0B`的数值。
 
-**NaN**
+## **NaN**
 
 `NaN`是 JavaScript 的特殊值，表示“非数字”（Not a Number），主要出现在将字符串解析成数字出错的场合。
 
-**字符串**
+## **字符串**
 
 由单双引号包裹在一起的字符，就是字符串。
 
@@ -258,7 +258,7 @@ String';
 
 字符集：javaScript 使用 Unicode 字符集。JavaScript 引擎内部，所有字符都用 Unicode 表示。
 
-**对象**
+## **对象**
 
 ```javascript
 var obj = { // 对象声明
@@ -283,7 +283,7 @@ for (var i in obj) {
 }
 ```
 
-**函数**
+## **函数**
 
 function 关键字声明。
 
@@ -323,7 +323,7 @@ function foo() {console('ok')}
 
 > JavaScript函数知识点还是蛮多的，后面针对函数这一块单独整理。
 
-**数组**
+## **数组**
 
 数组属于一种特殊的对象。
 
@@ -344,7 +344,7 @@ for (var i in a) {
 
 
 
-## 小结
+# 小结
 
 本文要点回顾，欢迎留言交流。
 

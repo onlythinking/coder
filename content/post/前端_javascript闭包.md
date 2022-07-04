@@ -7,11 +7,11 @@ categories: ["前端"]
 keywords: ["JavaScript"]
 ---
 
-## 作用域
+# 作用域
 
 JavaScript中的作用域分为**全局作用域**，**函数作用域**，**块作用域**。
 
-### 全局作用域
+## 全局作用域
 
 对于全局范围内声明的变量，可以在任何地方访问。
 
@@ -23,7 +23,7 @@ function say(){
 say(); // Hello
 ```
 
-### 函数作用域
+## 函数作用域
 
 在函数内声明的变量，只能从该函数内部访问。
 
@@ -36,7 +36,7 @@ say(); // Hello
 console.log(greeting); // ReferenceError: messge is not defined
 ```
 
-### 块作用域
+## 块作用域
 
 ES6 引入了`let`和`const` 关键字，它们声明的变量只能从该代码块内访问。
 
@@ -48,7 +48,7 @@ ES6 引入了`let`和`const` 关键字，它们声明的变量只能从该代码
 console.log(messge); // ReferenceError: messge is not defined
 ```
 
-### 静态作用域
+## 静态作用域
 
 在词法分析时（编译时）确定。
 
@@ -65,7 +65,7 @@ function log() {
 log(); // 42
 ```
 
-### 作用域链
+## 作用域链
 
 JavaScript运行时，引擎首先会在当前范围内查找变量，如果找不到，会向父作用域查一层一层向上查找，一直找到顶层全局作用域，如果还是找不到就返回`undefined`。
 
@@ -92,9 +92,9 @@ f1(); // Global hello G1 hello G2 hello
 
 
 
-## 运行分析
+# 运行分析
 
-### 执行上下文
+## 执行上下文
 
 **执行上下文**是执行一段 JavaScript 的环境，它存储了执行代码的一些必要信息。执行上下文分**全局执行上下文**和**函数执行上下文**。
 
@@ -116,7 +116,7 @@ f1(); // Global hello G1 hello G2 hello
 
 
 
-### 案例
+## 案例
 
 案例一
 
@@ -174,7 +174,7 @@ s()
 
 
 
-## 思考题
+# 思考题
 
 在脑海里动态执行下面代码。
 

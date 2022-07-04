@@ -7,19 +7,19 @@ categories: ["前端"]
 keywords: ["html", "css"]
 ---
 
-## HTML（网页）
+# HTML（网页）
 
 Web领域的一些基本概念。
 
-#### WEB
+**WEB**
 
 Web（World Wide Web）叫全球广域网，俗称万维网（www）。
 
-#### W3C
+**W3C**
 
 W3C（World Wide Web Consortium）叫万维网联盟，是国际最著名的标准化组织，制定了web标准。
 
-#### WEB标准
+## WEB标准
 
 一个网页包含了html元素 Css JavaScript，Html元素决定了网页结构，Css进行了修饰美化，JavaScript控制了交互行为和动态效果。
 
@@ -29,7 +29,7 @@ web标准包含了下面三个方面：
 - 表现标准（CSS）：用于设置网页元素的版式、颜色、大小等外观样式。
 - 行为标准（JavaScript）：用于定义网页的交互和行为。
 
-#### HTML定义
+## HTML定义
 
 Html不是一种编程语言，而是描述性的**标记语言**，主要作用是定义内容的结构。
 
@@ -45,7 +45,7 @@ Html5新特性：
 - 新的特殊内容元素，比如 article、footer、header、nav、section。
 - 新的表单控件，比如 calendar、date、time、email、url、search。
 
-#### 页面基本结构
+**页面基本结构**
 
 ```html
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ Html5新特性：
 </html>
 ```
 
-#### 关于viewport
+## 关于viewport
 
 viewport用户网页的可视区域，一个针对移动网页优化的页面 viewport meta 标签如下：
 
@@ -80,7 +80,7 @@ viewport用户网页的可视区域，一个针对移动网页优化的页面 vi
 - minimum-scale：允许用户缩放到的最小比例。
 - user-scalable：用户是否可以手动缩放。
 
-#### 常见元素
+## 常见元素
 
 head区域元素：meta title style link script base。
 
@@ -94,7 +94,7 @@ body区域元素：
 - a
 - form、input、select、textarea、button
 
-#### 元素分类
+## 元素分类
 
 **块级元素**：每个元素都是独占一行
 
@@ -149,7 +149,7 @@ body区域元素：
 
 通过Css：display:inline-block 改变元素。
 
-#### 元素默认样式
+## 元素默认样式
 
 很多元素都自带了默认样式，不同浏览器下默认样式表现不一致，为了统一或者满足一些需求我们需求将所有默认样式清空，这种处理方式又称为 **Css Reset**，比如：
 
@@ -166,9 +166,9 @@ body区域元素：
 
 
 
-## CSS（层叠样式表）
+# CSS（层叠样式表）
 
-#### Css的单位
+## Css的单位
 
 html中的单位是像素px
 
@@ -189,7 +189,7 @@ html中的单位是像素px
 - vmin：视窗较小尺寸的1%
 - vmax：视图大尺寸的1%
 
-#### 字体属性
+## 字体属性
 
 属性：字体、行高、颜色、大小、背景、边框、滚动、换行、修饰属性（粗体、斜体、下划线）
 
@@ -239,7 +239,7 @@ vertical-align: revert;
 vertical-align: unset;
 ```
 
-#### 文本属性
+## 文本属性
 
 - `letter-spacing: 0.5em ;` 单个字母之间的间距。
 - `word-spacing: 1em;` 单词之间的间距。
@@ -251,7 +251,7 @@ vertical-align: unset;
 - `text-shadow:2px 2px #ff0000;` 文字阴影效果。
 - `white-space: normal;` 设置元素空白处理，normal，nowrap，break-spaces。
 
-#### Overflow属性
+## Overflow属性
 
 内容溢出处理
 
@@ -260,13 +260,13 @@ vertical-align: unset;
 - `auto`：内容超出显示滚动条。
 - `scroll`：Windows总是显示滚动条。Mac和`auto` 属性相同。
 
-#### 滤镜
+## 滤镜
 
 ```css
 filter:gray()
 ```
 
-#### 背景属性
+## 背景属性
 
 - `background-color:#fff;` 设置背景颜色。
 - `background-image:url(img.png);` 设置图像为背景。
@@ -280,7 +280,7 @@ filter:gray()
   - cover（尽可能大地缩放图像以填充容器，必要时拉伸图像。），
   - auto（在相应的方向上缩放背景图像，以保持其固有比例。）。
 
-#### 优先级
+## 优先级
 
 **理解优先级很重要，有助于我们排查一些问题。**浏览器将优先级分为两部分：HTML的行内样式和选择器的样式。
 
@@ -325,16 +325,16 @@ filter:gray()
 1.  尽量不要使用ID选择器，因为它会大幅提升优先级。当需要覆盖这个选择器时，通常找不到另一个有意义的ID，于是就需要复制原来的选择器加上另一个类来让它区别于想要覆盖的选择器。
 2. 不要使用！important。它比ID更难覆盖，一旦用了它，想要覆盖原先的声明，就需要再加上一个！important，而且依然要处理优先级的问题。
 
+# CSS 选择器
 
-
-#### 基础选择器
+## 基础选择器
 
 - 类型或标签选择器，匹配目标元素的标签名，如 ：p，input[type=text]，优先级（0，0，1）。
 - 类选择器，匹配class属性中有指定类名的元素，如：.box，优先级（0，1，0）。
 - ID选择器，匹配拥有指定ID属性的元素，如：#id， 优先级（1，0，0）。
 - 通用选择器（*），匹配所有元素 ，优先级（0，0，0）。
 
-#### 组合选择器
+## 组合选择器
 
 由多个基础选择器组合成的复杂选择器。
 
@@ -343,11 +343,11 @@ filter:gray()
 - 相邻兄弟组合器（+），匹配的元素紧跟在后面其它元素后面，div + p。
 - 通用兄弟组合器（~），匹配所有跟随在指定元素之后的兄弟元素，它不会选中目标元素之前的兄弟元素，li.active ~ li。
 
-#### 复合选择器
+## 复合选择器
 
 多个基础选择器连起来（中间没有空格）组成一个复合选择器（如：ul.nav）。复合选择器选中的元素将匹配其全部基础选择器，.box.nav 可以选中 class="box nav" ，但是不能选中 class="box"。
 
-#### 伪类选择器
+## 伪类选择器
 
 用于选中某种特定状态的元素，优先级（0，1，0）。
 
@@ -378,7 +378,7 @@ filter:gray()
 
 
 
-#### 伪元素选择器
+## 伪元素选择器
 
 伪元素选择器可以向HTML标记中未定义的地方插入内容，优先级（0，0，1）。
 
@@ -388,7 +388,7 @@ filter:gray()
 - ::first-line——用于指定匹配元素的第一行文本的样式。
 - ::selection——用于指定用户使用鼠标高亮选择的任意文本的样式。通常用于改变选中文本的background-color。只有少数属性可以使用，包括color、background-color、cursor、text-decoration。
 
-#### 属性选择器
+## 属性选择器
 
 属性选择器用于根据HTML属性进行匹配元素，优先级（0，1，0）。
 
