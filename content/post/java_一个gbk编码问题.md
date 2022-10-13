@@ -5,7 +5,7 @@ description: "记录一个关于 GBK 编码的问题"
 tags: ["java","GBK","gbk"]
 categories: ["java"]
 keywords: ["GBK","gbk","java"]
-draft: true
+draft: false
 ---
 
 
