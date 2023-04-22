@@ -1,5 +1,5 @@
 ---
-title: "JIT编译器的神奇之处：为什么Java如此快速"
+title: "Java JIT 编译器：它是如何工作的以及为什么它对您的应用程序的性能很重要"
 date: 2022-07-06T14:39:37+08:00
 description: "解密Java JIT编译器：如何优化Java应用程序的性能"
 tags: ["java"]
