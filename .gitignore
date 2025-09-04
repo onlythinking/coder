@@ -25,3 +25,36 @@ package-lock.json
 *.iws
 *.iml
 *.ipr
+
+# 自动化脚本和敏感配置
+automation/
+scripts/
+config/ai_config.yaml
+config/platforms.yaml
+.env
+.env.local
+*.key
+api_keys.txt
+secrets.json
+
+# Python 相关
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+env/
+.venv/
+.env/
+
+# 数据和缓存文件
+data/
+cache/
+*.db
+*.sqlite
+*.log
+
+# 临时文件
+temp/
+tmp/
+*.tmp
