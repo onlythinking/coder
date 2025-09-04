@@ -23,7 +23,7 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google-analytics.com *.googletagmanager.com *.disqus.com *.disquscdn.com *.jsdelivr.net *.ibruce.info hm.baidu.com *.qhres2.com cse.google.com *.google.com; style-src 'self' 'unsafe-inline' *.googleapis.com *.jsdelivr.net *.google.com; img-src 'self' data: *.google-analytics.com *.googletagmanager.com *.aliyuncs.com; font-src 'self' data: *.googleapis.com *.gstatic.com; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com *.google.com;"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google-analytics.com *.googletagmanager.com *.disqus.com *.disquscdn.com *.jsdelivr.net *.ibruce.info hm.baidu.com *.bdstatic.com *.qhres2.com cse.google.com *.google.com; style-src 'self' 'unsafe-inline' *.googleapis.com *.jsdelivr.net *.google.com; img-src 'self' data: *.google-analytics.com *.googletagmanager.com *.aliyuncs.com *.google.com *.googleusercontent.com clients1.google.com; font-src 'self' data: *.googleapis.com *.gstatic.com *.jsdelivr.net; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com *.google.com api.github.com;"
 
 # 缓存静态资源
 [[headers]]
