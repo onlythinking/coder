@@ -23,7 +23,7 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google-analytics.com *.googletagmanager.com *.disqus.com *.disquscdn.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: *.google-analytics.com *.googletagmanager.com; font-src 'self' *.googleapis.com *.gstatic.com; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com;"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google-analytics.com *.googletagmanager.com *.disqus.com *.disquscdn.com *.jsdelivr.net *.ibruce.info hm.baidu.com *.qhres2.com cse.google.com; style-src 'self' 'unsafe-inline' *.googleapis.com *.jsdelivr.net; img-src 'self' data: *.google-analytics.com *.googletagmanager.com *.aliyuncs.com; font-src 'self' *.googleapis.com *.gstatic.com; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com;"
 
 # 缓存静态资源
 [[headers]]
