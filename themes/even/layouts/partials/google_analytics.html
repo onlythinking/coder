@@ -1,0 +1,12 @@
+{{- /* Google Analytics 4 (gtag.js) - Enable in production environment */ -}}
+{{- if .Site.Config.Services.GoogleAnalytics.ID -}}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Config.Services.GoogleAnalytics.ID }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', '{{ .Site.Config.Services.GoogleAnalytics.ID }}');
+</script>
+{{- end -}}
