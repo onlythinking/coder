@@ -1,7 +1,7 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://www.onlythinking.com/"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "编程码农 - 一个很骚气的程序员"
+title = "编程码农 - 专业技术博客 | 前端后端开发指南"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
@@ -21,9 +21,13 @@ pygmentsstyle="friendly"
 pygmentsuseclasses=true
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
-paginate = 5                                              # 首页每页显示的文章数
-disqusShortname = ""      # disqus_shortname
-googleAnalytics = "UA-214271826-1"      # UA-XXXXXXXX-X
+[pagination]
+pagerSize = 5                                              # 首页每页显示的文章数
+
+[services.googleAnalytics]
+id = "UA-214271826-1"      # UA-XXXXXXXX-X
+[services.disqus]
+shortname = ""      # disqus_shortname
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 [author]                  # essential                     # 必需
@@ -72,8 +76,8 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
   logoTitle = ""        # default: the title value    # 默认值: 上面设置的title值
-  keywords = ["技术博客","技术笔记","技术号","技术圈","前端","后端","小程序","安全","运维","软件开发","开发者","程序员","程序猿","程序媛","码农","编程","代码","软件开发","开源","Developer","Programmer","Coder","Coding","Code","javascript","python","java","ios","android"]
-  description = "编程学习,技术知识分享,技术笔记,内容包括：前端,后端,Java,javascript等等。"
+  keywords = ["编程技术", "开发实践", "前端开发", "后端架构", "JavaScript", "Java", "Python", "算法数据结构", "技术分享", "职业成长", "编程教程", "代码优化", "软件设计", "Web开发", "移动开发"]
+  description = "专注分享高质量编程技术内容，涵盖前端、后端、算法、架构设计，帮助开发者提升技术实力和职业竞争力。深入浅出的技术文章，实战经验分享。"
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
   archivePaginate = 50
