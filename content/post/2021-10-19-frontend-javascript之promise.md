@@ -1,6 +1,6 @@
 ---
 title: "Promise详解 - JavaScript异步编程完整指南 | 编程码农"
-date: "2021-10-19 18:17:03"
+date: "2021-10-19T18:17:03+08:00"
 description: "什么是Promise Promise 是异步编程的一种解决方案。ES6中已经提供了原生Promise对象。一个Promise对象会处于以下几种状态（fulfilled，rejected两种状态一旦确定后不会改变）： - 待定（pending）: 初始状/态，既没有被兑现，也没有被拒绝。 - 已兑现（..."
 tags:
   - "JavaScript"

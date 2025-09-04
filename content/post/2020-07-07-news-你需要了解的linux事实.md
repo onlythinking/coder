@@ -1,6 +1,6 @@
 ---
 title: "关于Linux，你需要知道的几个事实 | 编程码农"
-date: "2020-07-07 14:34:27"
+date: "2020-07-07T14:34:27+08:00"
 description: "近日线上开源峰会与嵌入式 Linux 大会上，Linux创始人Linus Torvalds与VMware 公司首席开源官 Dirk Hohndel 对话中谈论了关于Linux后继担忧。 早在之前Linus就在邮件中透露说到自己更多时候是进行代码合并，并称自己早不是程序员了。 > 我写的大多数代码实际..."
 tags:
   - "Git"

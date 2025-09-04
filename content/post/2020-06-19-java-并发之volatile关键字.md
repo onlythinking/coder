@@ -1,6 +1,6 @@
 ---
 title: "java并发之volatile | 编程码农"
-date: "2020-06-19 16:20:49"
+date: "2020-06-19T16:20:49+08:00"
 description: "Java面试中经常会涉及关于volatile的问题。本文梳理下volatile关键知识点。 volatile字意为“易失性”，在Java中用做修饰对象变量。它不是Java特有，在C，C++，C等编程语言也存在，只是在其它编程语言中使用有所差异，但总体语义一致。比如使用volatile 能阻止编译器对..."
 tags:
   - "Java"

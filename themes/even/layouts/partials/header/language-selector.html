@@ -5,7 +5,7 @@
   to the translated page. If not, the link will be to the home page of the site
   with specified language.
 -->
-{{ if (and (hugo.IsMultilingual) ($.Site.Params.showLanguageSelector)) }}
+{{ if (and (gt (len .Site.Languages) 1) ($.Site.Params.showLanguageSelector)) }}
   <div class="language-selector">
     <ul class="languages-list">
       {{ range $homeTranslation := .Site.Home.AllTranslations }}

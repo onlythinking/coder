@@ -25,7 +25,7 @@ hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否�
 pagerSize = 5                                              # 首页每页显示的文章数
 
 [services.googleAnalytics]
-id = "UA-214271826-1"      # UA-XXXXXXXX-X
+id = "G-RPR044C0GP"      # GA4 格式
 [services.disqus]
 shortname = ""      # disqus_shortname
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓

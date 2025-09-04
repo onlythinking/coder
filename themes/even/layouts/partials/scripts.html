@@ -101,7 +101,7 @@
 {{- end }}
 
 <!-- Analytics -->
-{{- if (in (slice (getenv "HUGO_ENV") hugo.Environment) "production") | and .Site.Config.Services.GoogleAnalytics.ID -}}
+{{- if (eq (getenv "HUGO_ENV") "production") | and .Site.Config.Services.GoogleAnalytics.ID -}}
 {{ partial "google_analytics.html" . }}
 {{- end -}}
 
@@ -119,7 +119,7 @@
 {{- end }}
 
 <!-- Google gtag -->
-{{- if (in (slice (getenv "HUGO_ENV") hugo.Environment) "production") | and .Site.Params.googleGtag -}}
+{{- if (eq (getenv "HUGO_ENV") "production") | and .Site.Params.googleGtag -}}
 {{- with .Site.Params.googleGtag -}}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{.}}"></script>
 <script id="google_gtag">

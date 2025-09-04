@@ -1,6 +1,6 @@
 ---
 title: "JavaScript 作用域和运行分析 | 编程码农"
-date: "2021-10-23 14:55:17"
+date: "2021-10-23T14:55:17+08:00"
 description: "作用域 JavaScript中的作用域分为全局作用域，函数作用域，块作用域。 全局作用域 对于全局范围内声明的变量，可以在任何地方访问。 `javascript var messge = 'Hello' function say(){   console.log(message) } say(); ..."
 tags:
   - "JavaScript"

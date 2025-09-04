@@ -1,6 +1,6 @@
 ---
 title: "简版在线聊天Websocket | 编程码农"
-date: "2020-05-19 21:29:28"
+date: "2020-05-19T21:29:28+08:00"
 description: "序言 - What is Webscoket ? - websocket 应用场景 - 简版群聊实现 - 代码例子 - 小结    Webscoket Websokcet 是一种单个TCP连接上进行全双工通信的协议，通过HTTP/1.1 协议的101状态码进行握手。 > http://websock..."
 tags:
   - "JavaScript"

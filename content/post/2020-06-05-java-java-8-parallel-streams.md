@@ -1,6 +1,6 @@
 ---
 title: "Java8中的ParallelStreams | 编程码农"
-date: "2020-06-05 14:48:42"
+date: "2020-06-05T14:48:42+08:00"
 description: "前言 并行编程势不可挡，Java从1.7开始就提供了Fork/Join 支持并行处理。java1.8 进一步加强。 并行处理就是将任务拆分子任务，分发给多个处理器同时处理，之后合并。 !stream Stream API Java 8 引入了许多特性，Stream API是其中重要的一部分。区别 I..."
 tags:
   - "Java"

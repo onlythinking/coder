@@ -1,6 +1,6 @@
 ---
 title: "JavaScript运行原理 | 编程码农"
-date: "2021-10-22 11:19:11"
+date: "2021-10-22T11:19:11+08:00"
 description: "简介 理解JavaScript运行原理，我们需要理解以下两方面内容。 - JavaScript引擎。 - JavaScript运行时环境。 JavaScript引擎 什么是JavaScript引擎 JavaScript引擎是一个计算机程序，它的主要作用是JavaScript运行时将源码编译为机器码。..."
 tags:
   - "JavaScript"

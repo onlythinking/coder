@@ -1,6 +1,6 @@
 ---
 title: "Html和Css基础 | 编程码农"
-date: "2021-10-13 10:52:46"
+date: "2021-10-13T10:52:46+08:00"
 description: "HTML（网页） Web领域的一些基本概念。 WEB Web（World Wide Web）叫全球广域网，俗称万维网（www）。 W3C W3C（World Wide Web Consortium）叫万维网联盟，是国际最著名的标准化组织，制定了web标准。 WEB标准 一个网页包含了html元素 C..."
 tags:
   - "JavaScript"

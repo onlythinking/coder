@@ -1,6 +1,6 @@
 ---
 title: "JavaScript中的class | 编程码农"
-date: "2021-10-19 09:53:14"
+date: "2021-10-19T09:53:14+08:00"
 description: "类 类是用于创建对象的模板。JavaScript中生成对象实例的方法是通过构造函数，这跟主流面向对象语言（java，C）写法上差异较大，如下： `javascript function Point(x, y) {   this.x = x;   this.y = y; } Point.prototy..."
 tags:
   - "JavaScript"

@@ -1,6 +1,6 @@
 ---
 title: "JavaScript的反射和代理 | 编程码农"
-date: "2021-10-18 11:33:34"
+date: "2021-10-18T11:33:34+08:00"
 description: "什么是反射 反射这个概念在很多编程语言中都存在，像Java，C。 在面向对象编程中，一般会先将类和方法定义好，然后创建对象显式调用方法，比如下面的例子： `java public class User{    private String name;    private Date birthday..."
 tags:
   - "JavaScript"
