@@ -49,9 +49,10 @@ Python凭借其丰富的库和框架，如asyncio和aiohttp，提供了强大的
 
 首先，我们需要确认Python的版本。为了充分利用异步编程的特性，我们推荐使用Python 3.7及以上版本，因为从Python 3.7开始，asyncio模块被标记为稳定，其提供了完整的异步编程支持。可以通过下面的命令检查你的Python版本：
 
-```bash
+```
 python --version
-```text
+```
+
 
 如果你的版本低于3.7，建议你通过官网下载最新版本进行更新。
 
@@ -62,7 +63,7 @@ python --version
 ```bash
 pip install asyncio
 pip install aiohttp
-```text
+```
 
 请注意，`asyncio`作为Python的标准库，在Python 3.7及以上版本默认已经包含，因此可能不需要单独安装。但是，`aiohttp`需要单独安装。
 
@@ -86,7 +87,7 @@ async def main():
     print('world')
 
 asyncio.run(main())
-```text
+```
 
 在这个例子中，`asyncio.run(main())` 开启了一个事件循环，并执行了 `main` 函数。`await asyncio.sleep(1)` 暂停了当前任务，让出控制权，允许其他任务运行。
 
@@ -106,7 +107,7 @@ async def main():
     await async_function()
 
 asyncio.run(main())
-```text
+```
 
 在上述代码中，`async_function` 是一个异步函数，它使用 `await` 挂起了执行流程，等待 `asyncio.sleep(1)` 完成。这使得其他任务有机会在此期间执行。
 
@@ -128,7 +129,7 @@ async def main():
 
 # 运行
 asyncio.run(main())
-```text
+```
 
 在这个例子中，`fetch_page` 函数异步获取一个网页的内容。使用 `async with` 确保资源的正确管理（比如网络连接的关闭）。
 
@@ -150,7 +151,7 @@ async def buggy_function():
     1 / 0  # 故意制造错误
 
 asyncio.run(buggy_function())
-```text
+```
 
 在这个例子中，我们使用了 `logging` 来记录程序的运行信息，`pdb.set_trace()` 设置了一个断点，这允许我们在程序执行到该点时进行交互式调试。
 
@@ -172,7 +173,7 @@ graph TD
     I --> J{所有任务完成?}
     J -->|是| K[结束]
     J -->|否| B
-```text
+```
 
 通过这个流程图，我们可以清晰地看到异步编程的工作方式：定义异步函数、在需要等待的地方使用 `await` 挂起、利用事件循环高效地管理多个任务的执行。
 
@@ -199,7 +200,7 @@ async def main():
     print('default thread pool', result)
 
 asyncio.run(main())
-```text
+```
 
 - 对于数据库操作等，可以使用异步的库（如`aiomysql`）来避免阻塞。
 
