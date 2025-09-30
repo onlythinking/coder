@@ -45,12 +45,46 @@ hugo new post/文章标题.md
 
 ## 文章命名规范
 
-文章文件名采用"分类_标题"格式，例如：
-- `前端_javascript之promise.md`
-- `数据结构_哈希表.md`
-- `算法_通用缓存算法.md`
-- `工具_frp实现远程本地调试.md`
-- `项目_简版在线聊天websocket.md`
+文章文件名采用两种格式：
+
+### 标准格式（推荐）
+`YYYY-MM-DD-分类-标题.md`
+
+**分类标识符**：
+- `frontend` - 前端技术
+- `java` - Java 相关
+- `datastructure` - 数据结构
+- `algorithm` - 算法
+- `tools` - 工具使用
+- `project` - 项目实践
+- `theory` - 理论知识
+- `programming` - 编程基础
+- `redis` - Redis 相关
+- `blockchain` - 区块链
+- `network` - 网络技术
+- `golang` - Go 语言
+- `solution` - 解决方案
+- `interview` - 面试相关
+- `reading` - 读书笔记
+- `news` - 新闻资讯
+
+**示例**：
+- `2021-10-19-frontend-javascript之promise.md`
+- `2021-11-09-datastructure-哈希表.md`
+- `2022-05-20-algorithm-通用缓存算法.md`
+- `2024-06-07-tools-frp实现远程本地调试.md`
+- `2020-05-19-project-简版在线聊天websocket.md`
+
+### 新格式（2025年开始使用）
+`YYYY-MM-DD-分类_标题.md`
+
+**分类标识符**：
+- `教程类` - 教程文档
+- `热点` - 热点话题
+
+**示例**：
+- `2025-09-04-教程类_pythonyibubianchengxiangjielilunyushizhanjiehe.md`
+- `2025-09-26-热点_2025年Vibe Coding元年AI重新定义开发者工作方式.md`
 
 ## Front Matter 配置
 
