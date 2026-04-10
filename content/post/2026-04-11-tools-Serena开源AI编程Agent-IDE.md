@@ -9,10 +9,6 @@ draft: false
 readingTime: 5 分钟
 ---
 
-## 目录
-
-{{< toc >}}
-
 ## 背景
 
 GitHub 上有一个增长极快的新项目 [Serena](https://github.com/oraios/serena)，发布两个月 star 数突破 2.3 万。它的核心定位很清晰：**给 AI 编程 Agent 提供和人类开发者使用 IDE 时一样的代码理解能力**。
