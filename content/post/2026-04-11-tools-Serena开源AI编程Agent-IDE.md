@@ -1,6 +1,6 @@
 ---
 title: "Serena，开源的 AI 编程 Agent IDE"
-date: 2025-04-11
+date: 2026-04-11
 description: "Serena 是一个基于 MCP 协议的语义编程工具包，为 AI 编程 Agent 提供符号级的代码检索、编辑和重构能力，支持 40+ 编程语言"
 tags: ["工具", "AI", "编程"]
 categories: ["工具"]
