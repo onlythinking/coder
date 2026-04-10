@@ -1,0 +1,43 @@
+====================================
+社交媒体分享草稿 - 2026-04-11
+文章：Serena：让AI编程Agent拥有IDE级别的代码理解能力
+链接：https://www.onlythinking.com/post/2026-04-11-tools-serena开源ai编程agent-ide/
+====================================
+
+【X/Twitter 草稿】
+推荐理由：Serena 是一个专注于提升 AI 编程工具代码理解能力的开源项目，与 @onlythinking 的技术博客定位完全契合。
+
+备选标题A（80字内）：
+"Serena：给AI编程Agent装上IDE级别的代码理解引擎，GitHub 23k Stars"
+#AI编程 #MCP #vibe-coding #开源
+
+备选标题B：
+"还在让AI大海捞针读代码？Serena用语义理解让AI精准定位，Claude Code/Cursor都能用"
+#AI编程工具 #编程效率 #开发者
+
+====================================
+【Hacker News 备选标题】
+Serena – 给 AI 编程 Agent 的 IDE 级代码理解工具（23k Stars，MIT）
+
+====================================
+【Reddit 草稿 - r/programming】
+
+Title: Serena: An open-source MCP toolkit that gives AI coding agents IDE-level code understanding (23k stars)
+
+Body:
+Serena (https://github.com/oraios/serena) is an MCP server that provides semantic code retrieval and editing capabilities for AI coding agents.
+
+Key features:
+- Symbol-level search (functions, classes, variables) instead of full-text keyword matching
+- Cross-file relationship tracking
+- 40+ programming languages via LSP
+- Integrates with Claude Code, Codex, Cursor, VSCode, JetBrains
+
+As someone who uses AI coding tools daily, this felt like a meaningful improvement over raw file reading.
+
+====================================
+【内链建议】
+已添加与以下历史文章的双向内链：
+- 2025-09-26 热点_Vibe Coding元年
+- 2025-09-29 Python AI Agent开发完全指南
+- 2025-10-04 多智能体系统实战指南

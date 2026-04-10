@@ -1,6 +1,6 @@
 ---
 title: "Serena：让 AI 编程 Agent 拥有 IDE 级别的代码理解能力"
-date: 2026-04-11
+date: 2026-04-10
 description: "Serena 是一个基于 MCP 协议的开源编程工具包，为 AI Agent 提供符号级代码检索、编辑和重构能力，支持 40+ 编程语言，可接入 Claude Code、Cursor 等主流 AI 编程工具"
 tags: ["工具", "AI编程", "MCP", "开源"]
 categories: ["工具"]
