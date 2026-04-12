@@ -6,10 +6,11 @@ tags: ["AI", "Agent", "评测", "benchmark", "AI编程"]
 categories: ["AI"]
 keywords: ["AI Agent", "评测基准", "SWE-Bench", "AgentBench", "AI编程", "benchmark"]
 draft: false
+toc: true
 readingTime: 4 分钟
 ---
 
-{{< toc >}}
+
 
 ## 背景
 
