@@ -7,9 +7,8 @@ categories: ["tools"]
 keywords: ["GitHub Stacked PRs", "gh stack", "代码审查", "Pull Request", "Git工作流", "Stacked PRs", "PR堆叠"]
 draft: false
 readingTime: 6 分钟
+toc: true
 ---
-
-{{< toc >}}
 
 ## 背景
 
