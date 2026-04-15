@@ -7,9 +7,8 @@ categories: ["AI"]
 keywords: ["MCP协议", "Model Context Protocol", "Serena", "AI编程工具", "语义检索", "Agent IDE", "MCP Client", "上下文管理", "原子化编辑", "语义索引"]
 draft: false
 readingTime: 5 分钟
+toc: true
 ---
-
-{{< toc >}}
 
 ## 背景
 
