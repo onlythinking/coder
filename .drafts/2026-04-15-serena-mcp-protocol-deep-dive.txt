@@ -1,0 +1,28 @@
+=== Hacker News Submission Draft ===
+Title (≤80 chars): Serena架构解析：MCP协议如何驱动AI编程Agent IDE
+URL: https://www.onlythinking.com/post/serena-mcp-protocol-deep-dive/
+
+Alt Title: MCP协议深度解析：Serena如何构建AI编程Agent IDE
+
+=== Twitter/X Draft ===
+🔥 深入解析 Serena 的三层架构：MCP协议层 + 语义检索层 + 原子编辑层
+
+MCP (Model Context Protocol) 正在成为 AI Agent 与开发工具交互的标准协议，Serena是目前最完整的开源实现之一。
+
+→ https://www.onlythinking.com/post/serena-mcp-protocol-deep-dive/
+
+#AI #MCP #Serena #LLM #编程工具 #Agent
+
+=== Reddit r/programming Draft ===
+Title: "Serena Architecture Deep Dive: How MCP Protocol Powers AI Programming Agent IDE"
+
+Body:
+I've been exploring Serena (22.9k stars on GitHub), an open-source project that positions itself as an "IDE for AI agents". Its architecture is built around MCP (Model Context Protocol) - the same protocol Anthropic uses.
+
+The article covers:
+- MCP protocol fundamentals (Host/Client/Server architecture)
+- Serena's 3-layer architecture: Protocol Layer, Retrieval Layer, Edit Layer
+- How semantic search bridges natural language queries to structured code
+- Atomic editing with rollback capability
+
+Link: https://www.onlythinking.com/post/serena-mcp-protocol-deep-dive/
