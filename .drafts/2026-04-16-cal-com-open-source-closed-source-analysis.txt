@@ -1,0 +1,47 @@
+================================================================================
+分享草稿 - 2026-04-16
+标题: Cal.com 宣布闭源：一个开源调度平台的商业化困境
+链接: https://www.onlythinking.com/post/2026-04-16-tools-cal-com-open-source-closed-source-analysis/
+================================================================================
+
+【Hacker News 备选标题】（80字内）
+Cal.com 开源调度平台宣布闭源，41k Stars 的开源项目何去何从？
+
+备选：41k Stars 开源项目转向闭源：Cal.com 的商业化困境与开源生态反思
+
+================================================================================
+
+【Twitter/X 草稿】
+🧵 41,000 Stars 的开源项目说关就关。
+
+Cal.com 刚刚宣布核心产品闭源，曾经用开源吸引社区，如今转向闭源。
+
+我在 @onlythinking 写了深度分析：
+→ 开源商业化的三条路
+→ fork 的真实代价
+→ 开发者应对指南
+
+#开源 #OpenSource #Cal.com #SaaS #开发者
+
+================================================================================
+
+【Reddit r/programming 草稿】
+
+Title: Cal.com (41k GitHub Stars) is going closed source - analysis of the business dilemma behind open source
+
+Body:
+Cal.com, one of the most popular open-source scheduling platforms, just announced they're moving their core product to closed source. The GitHub repo cal.diy has 41k stars and 12k forks.
+
+I wrote a detailed analysis (in Chinese, with English resources linked) covering:
+
+- What actually happened and why they cited
+- Community reactions from HN
+- The real cost of forking under MIT license
+- Three common paths for open source monetization (and why Cal.com took a fourth)
+- Practical advice for self-hosted users
+
+HN discussion here: https://news.ycombinator.com/item?id=47780456
+
+Discussion: What do you think about open source → closed source transitions? Is it a betrayal or just business?
+
+================================================================================

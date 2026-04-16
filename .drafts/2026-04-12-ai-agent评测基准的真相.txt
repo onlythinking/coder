@@ -1,0 +1,64 @@
+================================================================================
+文章发布草稿 - 2026-04-12
+================================================================================
+标题: AI Agent评测基准的真相：为何刷榜容易、实战难
+链接: https://www.onlythinking.com/post/2026-04-12-ai-ai-agent评测基准的真相为何刷榜容易实战难/
+
+--------------------------------------------------------------------------------
+【Hacker News 备选标题】(80字内)
+--------------------------------------------------------------------------------
+1. AI Agent评测基准的真相：为何刷榜容易、实战难 (26字)
+2. 为什么你的AI编程Agent刷榜满分、上手就崩？ (21字)
+3. 我们是如何打破AI Agent评测基准的 (14字) — 改编自原文标题
+
+推荐: "AI Agent评测基准的真相：为何刷榜容易、实战难"
+
+--------------------------------------------------------------------------------
+【Twitter/X 草稿】
+--------------------------------------------------------------------------------
+🏆 GitHub上宣称"SWE-Bench满分"的AI编程项目，实际用起来却频繁卡壳？
+
+刷榜与实战之间的巨大鸿沟，是当前AI Agent领域最被低估的问题。
+
+为什么基准测试越来越不可信？数据污染、任务粒度不匹配、评价指标单一……
+
+中文技术博客首发：
+https://www.onlythinking.com/post/2026-04-12-ai-ai-agent评测基准的真相为何刷榜容易实战难/
+
+#AI #Agent #编程 #benchmark #SWE-Bench
+
+--------------------------------------------------------------------------------
+【Reddit 草稿 - r/programming】
+--------------------------------------------------------------------------------
+Title: AI Agent benchmarks are broken — here's why high scores don't translate to real performance
+
+Body:
+Most AI coding agents claim impressive scores on standard benchmarks like SWE-Bench, but developers keep finding a huge gap between benchmark performance and real-world usefulness.
+
+This post analyzes the four core problems with current AI agent evaluation:
+1. Data contamination — training data "memorizes" benchmark tasks
+2. Task granularity mismatch — benchmarks test isolated steps, not multi-round workflows
+3. Single-dimensional metrics — only pass/fail, ignoring efficiency and code quality
+4. Benchmark pollution — tasks get discussed publicly before evaluation ends
+
+Plus: industry efforts to build better evaluation systems.
+
+Link: https://www.onlythinking.com/post/2026-04-12-ai-ai-agent评测基准的真相为何刷榜容易实战难/
+
+--------------------------------------------------------------------------------
+【微信公众号摘要】
+--------------------------------------------------------------------------------
+标题：AI Agent评测基准的四大困境
+
+过去一年，GitHub上标注着"SWE-Bench满分"的AI编程项目层出不穷。但真正上手使用时却频繁卡壳——任务稍作变体就失败，遇到边界条件就"死循环"。
+
+为什么评测基准越来越不可信？本文深度分析：
+• 数据污染：模型可能是在"背答案"
+• 任务粒度不匹配：评测的是"点"，实战是"线"
+• 评价指标过于单一
+• 基准污染与"考题泄露"
+
+适合中文技术开发者阅读，深入浅出。
+
+阅读原文：https://www.onlythinking.com/post/2026-04-12-ai-ai-agent评测基准的真相为何刷榜容易实战难/
+

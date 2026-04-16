@@ -1,0 +1,66 @@
+================================================================================
+发布草稿 - 2026-04-14
+选题：GitHub Stacked PRs：让大变更拆小、审查更聚焦的官方工具
+链接：https://www.onlythinking.com/post/github-stacked-prs/
+================================================================================
+
+## Hacker News 备选标题（80字内）
+
+1. "GitHub Stacked PRs: A Better Way to Review Large Code Changes" (57 chars) ✓
+2. "How GitHub's New Stacked PRs Feature Changes Code Review Forever" (63 chars) ✓
+3. "GitHub Stacked PRs 深度解析：大变更代码审查的破局之道" (32 chars中文)
+
+建议 HN 标题：GitHub Stacked PRs: A Better Way to Review Large Code Changes
+备选中文草稿：GitHub 官方推出 Stacked PRs：让大变更拆小、审查更聚焦的代码审查工具
+
+## Twitter/X 草稿
+
+🧵 GitHub 刚刚推出 Stacked PRs——一种将大型代码变更拆解为多个有序小 PR 的工作流。
+
+✅ 大 PR 拆小，reviewer 不再望而生畏
+✅ 自动 base 传播，依赖管理不再头疼
+✅ gh-stack CLI 扩展，开箱即用
+
+目前处于 Private Preview，快申请体验：
+https://gh.io/stacksbeta
+
+#GitHub #CodeReview #PR #DevTools #programming
+
+---
+
+原文链接：https://www.onlythinking.com/post/github-stacked-prs/
+
+## Reddit 草稿（r/programming）
+
+**Title**: GitHub launched Stacked PRs (Private Preview) - a systematic approach to reviewing large code changes
+
+**Body**:
+After years of big tech using internal tools like Google's Piper and Meta's Stacked Diff to manage large code changes, GitHub has finally brought this workflow to open source.
+
+Stacked PRs lets you break a large refactor (say, 3000+ lines) into a chain of small, focused PRs that build on each other. When the base PR merges, all downstream PRs automatically update their base branch.
+
+Key benefits:
+- Reviewers see smaller, focused diffs
+- No manual rebase when upstream merges
+- Parallel review without blocking
+- Per-layer rollback
+
+The `gh-stack` CLI extension manages the entire workflow:
+```bash
+gh extension install github/gh-stack
+gh stack init feature/layer-1
+gh stack add feature/layer-2  # auto-bases on layer-1
+gh stack push
+```
+
+Currently in Private Preview - sign up at https://gh.io/stacksbeta
+
+https://www.onlythinking.com/post/github-stacked-prs/
+
+---
+**Subreddit**: r/programming or r/ProgrammingLanguages
+**Why it might do well**: Code review pain is universal among developers; stacked PRs solve a real problem
+**Potential controversy**: HN readers may complain about Private Preview exclusivity
+
+## 草稿保存路径
+~/workspace/projects/coder/.drafts/2026-04-14-github-stacked-prs.txt

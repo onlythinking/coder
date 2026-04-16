@@ -1,0 +1,47 @@
+==============================================================
+分享草稿 — 2026-04-13
+文章：AgentScope Java: 面向Agent编程的Java LLM应用框架
+URL：https://www.onlythinking.com/post/2026-04-13-ai-agentscope-java-agent-oriented-programming-for-llm-applications/
+==============================================================
+
+## Hacker News 备选标题（<=80字符）
+
+1. AgentScope Java: Build Production-Ready LLM Agents in Java (ReAct, MCP, A2A)
+2. Java开发者福音！AgentScope Java：面向Agent编程的LLM应用框架
+3. 从Python到Java：AgentScope团队推出企业级LLM Agent框架（支持GraalVM）
+
+## Twitter/X 草稿
+
+🚀 Java工程师的AI Agent框架来了！
+
+AgentScope Java 发布1.0.11：
+✅ ReAct推理 + 工具调用
+✅ MCP / A2A 协议支持
+✅ GraalVM 200ms冷启动
+✅ OpenTelemetry 全链路追踪
+
+面向Agent编程，不是给Java框架打补丁。
+适合Spring Boot项目集成LLM能力。
+
+🔗 https://www.onlythinking.com/post/2026-04-13-ai-agentscope-java-agent-oriented-programming-for-llm-applications/
+
+#Java #LLM #AI #Agent #AgentScope #AI编程 #MCP #GraalVM
+
+## Reddit 备选（r/programming）
+
+Title: AgentScope Java – An agent-oriented programming framework for building LLM applications in Java (Apache 2.0)
+
+Body:
+AgentScope Java (https://github.com/agentscope-ai/agentscope-java) just released version 1.0.11. It's an agent-oriented programming framework specifically for Java developers who want to integrate LLM capabilities into enterprise Java projects.
+
+Key features:
+- ReAct (Reasoning + Acting) paradigm with runtime intervention (safe interruption, graceful cancellation, human-in-the-loop hooks)
+- Built-in tools: PlanNotebook, Structured Output, Long-term Memory, RAG
+- Protocol support: MCP and A2A for tool and agent-to-agent integration
+- GraalVM Native Image: 200ms cold start
+- OpenTelemetry for distributed tracing
+- JDK 17+, Apache 2.0 license
+
+It's built by the same team behind the Python agentscope project, now targeting Java/Spring Boot ecosystem where most existing solutions are Python-first.
+
+Anyone tried it? How does it compare to LangChain4j for production use?
