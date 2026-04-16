@@ -1,0 +1,26 @@
+<!-- 自定义CSS：约束流程图和时序图宽度，防止溢出边界 -->
+<style>
+/* 所有 flowchart/sequence 生成的 SVG 容器 */
+[id^="js-flowchart-diagrams"],
+[id^="js-sequence-diagrams"] {
+  max-width: 100% !important;
+  width: 100% !important;
+  overflow-x: auto !important;
+}
+
+/* SVG 本身也要约束 */
+[id^="js-flowchart-diagrams"] svg,
+[id^="js-sequence-diagrams"] svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* 确保图在移动端也能完整显示，可横向滚动 */
+@media screen and (max-width: 800px) {
+  [id^="js-flowchart-diagrams"],
+  [id^="js-sequence-diagrams"] {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+</style>
