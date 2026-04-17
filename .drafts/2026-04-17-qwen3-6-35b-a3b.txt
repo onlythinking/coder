@@ -1,0 +1,63 @@
+================================================================================
+发布日期: 2026-04-17
+文章: Qwen3.6-35B-A3B：开源模型本地编程能力实测
+链接: https://www.onlythinking.com/post/2026-04-17-ai-qwen3-6-35b-a3b-local-coding-agent/
+================================================================================
+
+## Hacker News 备选标题（80字内）
+
+1. Qwen3.6-35B-A3B实测：21GB本地跑出比肩Claude Opus 4.7的编程能力
+2. 阿里开源Qwen3.6-35B-A3B：Mac上本地运行，编程能力实测超越Claude Opus 4.7
+3. Qwen3.6 vs Claude Opus 4.7编程对决：开源模型本地AI编程实战
+
+================================================================================
+
+## Twitter/X 草稿
+
+🔥 Qwen3.6-35B-A3B实测：阿里通义千问新开源模型，21GB量化体积本地运行
+编程能力超越Claude Opus 4.7，MoE架构精妙解析，三种本地部署方案对比
+
+#AI #LLM #开源模型 #Qwen #MachineLearning #编程
+
+链接: https://www.onlythinking.com/post/2026-04-17-ai-qwen3-6-35b-a3b-local-coding-agent/
+
+================================================================================
+
+## Reddit r/programming 草稿
+
+Title: I tested Qwen3.6-35B-A3B on my MacBook – it writes better code than Claude Opus 4.7
+
+Body:
+Alibaba just released Qwen3.6-35B-A3B, a MoE model with 350B total params but only 35B active. The quantized version (21GB GGUF) runs locally on a MacBook Pro M5.
+
+In my tests it matched or exceeded Claude Opus 4.7 on:
+- Algorithm implementation (LRU Cache O(1) with type annotations)
+- Concurrency safety analysis (GIL, threading.Lock, multiprocessing)
+- SQL query optimization
+- Chinese technical context understanding
+
+Key advantages for Chinese developers:
+- Native Chinese comprehension
+- Fully private deployment (no API data sent to third parties)
+- Free (one-time hardware cost)
+
+Detailed benchmark results and 3 local deployment methods (LM Studio, Ollama, llama.cpp) in the full post.
+
+(中文技术博客首发，附详细中文解读)
+
+================================================================================
+
+## Reddit r/MachineLearning 草稿
+
+Title: Qwen3.6-35B-A3B (350B total / 35B active) – first open-source model that runs locally and competes with Claude Opus 4.7 in coding tasks
+
+Body:
+Alibaba's new Qwen3.6-35B-A3B uses MoE architecture (350B total, 35B active per token) and achieves 128K context with GGUF quantization (~21GB).
+
+Independent testing (Simon Willison's pelican benchmark) shows it outperforms Claude Opus 4.7 in SVG code generation.
+
+For programming tasks specifically – algorithm implementation, concurrency analysis, SQL optimization – it performs at GPT-4 level.
+
+What makes it unique: it's the first open-weight model where Chinese developers can get Claude Opus 4.7-level coding assistance with complete data privacy, on commodity hardware.
+
+================================================================================
