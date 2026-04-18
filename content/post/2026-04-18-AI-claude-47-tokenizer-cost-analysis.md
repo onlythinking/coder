@@ -7,9 +7,8 @@ categories: ["AI"]
 keywords: ["Claude Opus 4.7", "tokenizer", "token计数", "Anthropic API", "LLM成本优化", "tokenizer比较", "上下文窗口", "BPE", "API计费", "token压缩"]
 draft: false
 readingTime: 17 分钟
+toc: true
 ---
-
-{{< toc >}}
 
 ## 背景
 
