@@ -6,6 +6,7 @@ tags: ["AI", "LLM", "Claude", "Tokenizer", "API成本", "API效率"]
 categories: ["AI"]
 keywords: ["Claude Opus 4.7", "tokenizer", "token计数", "Anthropic API", "LLM成本优化", "tokenizer比较", "上下文窗口", "BPE", "API计费", "token压缩"]
 draft: false
+cover: /images/covers/2026-04-18-AI-claude-47-tokenizer-cost-analysis.png
 readingTime: 17 分钟
 toc: true
 ---

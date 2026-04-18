@@ -1,0 +1,24 @@
+{{/* Render cover image at top of post if cover param is set */}}
+{{- with .Params.cover -}}
+{{- $cover := . }}
+{{- /* support both absolute URLs and relative paths */ -}}
+{{- $isExternal := hasPrefix $cover "http" -}}
+{{- if $isExternal -}}
+  <div class="post-cover">
+    <img src="{{ $cover | safeURL }}" alt="{{ $.Title }}" loading="lazy" />
+  </div>
+{{- else -}}
+  {{- /* treat as Hugo page resource first, then as static file */ -}}
+  {{- $res := $.Resources.GetMatch (replace $cover "/static/" "") -}}
+  {{- if $res -}}
+    {{- $resized := $res.Resize "1600x600 webp" -}}
+    <div class="post-cover">
+      <img src="{{ $resized.RelPermalink }}" alt="{{ $.Title }}" loading="lazy" />
+    </div>
+  {{- else -}}
+    <div class="post-cover">
+      <img src="{{ $cover | relURL }}" alt="{{ $.Title }}" loading="lazy" />
+    </div>
+  {{- end -}}
+{{- end -}}
+{{- end -}}
