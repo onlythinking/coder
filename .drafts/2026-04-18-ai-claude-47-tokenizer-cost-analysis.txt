@@ -1,0 +1,68 @@
+==========================================
+社区分发草稿
+文章：Claude 4.7 Tokenizer 成本实测：Token 计数的隐性开销
+日期：2026-04-18
+链接：https://www.onlythinking.com/post/ai-claude-47-tokenizer-cost-analysis/
+==========================================
+
+## Hacker News 备选标题（≤80字符）
+
+1. "Claude 4.7 Tokenizer 实测：相同文本 Token 消耗降低约 10%，开发者成本影响分析"
+   (63字符) ✓
+
+2. "新 Claude Opus 4.7 的 Tokenizer 有何不同？代码场景省 15% Token，开发者必看"
+   (55字符) ✓
+
+3. "实测 Claude 4.7 Tokenizer：数字编码优化、多语言压缩率提升，对 API 账单影响几何"
+   (55字符) ✓
+
+## Twitter / X 草稿
+
+🚀 Claude Opus 4.7 新 Tokenizer 实测：相同代码 Token 消耗减少约 10-15%，API 账单悄悄降低！
+
+📊 对比数据：
+- Python 代码：节省 13%
+- 中文文档：节省 12%
+- 混合内容：节省 10%
+
+💰 影响：高频调用方月度节省可观。上下文窗口效率同步提升~17%。
+
+👀 完整实测 + 工程建议：
+https://www.onlythinking.com/post/ai-claude-47-tokenizer-cost-analysis/
+
+#AI #LLM #Claude #Tokenizer #APICost #开发者
+
+## Reddit 草稿（r/programming）
+
+Title:实测：Claude Opus 4.7 的新 Tokenizer 让代码 Token 消耗减少 10-15%（中文场景同样受益）
+
+Body:
+Anthropic 4月发布的 Claude Opus 4.7 引入了新 tokenizer，社区实测显示效果显著：
+
+**代码场景**（Python，50行函数）：
+- Token消耗从 ~320 降至 ~278
+- 节省约 13%
+
+**中文技术文档**（1000字）：
+- Token消耗从 ~620 降至 ~540
+- 节省约 13%
+
+**核心原因**：
+1. 词汇表调整，更多编程关键字被纳入单token范围
+2. 数字编码优化（6位数字不再强制拆成6个token）
+3. URL、邮箱、代码路径等特殊模式压缩
+
+**实际影响**：如果你日均调用 10M tokens，10% 的节省意味着每月可节省约 30M tokens 的费用。
+
+原文含完整实测数据表格、成本估算逻辑和工程优化建议：
+https://www.onlythinking.com/post/ai-claude-47-tokenizer-cost-analysis/
+
+（发表于中文技术博客 编程码农）
+
+## HN Submit 草稿（manual submit）
+
+URL: https://www.onlythinking.com/post/ai-claude-47-tokenizer-cost-analysis/
+
+Title: Measuring Claude 4.7's New Tokenizer: 10-15% Token Savings in Code, Real-World Impact
+
+Body: 实测对比新版 tokenizer 在代码、中文、混合文本场景下的 token 计数差异，量化分析其对 API 成本和上下文窗口效率的影响，含工程优化建议。

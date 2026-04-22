@@ -1,0 +1,52 @@
+================================================================================
+DISTRIBUTION DRAFT — 2026-04-19
+Article: Cougar-CLI: 轻量级命令行AI编程Agent的架构与实践
+URL: https://www.onlythinking.com/post/2026-04-19-tools-cougar-cli-ai-programming-agent/
+================================================================================
+
+## Hacker News Submission
+Title (80 char limit): "Cougar-CLI: An open-source CLI AI programming agent with multi-Provider support"
+Alternative titles:
+  - "Show HN: Cougar-CLI — lightweight CLI AI coding agent with local model support"
+  - "A deep dive into Cougar-CLI, an open-source command-line AI programming agent"
+
+URL: https://news.ycombinator.com/submitlink?u=https://www.onlythinking.com/post/2026-04-19-tools-cougar-cli-ai-programming-agent/
+
+---
+## Twitter/X Draft
+Cougar-CLI 是一款开源命令行AI编程Agent，支持OpenRouter/OpenAI/Claude/智谱等多种LLM后端，可本地运行。
+
+核心亮点：
+✅ 完全本地化，数据不离开机器
+✅ 支持Ollama/vLLM等本地部署
+✅ 命令执行+文件读写+代码重构
+
+适合：远程服务器、SSH开发、低配置环境
+
+#AI #Agent #LLM #DevTools #TypeScript
+
+Link: https://www.onlythinking.com/post/2026-04-19-tools-cougar-cli-ai-programming-agent/
+
+---
+## Reddit (r/programming) Draft
+Title: "Cougar-CLI – an open-source CLI AI programming agent with multi-LLM provider support"
+
+Body:
+I've been exploring lightweight CLI-based AI coding agents for remote/server-side development. Found Cougar-CLI (Apache 2.0) which supports OpenRouter, OpenAI, Anthropic Claude, Zhipu, and any OpenAI-compatible endpoint.
+
+Architecture breakdown:
+- Task Orchestrator with state machine
+- Unified LLM Provider interface
+- Tool Executor with command safety checks
+
+For those working in SSH environments or needing local-first AI coding tools, this might be worth a look.
+
+Discussion: https://www.onlythinking.com/post/2026-04-19-tools-cougar-cli-ai-programming-agent/
+
+---
+## Reddit (r/MachineLearning) Draft
+Title: "Cougar-CLI: A lightweight CLI AI agent for programming, with local model support"
+
+Not directly ML research, but relevant to applied LLM use in development workflows.
+
+================================================================================

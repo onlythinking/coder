@@ -1,0 +1,48 @@
+====================================
+PUBLISHING DRAFT - 2026-04-20
+====================================
+
+=== Hacker News ===
+Primary Title (80 char limit):
+CAPTCHAs for Agents: when bots need to prove they're robots
+
+Alt Title (80 char limit):
+When AI Agents Need to Prove They're Robots: CAPTCHA's New Frontier
+
+URL to submit: https://news.ycombinator.com/submit
+
+=== Twitter/X ===
+推文草稿：
+
+当AI Agent自动化工具大量涌现，传统CAPTCHA防线已大规模失效。本文深入分析从"防机器人"到"管机器人"的范式转变🔐
+
+#AI #Agent #CAPTCHA #编程 #技术
+
+https://www.onlythinking.com/post/2026-04-20-ai-captchas-for-agents-identity-verification/
+
+=== Reddit (r/programming) ===
+Title: CAPTCHAs for Agents: when automated programs need to prove they're robots (2026)
+
+Body:
+Traditional CAPTCHAs were designed to block bots, but as LLM-powered automation tools proliferate, a new paradigm is emerging: agents that actively want to prove they're robots.
+
+I wrote a technical deep-dive covering:
+- Why traditional CAPTCHAs are failing (OCR, multimodal models)
+- 4 new Agent verification approaches: token-based, browser fingerprint, third-party services
+- How to implement legitimate bot identity for your automation tools
+- The shift from "CATCH the bot" to "IDENTIFY the agent"
+
+Relevant to developers working with AI agents, web scraping, or bot management.
+
+Link: https://www.onlythinking.com/post/2026-04-20-ai-captchas-for-agents-identity-verification/
+
+=== Reddit (r/MachineLearning) ===
+Title: [D] CAPTCHAs for Agents: AI's identity crisis as bots seek robot credentials
+
+Body:
+An interesting shift in the AI landscape: as LLM-based automation tools become widespread, the traditional CAPTCHA paradigm is being inverted. Instead of sites trying to block bots, we're seeing the emergence of verification systems where agents actively prove their robot identity.
+
+My analysis covers token-based verification, standardized browser fingerprints for agents, and the business of "Agent verification services" (similar to reCAPTCHA but inverted).
+
+Technical deep-dive: https://www.onlythinking.com/post/2026-04-20-ai-captchas-for-agents-identity-verification/
+

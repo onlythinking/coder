@@ -1,0 +1,40 @@
+====================================
+社区分享草稿
+文章：ggsql：用 SQL 语句画图的 Grammar of Graphics 实现
+日期：2026-04-21
+链接：https://www.onlythinking.com/post/2026-04-21-tools-ggsql-grammar-of-graphics-for-sql/
+====================================
+
+## Hacker News 备选标题（80字内）
+
+1. "ggsql: A Grammar of Graphics implementation in SQL — now in alpha"
+2. "用 SQL 语句画图：Posit 开源 ggsql，让数据和图表定义共存于同一查询文件"
+
+## Twitter/X 草稿
+
+🛠️ ggsql：Posit 开源的 Rust 工具，将 Grammar of Graphics 理念直接嵌入 SQL。
+
+现在可以在 Quarto、Jupyter、VS Code 中用声明式语法生成交互式图表，数据和图表定义共存于同一个可版本化的 SQL 文件。
+
+→ https://www.onlythinking.com/post/2026-04-21-tools-ggsql-grammar-of-graphics-for-sql/
+#SQL #数据可视化 #GrammarOfGraphics #Posit #Rust #DataScience
+
+## Reddit 备选（r/programming）
+
+Title: "ggsql – Posit open-sources a Grammar of Graphics implementation for SQL (alpha)"
+
+Body:
+Posit just released ggsql, an alpha-quality tool that lets you describe visualizations directly inside SQL queries using VISUALIZE/DRAW syntax, compiled to Vega-Lite specs.
+
+Key features:
+- Declarative GoG syntax in SQL: `VISUALIZE x, y FROM table DRAW point`
+- Built-in datasets (penguins, etc.)
+- Output: Vega-Lite JSON → renders interactive charts in Quarto, Jupyter, VS Code
+- Rust implementation, MIT licensed
+
+Announcement: https://opensource.posit.co/blog/2026-04-20_ggsql_alpha_release/
+GitHub: https://github.com/posit-dev/ggsql
+
+For data teams already deep in SQL, this could eliminate the SQL → Python/R → BI tool handoff.
+
+(r/programming)

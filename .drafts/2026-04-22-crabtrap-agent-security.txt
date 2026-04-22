@@ -1,0 +1,66 @@
+===============================================
+DISTRIBUTION DRAFTS
+Date: 2026-04-22
+Article: CrabTrap: 用 HTTP 代理给 AI Agent 套上安全缰绳
+URL: https://www.onlythinking.com/post/2026-04-22-ai-crabtrap-http-proxy-ai-agent-security/
+===============================================
+
+## Hacker News
+
+Primary Title (80 chars):
+CrabTrap: HTTP proxy with LLM-as-judge for securing AI agents in production
+
+Alt Title (80 chars):
+用 HTTP 代理给 AI Agent 套上安全缰绳 — Brex 开源 CrabTrap
+
+HN URL: https://news.ycombinator.com/submit
+HN Score: 66 (pre-publish estimate)
+
+---
+
+## Twitter/X
+
+Tweet:
+Brex 开源了 CrabTrap——一个 LLM-as-a-judge HTTP 代理，给 AI Agent 套上安全缰绳。
+
+双层决策引擎：静态规则 + LLM Judge，支持 SSRF 防护、Prompt 注入检测、完整审计日志。
+
+Agent 开发者必备安全工具。#AI #Agent #安全 #LLM #Proxy
+
+Link: https://www.onlythinking.com/post/2026-04-22-ai-crabtrap-http-proxy-ai-agent-security/
+
+---
+
+## Reddit (r/programming)
+
+Title:
+CrabTrap: Brex open-sourced an HTTP proxy that uses LLM-as-a-judge to secure AI agents in production
+
+Body:
+Brex just open sourced CrabTrap, an HTTP/HTTPS forward proxy designed specifically for securing AI agents that make external API calls.
+
+Key features:
+- Two-tier decision engine: deterministic static rules + LLM judge
+- SSRF protection (blocks RFC 1918 private IPs,169.254.169.254 metadata endpoints)
+- Prompt injection defense (JSON encoding/escaping before LLM evaluation)
+- Circuit breaker (opens after 5 consecutive LLM failures, retries after 10s)
+- Complete audit trail in PostgreSQL
+
+It's MIT licensed and production-ready.
+
+GitHub: https://github.com/brexhq/CrabTrap
+Blog: https://www.brex.com/crabtrap
+
+Discussion context: With AI agents increasingly making real API calls (Gmail, Slack, GitHub), security guardrails are critical. CrabTrap provides a clean architectural solution.
+
+---
+
+## WeChat (草稿)
+
+标题：Brex 开源 CrabTrap：用 HTTP 代理给 AI Agent 戴上安全缰绳
+
+摘要：CrabTrap 通过双层决策引擎（静态规则 + LLM Judge）为 AI Agent 提供运行时安全防护，支持 SSRF 防护、Prompt 注入检测，适合生产环境使用。
+
+封面配图：/images/covers/crabtrap-http-proxy-ai-agent-security.png
+
+原文链接：https://www.onlythinking.com/post/2026-04-22-ai-crabtrap-http-proxy-ai-agent-security/
