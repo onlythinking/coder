@@ -33,27 +33,16 @@ toc: true
 
 ECC 的架构分为六个核心层次，每一层解决一个真实的 Agent 编程痛点：
 
-```
-flow
-st=>start: 用户指令
-cond1=>condition: Token 预算充足？
-cond2=>condition: 上下文可恢复？
-cond3=>condition: 安全策略通过？
-op1=>operation: Token 优化层
-op2=>operation: 记忆持久化层
-op3=>operation: 技能匹配层
-op4=>operation: 验证循环层
-op5=>operation: 安全扫描层
-e=>end: 执行结果
+| 顺序 | 层级 | 核心职责 | 解决的核心问题 |
+|------|------|----------|--------------|
+| 1 | Token 优化层 | 模型选择、提示精简、进程管理 | Token 预算浪费 |
+| 2 | 记忆持久化层 | 跨会话上下文恢复、模式提取 | AI 每次从零开始 |
+| 3 | 技能匹配层 | 156 个技能模块自动匹配触发 | 同类任务重复探索 |
+| 4 | 验证循环层 | Checkpoint / Continuous 双重验证 | 输出质量无保障 |
+| 5 | 安全扫描层 | AgentShield 命令净化、CVE 扫描 | 危险操作无拦截 |
+| 6 | 并行编排层 | Git Worktrees + 子代理上下文管理 | 复杂任务无法拆解 |
 
-st->cond1
-cond1(no)->op1->cond1
-cond1(yes)->cond2
-cond2(no)->op2->cond2
-cond2(yes)->cond3
-cond3(no)->op5->cond3
-cond3(yes)->op3->op4->e
-```
+处理流程：**用户指令 → Token 预算检查 → 上下文恢复检查 → 安全策略检查 → 技能匹配 → 验证 → 执行结果**。任一层不通过则返回上一级重试，直到通过才进入下一层。
 
 ### 第一层：Token 优化层（Token Optimization）
 
