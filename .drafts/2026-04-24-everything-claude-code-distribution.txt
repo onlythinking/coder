@@ -1,0 +1,18 @@
+【分发草稿】2026-04-24
+
+=== X/Twitter ===
+标题：140K Stars 的 AI 编程终极配置库 everything-claude-code 架构深度解析
+正文：
+GitHub 16.5万⭐、Anthropic Hackathon 冠军、12语言生态覆盖——everything-claude-code 不是配置包，而是一套完整的 Agent Harness 性能优化系统。
+
+本文深入解析其六层架构：Token优化、记忆持久化、技能匹配、验证循环、安全扫描和并行编排，以及 ECC 2.0 Rust 控制平面。
+
+链接：https://www.onlythinking.com/post/2026-04-24-ai-everything-claude-code-agent-harness-system/
+标签：#AICoding #ClaudeCode #Agent #HarnessOptimization #开发效率
+
+=== Hacker News ===
+标题：everything-claude-code: AI Agent Harness 性能优化系统（16.5K Stars，Anthropic Hackathon 冠军）
+链接：https://github.com/affaan-m/everything-claude-code
+
+=== 微信群/朋友圈分享语 ===
+140K Stars 的 Claude Code 配置库深度解析：6层架构、156个技能、Rust 2.0，这可能是我见过最完整的 AI 编程效率优化系统 👇

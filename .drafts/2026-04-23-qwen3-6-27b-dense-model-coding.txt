@@ -1,0 +1,42 @@
+=== 2026-04-23 文章分发草稿 ===
+
+## 文章信息
+标题: Qwen3.6-27B：稠密架构的旗舰级代码能力
+链接: https://www.onlythinking.com/post/qwen3-6-27b-dense-model-coding/
+日期: 2026-04-23
+
+=== Hacker News 备选标题（80字内） ===
+
+选项1: "Qwen3.6-27B: A 27B Dense Model Outperforming MoE Peers in Code Generation"
+选项2: "实测 Qwen3.6-27B：27B 稠密模型 vs 35B MoE，编程能力谁更强？"
+选项3: "Qwen3.6-27B 发布：Dense 架构补全 Qwen3 家族，16GB 显存即可本地运行"
+建议: 选项2（中文社区亲和力强，数据对比吸引点击）
+
+=== Twitter/X 草稿 ===
+
+🐉 Qwen3.6-27B 发布：首款 27B 稠密大模型，专注射程代码能力
+
+Dense vs MoE 怎么选？实测对比：
+- 27B Dense: 16GB显存，推理稳定，无路由开销
+- 35B MoE: 21GB显存，吞吐量更高
+
+中文开发者本地AI编程新选择
+
+#AI #LLM #Qwen #编程 #开源
+
+=== Reddit 备选 (r/programming) ===
+
+Title: Qwen3.6-27B: A 27B Dense Model for Code Generation (Open Source)
+
+Body:
+Qwen team just released Qwen3.6-27B, a Dense architecture model with 27B parameters (all activated per inference) — different from the 35B MoE model released 5 days ago.
+
+Key points:
+- 27B params, all active (Dense) vs 350B total / 35B active (MoE)
+- Q4 quantized ~16GB VRAM, runs on RTX 3080/3090
+- Benchmarks show strong code generation performance
+- 128K context window
+
+Full comparison table and local deployment guide in the post.
+
+Discussion: Dense vs MoE for coding tasks — which do you prefer and why?

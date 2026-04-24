@@ -1,0 +1,28 @@
+=== 2026-04-24 文章发布草稿 ===
+标题：当Go语言核心贡献者说「我不喜欢现在的云」：exe.dev的云端重塑
+链接：https://www.onlythinking.com/post/exe-dev-reinventing-cloud/
+
+=== Hacker News 备选标题（80字内）===
+1. "I don't like the cloud today": Why a Go core contributor is building a new one
+2. Go语言核心贡献者：为什么我要再造一个云
+3. The cloud is the wrong abstraction (by David Crawshaw)
+
+=== Twitter/X 草稿 ===
+David Crawshaw（Go语言核心贡献者）公开批评现有云抽象的三大缺陷：
+• VM是错误的形状
+• SSD时代远程存储IOPS倒退100倍  
+• 网络出口定价是数据中心的10倍
+
+他在做 exe.dev。中文技术圈少有的第一性原理云重构分析。
+
+#云计算 #Go语言 #云原生 #基础设施
+
+=== Reddit (r/programming) 备选 ===
+Title: A Go core contributor argues today's cloud abstractions are "the wrong shape"
+
+Body: David Crawshaw (Go core contributor, startup co-founder) just published his reasoning for building a new cloud platform called exe.dev. His core arguments:
+- VMs are tied to CPU/memory, limiting elasticity
+- Remote storage overhead went from 10% (HDD era) to 10x (SSD era)
+- Cloud egress pricing is 10x what you pay in a normal data center
+
+He wants to expose real physical computers through the cloud API. Interesting read for anyone dealing with cloud vendor lock-in.
