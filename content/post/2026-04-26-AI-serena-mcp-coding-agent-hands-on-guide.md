@@ -1,5 +1,5 @@
 ---
-title: "给AI编程助手装上"IDE大脑"：代码重构从此不再踩坑"
+title: "给AI编程助手装上「IDE大脑」：代码重构从此不再踩坑"
 date: 2026-04-26
 description: "GitHub星标超23K的Serena MCP工具包，如何让Claude Code等AI编程助手获得符号级别的代码理解能力？本文手把手演示安装配置到实战技巧，解决AI编程工具普遍面临的上下文碎片化、跨文件重构困难等核心痛点。"
 tags: ["MCP", "AI编程", "Claude Code", "Serena", "编程助手", "开发效率", "大语言模型"]
