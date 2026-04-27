@@ -1,5 +1,5 @@
 ---
-title: "国产大模型编程PK：谁才是真神器"
+title: "AI编程助手选哪家？四大国产模型横评"
 date: 2026-04-27
 description: "深度对比GLM5.1、Kimi2.6、MiniMax2.7、DeepSeekV4四大国产LLM编程能力，附场景化选型建议"
 tags: ["AI", "LLM", "编程", "评测"]
