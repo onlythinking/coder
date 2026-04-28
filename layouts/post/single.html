@@ -1,4 +1,6 @@
 {{ define "content" -}}
+  {{- $showToc := or .Params.toc (and .Site.Params.toc (ne .Params.toc false)) -}}
+  {{- $showQr := or .Params.qrCode (and .Site.Params.qrCode (ne .Params.qrCode false)) -}}
   <article class="post bg-white">
     <!-- post-header -->
     <header class="post-header">
@@ -31,9 +33,6 @@
     </div>
     {{- end -}}
 
-    <!-- TOC -->
-    {{- partial "post/toc.html" . -}}
-
     <!-- Outdated Info Warning -->
     {{- partial "post/outdated-info-warning.html" . -}}
 
@@ -54,6 +53,16 @@
 
     <!-- Reward -->
     {{- partial "post/reward.html" . -}}
+
+    {{- if $showToc -}}
+    <aside class="post-side-rail">
+      {{- partial "post/toc.html" . -}}
+    </aside>
+    {{- end -}}
+
+    {{- if $showQr -}}
+      {{- partial "qr_code.html" . -}}
+    {{- end -}}
 
     <footer class="post-footer">
       {{ with .Params.tags -}}

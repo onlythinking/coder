@@ -4,55 +4,6 @@
 @import "_variables";
 @import "_common/_utils";
 
-// ========== 品牌主题色 ========== //
-// 主题色：深靛蓝渐变
-$brand-primary: #1a1a3e;
-$brand-gradient: linear-gradient(135deg, #1a1a3e 0%, #2d4a6e 50%, #1a3a5c 100%);
-
-// ========== Header 品牌化 ========== //
-// 顶部加深色背景，品牌感更强
-#header {
-  background: $brand-gradient !important;
-  border-top: none !important;
-  padding: 24px 30px !important;
-  margin-bottom: 0 !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
-
-  .logo-wrapper {
-    float: left;
-
-    .logo {
-      font-size: 28px !important;
-      font-family: "Source Sans Pro", "PingFang SC", "Microsoft YaHei", sans-serif !important;
-      font-weight: 700 !important;
-      color: #ffffff !important;
-      letter-spacing: 1px;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    }
-  }
-
-  .site-navbar {
-    float: right;
-
-    .menu {
-      font-family: "Source Sans Pro", "PingFang SC", "Microsoft YaHei", sans-serif !important;
-
-      .menu-item-link {
-        font-size: 16px !important;
-        color: rgba(255, 255, 255, 0.85) !important;
-        padding: 4px 8px;
-        border-radius: 4px;
-        transition: color 0.2s, background 0.2s;
-
-        &:hover {
-          color: #ffffff !important;
-          background: rgba(255, 255, 255, 0.1) !important;
-        }
-      }
-    }
-  }
-}
-
 // 覆盖 body 的 border-top
 body {
   border-top: none !important;
@@ -74,59 +25,6 @@ body {
 
   &:hover {
     border-left-color: #c05b4d;
-  }
-}
-
-// ========== 微信公众号二维码 ========== //
-// 改为右下角浮动小卡片，不占用正文空间
-.qr_code {
-  position: fixed !important;
-  bottom: 24px !important;
-  right: 24px !important;
-  left: auto !important;
-  top: auto !important;
-  width: 120px !important;
-  margin: 0 !important;
-  padding: 12px 10px !important;
-  background: #ffffff !important;
-  border: 1px solid #e8e8e8 !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
-  z-index: 100;
-
-  .qr_code_pc_img {
-    width: 100px !important;
-    height: 100px !important;
-    display: block !important;
-    margin: 0 auto 6px !important;
-    border-radius: 4px;
-  }
-
-  p {
-    font-size: 11px !important;
-    color: #555 !important;
-    text-align: center !important;
-    margin: 0 !important;
-    line-height: 1.4 !important;
-  }
-}
-
-@include max-screen($toc-max-sreen-width) {
-  .qr_code {
-    display: block !important;
-    bottom: 16px !important;
-    right: 16px !important;
-    width: 100px !important;
-    padding: 8px 6px !important;
-
-    .qr_code_pc_img {
-      width: 80px !important;
-      height: 80px !important;
-    }
-
-    p {
-      font-size: 10px !important;
-    }
   }
 }
 
@@ -172,33 +70,9 @@ body {
 
 // ========== 手机端适配 ========== //
 @include max-screen(768px) {
-  #header {
-    padding: 16px 12px !important;
-
-    .logo-wrapper .logo {
-      font-size: 20px !important;
-    }
-  }
-
   .posts .post {
     padding-left: 8px;
     margin-left: -8px;
-  }
-
-  .qr_code {
-    bottom: 12px !important;
-    right: 12px !important;
-    width: 90px !important;
-    padding: 6px 4px !important;
-
-    .qr_code_pc_img {
-      width: 72px !important;
-      height: 72px !important;
-    }
-
-    p {
-      font-size: 9px !important;
-    }
   }
 }
 

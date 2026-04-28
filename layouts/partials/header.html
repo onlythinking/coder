@@ -1,0 +1,37 @@
+{{- $titleParts := split .Site.Title "|" -}}
+{{- $brand := trim (index $titleParts 0) " " -}}
+{{- $tagline := "" -}}
+{{- if gt (len $titleParts) 1 -}}
+  {{- $tagline = trim (delimit (after 1 $titleParts) "|") " " -}}
+{{- end -}}
+
+<div class="logo-wrapper">
+  <div class="brand-block">
+    <a href="{{ "/" | relLangURL }}" class="logo brand-mark">{{ $brand }}</a>
+    {{- with $tagline -}}
+      <span class="logo-tagline">{{ . }}</span>
+    {{- end -}}
+  </div>
+</div>
+
+{{ partial "header/language-selector.html" . }}
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    {{ range .Site.Menus.main -}}
+      <li class="menu-item">
+        <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
+      </li>
+    {{- end }}
+
+    {{ if .Site.Params.search.google.enable }}
+    <li class="menu-item">
+      <a id="openSearch" class="menu-item-link menu-item-search" href="#" aria-label="搜索站内内容">
+        <i class="iconfont">
+          {{ partial "svg/search.svg" }}
+        </i>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>

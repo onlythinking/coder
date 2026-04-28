@@ -1,0 +1,41 @@
+{{- $titleParts := split .Site.Title "|" -}}
+{{- $brand := trim (index $titleParts 0) " " -}}
+{{- $tagline := "" -}}
+{{- if gt (len $titleParts) 1 -}}
+  {{- $tagline = trim (delimit (after 1 $titleParts) "|") " " -}}
+{{- end -}}
+
+<div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-navbar-icon" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="mobile-header-logo">
+    <a href="{{ "/" | relLangURL }}" class="logo">{{ $brand }}</a>
+    {{- with $tagline -}}
+      <span class="mobile-logo-tagline">{{ . }}</span>
+    {{- end -}}
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    {{ range .Site.Menus.main -}}
+      <a href="{{ .URL | safeURL }}">
+        <li class="mobile-menu-item">{{ .Name }}</li>
+      </a>
+    {{- end }}
+
+    {{ if .Site.Params.search.google.enable }}
+      <li class="mobile-menu-item">
+        <a id="openSearchMobile" class="mobile-menu-item-link menu-item-search" href="#" aria-label="搜索站内内容">
+          <i class="iconfont">
+            {{ partial "svg/search.svg" }}
+          </i>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+
+  {{ partial "header/language-selector.html" . }}
+</nav>
