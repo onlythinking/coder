@@ -27,3 +27,33 @@
     max-height: 240px;
   }
 }
+
+/* 手机端文章标题溢出修复 */
+.post-header .post-title,
+.posts .post-title {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  word-break: break-all !important;
+}
+
+@media screen and (max-width: 800px) {
+  .post-header .post-title {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+  }
+
+  .posts .post-title {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .post-header .post-title {
+    font-size: 16px !important;
+  }
+
+  .posts .post-title {
+    font-size: 14px !important;
+  }
+}
