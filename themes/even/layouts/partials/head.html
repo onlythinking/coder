@@ -4,10 +4,10 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="theme-color" content="#1a1a3e" />
+<meta name="msapplication-navbutton-color" content="#1a1a3e">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+<meta name="apple-mobile-web-app-status-bar-style" content="#1a1a3e">
 
 <!-- author & description & keywords  -->
 <meta name="author" content="{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Params.Author.name | safeHTML }}{{ end }}" />
@@ -79,7 +79,9 @@
 {{- template "_internal/schema.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
 
-<!-- 结构化数据 JSON-LD -->
+<!-- ==================== SEO 结构化数据增强 ==================== -->
+
+{{/* ---- Article Schema 增强：加入 image 和 author ---- */}}
 {{ if .IsPage }}
 <script type="application/ld+json">
 {
@@ -87,14 +89,20 @@
   "@type": "BlogPosting",
   "headline": "{{ .Title }}",
   "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}",
+  "image": "{{ if .Params.cover }}{{ .Params.cover | relURL }}{{ else }}{{ "img/og-default.jpg" | relURL }}{{ end }}",
   "author": {
     "@type": "Person",
-    "name": "{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.Author.name }}{{ end }}"
+    "name": "{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.Author.name }}{{ end }}",
+    "url": "{{ .Site.BaseURL }}"
   },
   "publisher": {
     "@type": "Organization",
     "name": "{{ .Site.Title }}",
-    "url": "{{ .Site.BaseURL }}"
+    "url": "{{ .Site.BaseURL }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ "favicon-32x32.png" | relURL }}"
+    }
   },
   "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
@@ -107,6 +115,93 @@
   "articleSection": "{{ with .Section }}{{ . }}{{ end }}"
 }
 </script>
+{{ end }}
+
+{{/* ---- BreadcrumbList Schema（分类页/标签页/文章页） ---- */}}
+{{ if or .IsPage .IsSection .IsTaxonomy }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{ if .IsPage }}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "{{ .Site.BaseURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ .Section | default "文章" }}",
+      "item": "{{ .Site.BaseURL }}{{ .Section }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+    {{ else if .IsSection }}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "{{ .Site.BaseURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+    {{ else if .IsTaxonomy }}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "{{ .Site.BaseURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
+
+<!-- ==================== Open Graph og:image 增强 ==================== -->
+{{/* Hugo 内置模板已处理基础 og:*，这里补充 og:image ---- */}}
+{{- /* 文章页优先用封面图 */ -}}
+{{- $ogImage := "" -}}
+{{- if .Params.cover -}}
+  {{- $ogImage = .Params.cover | relURL -}}
+{{- else if and .IsPage .Params.images -}}
+  {{- $ogImage = index .Params.images 0 | relURL -}}
+{{- else -}}
+  {{- $ogImage = "img/og-default.jpg" | relURL -}}
+{{- end -}}
+<meta property="og:image" content="{{ $ogImage }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="{{ if .IsPage }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}" />
+
+{{/* 文章页额外增强 */}}
+{{ if .IsPage }}
+<meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}" />
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+<meta property="article:author" content="{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.Author.name }}{{ end }}" />
+{{ if .Params.categories }}
+<meta property="article:section" content="{{ index .Params.categories 0 }}" />
+{{ end }}
+{{ range first 5 .Params.tags }}
+<meta property="article:tag" content="{{ . }}" />
+{{ end }}
 {{ end }}
 
 <!-- Polyfill for old browsers -->

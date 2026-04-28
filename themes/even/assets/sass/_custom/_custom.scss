@@ -1,37 +1,211 @@
 // ==============================
-// Custom style
+// Custom style - 编程码农品牌定制
 // ==============================
-// You can override the variables in _variables.scss to customize the style
 @import "_variables";
 @import "_common/_utils";
 
+// ========== 品牌主题色 ========== //
+// 主题色：深靛蓝渐变
+$brand-primary: #1a1a3e;
+$brand-gradient: linear-gradient(135deg, #1a1a3e 0%, #2d4a6e 50%, #1a3a5c 100%);
+
+// ========== Header 品牌化 ========== //
+// 顶部加深色背景，品牌感更强
+#header {
+  background: $brand-gradient !important;
+  border-top: none !important;
+  padding: 24px 30px !important;
+  margin-bottom: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+
+  .logo-wrapper {
+    float: left;
+
+    .logo {
+      font-size: 28px !important;
+      font-family: "Source Sans Pro", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .site-navbar {
+    float: right;
+
+    .menu {
+      font-family: "Source Sans Pro", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+
+      .menu-item-link {
+        font-size: 16px !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+        padding: 4px 8px;
+        border-radius: 4px;
+        transition: color 0.2s, background 0.2s;
+
+        &:hover {
+          color: #ffffff !important;
+          background: rgba(255, 255, 255, 0.1) !important;
+        }
+      }
+    }
+  }
+}
+
+// 覆盖 body 的 border-top
+body {
+  border-top: none !important;
+}
+
+// ========== 首页 Hero Banner ========== //
+// 标题区域下方加一条品牌色装饰条
+.content-wrapper {
+  padding-top: 0 !important;
+}
+
+// ========== 文章列表样式 ========== //
+// 文章之间加品牌色左边框强调
+.posts .post {
+  border-left: 3px solid transparent;
+  padding-left: 16px;
+  margin-left: -16px;
+  transition: border-left-color 0.2s ease;
+
+  &:hover {
+    border-left-color: #c05b4d;
+  }
+}
+
+// ========== 微信公众号二维码 ========== //
+// 改为右下角浮动小卡片，不占用正文空间
 .qr_code {
-  position: fixed;
-  width: $post-toc-width;
-  margin-left: $post-toc-margin-left;
-  padding: 10px;
-  font-family: $global-serif-font-family;
-  border-radius: 4px;
-  background: #fff;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
-  word-wrap: break-word;
-  box-sizing: border-box;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  left: auto !important;
+  top: auto !important;
+  width: 120px !important;
+  margin: 0 !important;
+  padding: 12px 10px !important;
+  background: #ffffff !important;
+  border: 1px solid #e8e8e8 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+  z-index: 100;
+
+  .qr_code_pc_img {
+    width: 100px !important;
+    height: 100px !important;
+    display: block !important;
+    margin: 0 auto 6px !important;
+    border-radius: 4px;
+  }
+
+  p {
+    font-size: 11px !important;
+    color: #555 !important;
+    text-align: center !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+  }
 }
 
 @include max-screen($toc-max-sreen-width) {
   .qr_code {
-    display: none;
+    display: block !important;
+    bottom: 16px !important;
+    right: 16px !important;
+    width: 100px !important;
+    padding: 8px 6px !important;
+
+    .qr_code_pc_img {
+      width: 80px !important;
+      height: 80px !important;
+    }
+
+    p {
+      font-size: 10px !important;
+    }
+  }
+}
+
+// ========== 页脚样式 ========== //
+// 淡化统计数字，更低调
+.footer {
+  .busuanzi-footer {
+    font-size: 12px;
+    color: #aaa;
+
+    #busuanzi_container_site_pv,
+    #busuanzi_container_site_uv {
+      color: #bbb;
+      font-size: 12px;
+    }
+
+    .division {
+      color: #ccc;
+    }
+  }
+
+  .copyright {
+    font-size: 12px;
+    color: #aaa;
+
+    .heart {
+      color: #c05b4d;
+    }
+  }
+
+  .social-links {
+    .iconfont {
+      font-size: 24px;
+      color: #999;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #c05b4d;
+      }
+    }
+  }
+}
+
+// ========== 手机端适配 ========== //
+@include max-screen(768px) {
+  #header {
+    padding: 16px 12px !important;
+
+    .logo-wrapper .logo {
+      font-size: 20px !important;
+    }
+  }
+
+  .posts .post {
+    padding-left: 8px;
+    margin-left: -8px;
+  }
+
+  .qr_code {
+    bottom: 12px !important;
+    right: 12px !important;
+    width: 90px !important;
+    padding: 6px 4px !important;
+
+    .qr_code_pc_img {
+      width: 72px !important;
+      height: 72px !important;
+    }
+
+    p {
+      font-size: 9px !important;
+    }
   }
 }
 
 // 手机端文章标题溢出修复
 @include max-screen(768px) {
   .post-header .post-title {
-    font-size: 20px !important;
+    font-size: 18px !important;
     line-height: 1.4;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -39,7 +213,7 @@
   }
 
   .posts .post-title {
-    font-size: 18px !important;
+    font-size: 16px !important;
     line-height: 1.4;
     word-wrap: break-word;
     overflow-wrap: break-word;
