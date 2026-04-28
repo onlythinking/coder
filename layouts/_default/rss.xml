@@ -1,45 +1,38 @@
-{{- $pages := .Pages -}}
-{{- if .IsHome -}}
-  {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections -}}
-{{- end -}}
-{{- $limit := site.Config.Services.RSS.Limit -}}
-{{- if $limit -}}
-  {{- $pages = $pages | first $limit -}}
+{{- /* RSS 模板：仅限首页使用，自动排除非首页的 term/taxonomy 页面 */ -}}
+{{- if not .IsHome -}}
+  {{- /* 非首页不输出 RSS，避免渲染失败 */ -}}
+  {{- "" -}}
+{{- else -}}
+{{- $pages := .Site.RegularPages -}}
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- $hasLimit := and $limit (gt $limit 0) -}}
+{{- if $hasLimit -}}
+{{-   $pages = $pages | first $limit -}}
 {{- end -}}
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}</title>
-    <link>{{ .Permalink }}</link>
-    <description>{{ if .IsHome }}{{ site.Params.description }}{{ else }}{{ .Description }}{{ end }}</description>
-    <copyright>{{ with site.Copyright }}{{ . }}{{ else }}© {{ now.Year }} {{ site.Title }}{{ end }}</copyright>
+    <title>{{ .Site.Title }}</title>
+    <link>{{ .Site.BaseURL }}</link>
+    <description>{{ .Site.Params.description }}</description>
+    <language>{{ .Site.Language.LanguageCode }}</language>
     <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
     <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml"/>
-    <language>{{ site.Language.LanguageCode }}</language>
-    {{- with site.Params.author }}<managingEditor>{{ . }}</managingEditor>{{ end }}
-    {{- with site.Params.author }}<webMaster>{{ . }}</webMaster>{{ end }}
-    {{- with site.Params.copyright }}<cloud>{{ . }}</cloud>{{ end }}
-    <ttl>{{ site.Timezone }}</ttl>
-    {{- if site.Config.Services.RSS.Favicon -}}
-    <image>
-      <url>{{ "favicon.ico" | absURL }}</url>
-      <title>{{ site.Title }}</title>
-      <link>{{ site.BaseURL }}</link>
-    </image>
-    {{- end -}}
+    {{- with .Site.Params.author }}<managingEditor>{{ . }}</managingEditor>{{ end }}
     {{- range $pages }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
       <guid isPermaLink="true">{{ .Permalink }}</guid>
       <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      <author>{{ with .Params.author }}{{ . }}{{ else }}{{ site.Params.author.name }}{{ end }}</author>
-      <description>{{ .Description | default .Summary | html }}</description>
+      <author>{{ with .Params.author }}{{ . }}{{ else }}{{ $.Site.Params.author.name }}{{ end }}</author>
+      <description>{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | html }}{{ end }}</description>
       {{- if .Content }}
       <content:encoded><![CDATA[{{ .Content }}]]></content:encoded>
       {{- end }}
-      {{- range .Keywords }}<category>{{ . }}</category>{{ end }}
+      {{- range first 5 .Keywords }}<category>{{ . }}</category>{{ end }}
     </item>
     {{- end }}
   </channel>
 </rss>
+{{- end -}}
