@@ -13,7 +13,7 @@ toc: true
 
 ## 背景：AI编程助手的新流派
 
-GitHub上有一个最近引起不少关注的开源项目 [gensyn-ai/codeassist](https://github.com/gensyn-ai/codeassist)，目前已获得 **698 颗 Stars**、123 次 Fork**。它的核心理念与主流AI编程助手截然不同：不是帮你补全代码，而是通过强化学习，让AI在你写代码的过程中**持续学习你的习惯和风格**，最终成为一个真正"懂你"的编程搭档。
+GitHub上有一个最近引起不少关注的开源项目 [gensyn-ai/codeassist](https://github.com/gensyn-ai/codeassist)，目前已获得 **698 颗 Stars**、123 次 Fork。它的核心理念与主流AI编程助手截然不同：不是帮你补全代码，而是通过强化学习，让AI在你写代码的过程中**持续学习你的习惯和风格**，最终成为一个真正"懂你"的编程搭档。
 
 说到AI编程助手，大多数人第一时间想到的是 GitHub Copilot、Cursor、Windsurf 这些工具。它们的核心机制是"预训练+提示补全"：用海量开源代码训练一个大模型，你打字时模型预测下一个token完成补全。这种方式效果不错，最大的问题是**模型是在学所有人的代码，而不是学你一个人的风格**。
 
