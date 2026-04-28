@@ -13,7 +13,7 @@
     <link>{{ .Permalink }}</link>
     <description>{{ if .IsHome }}{{ site.Params.description }}{{ else }}{{ .Description }}{{ end }}</description>
     <copyright>{{ with site.Copyright }}{{ . }}{{ else }}© {{ now.Year }} {{ site.Title }}{{ end }}</copyright>
-    <lastBuildDate>{{ now | format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
     <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml"/>
     <language>{{ site.Language.LanguageCode }}</language>
     {{- with site.Params.author }}<managingEditor>{{ . }}</managingEditor>{{ end }}
