@@ -1,28 +1,29 @@
-{- /* RSS 模板：内嵌 XSL data URI，解决浏览器 CSP 跨域限制 */ -}
+{{- /* RSS 内嵌 XSL data URI，解决浏览器 CSP 跨域限制 */ -}}
 <?xml version="1.0" encoding="utf-8"?>
+{{- /* xml-stylesheet via data URI */ -}}
 <?xml-stylesheet type="text/xsl" href="data:application/xslt+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHhzbDpzdHlsZXNoZWV0IHZlcnNpb249IjEuMCIKICB4bWxuczp4c2w9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvWFNML1RyYW5zZm9ybSIKICB4bWxuczphdG9tPSJodHRwOi8vd3d3LnczLm9yZy8yMDA1L0F0b20iCiAgeG1sbnM6Y29udGVudD0iaHR0cDovL3B1cmwub3JnL3Jzcy8xLjAvbW9kdWxlcy9jb250ZW50LyI+CiAgPHhzbDpvdXRwdXQgbWV0aG9kPSJodG1sIiBpbmRlbnQ9InllcyIgZW5jb2Rpbmc9IlVURi04Ii8+CgogIDx4c2w6dGVtcGxhdGUgbWF0Y2g9Ii8iPgogICAgPGh0bWwgbGFuZz0iemgtQ04iPgogICAgPGhlYWQ+CiAgICAgIDxtZXRhIGNoYXJzZXQ9IlVURi04Ii8+CiAgICAgIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MSIvPgogICAgICA8dGl0bGU+PHhzbDp2YWx1ZS1vZiBzZWxlY3Q9InJzcy9jaGFubmVsL3RpdGxlIi8+IC0gUlNTIOiuoumYhTwvdGl0bGU+CiAgICAgIDxzdHlsZT4KICAgICAgICBib2R5IHsgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sICJQaW5nRmFuZyBTQyIsICJNaWNyb3NvZnQgWWFIZWkiLCBzYW5zLXNlcmlmOyBtYXgtd2lkdGg6IDkwMHB4OyBtYXJnaW46IDAgYXV0bzsgcGFkZGluZzogMjBweDsgYmFja2dyb3VuZDogI2Y4ZjVlYzsgY29sb3I6ICMzNDQ5NWU7IH0KICAgICAgICBoMSB7IGJvcmRlci1ib3R0b206IDNweCBzb2xpZCAjMWExYTNlOyBwYWRkaW5nLWJvdHRvbTogMTBweDsgY29sb3I6ICMxYTFhM2U7IH0KICAgICAgICAuY2hhbm5lbC1kZXNjIHsgY29sb3I6ICM2NjY7IG1hcmdpbi1ib3R0b206IDMwcHg7IH0KICAgICAgICAuaXRlbSB7IGJhY2tncm91bmQ6ICNmZmY7IGJvcmRlci1yYWRpdXM6IDhweDsgcGFkZGluZzogMjBweDsgbWFyZ2luLWJvdHRvbTogMTZweDsgYm94LXNoYWRvdzogMCAycHggOHB4IHJnYmEoMCwwLDAsMC4wOCk7IH0KICAgICAgICAuaXRlbSBoMiB7IG1hcmdpbjogMCAwIDhweDsgZm9udC1zaXplOiAxOHB4OyB9CiAgICAgICAgLml0ZW0gaDIgYSB7IGNvbG9yOiAjMWExYTNlOyB0ZXh0LWRlY29yYXRpb246IG5vbmU7IH0KICAgICAgICAuaXRlbSBoMiBhOmhvdmVyIHsgY29sb3I6ICNjMDViNGQ7IH0KICAgICAgICAuaXRlbS1tZXRhIHsgZm9udC1zaXplOiAxMnB4OyBjb2xvcjogIzk5OTsgbWFyZ2luLWJvdHRvbTogMTBweDsgfQogICAgICAgIC5pdGVtLWRlc2MgeyBjb2xvcjogIzU1NTsgbGluZS1oZWlnaHQ6IDEuNjsgZm9udC1zaXplOiAxNHB4OyB9CiAgICAgICAgLml0ZW0tZGVzYyBpbWcgeyBtYXgtd2lkdGg6IDEwMCU7IGhlaWdodDogYXV0bzsgfQogICAgICAgIC5pdGVtLWRlc2MgcHJlIHsgYmFja2dyb3VuZDogI2Y2ZjZmNjsgcGFkZGluZzogMTJweDsgYm9yZGVyLXJhZGl1czogNHB4OyBvdmVyZmxvdy14OiBhdXRvOyBmb250LXNpemU6IDEycHg7IH0KICAgICAgICAucmVhZC1tb3JlIHsgZGlzcGxheTogaW5saW5lLWJsb2NrOyBtYXJnaW4tdG9wOiAxMHB4OyBjb2xvcjogI2MwNWI0ZDsgZm9udC1zaXplOiAxNHB4OyB9CiAgICAgICAgLmZvb3RlciB7IHRleHQtYWxpZ246IGNlbnRlcjsgY29sb3I6ICNhYWE7IGZvbnQtc2l6ZTogMTJweDsgbWFyZ2luLXRvcDogNDBweDsgcGFkZGluZy10b3A6IDIwcHg7IGJvcmRlci10b3A6IDFweCBzb2xpZCAjZTBlMGUwOyB9CiAgICAgIDwvc3R5bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgPGgxPjx4c2w6dmFsdWUtb2Ygc2VsZWN0PSJyc3MvY2hhbm5lbC90aXRsZSIvPjwvaDE+CiAgICAgIDxwIGNsYXNzPSJjaGFubmVsLWRlc2MiPjx4c2w6dmFsdWUtb2Ygc2VsZWN0PSJyc3MvY2hhbm5lbC9kZXNjcmlwdGlvbiIvPjwvcD4KCiAgICAgIDx4c2w6Zm9yLWVhY2ggc2VsZWN0PSJyc3MvY2hhbm5lbC9pdGVtIj4KICAgICAgICA8ZGl2IGNsYXNzPSJpdGVtIj4KICAgICAgICAgIDxoMj48YSBocmVmPSJ7bGlua30iIHRhcmdldD0iX2JsYW5rIj48eHNsOnZhbHVlLW9mIHNlbGVjdD0idGl0bGUiLz48L2E+PC9oMj4KICAgICAgICAgIDxkaXYgY2xhc3M9Iml0ZW0tbWV0YSI+CiAgICAgICAgICAgIDx4c2w6dmFsdWUtb2Ygc2VsZWN0PSJwdWJEYXRlIi8+IHwKICAgICAgICAgICAg5L2c6ICF77yaPHhzbDp2YWx1ZS1vZiBzZWxlY3Q9ImF1dGhvciIvPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJpdGVtLWRlc2MiPgogICAgICAgICAgICA8eHNsOnZhbHVlLW9mIHNlbGVjdD0iZGVzY3JpcHRpb24iIGRpc2FibGUtb3V0cHV0LWVzY2FwaW5nPSJ5ZXMiLz4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGEgY2xhc3M9InJlYWQtbW9yZSIgaHJlZj0ie2xpbmt9IiB0YXJnZXQ9Il9ibGFuayI+6ZiF6K+75pu05aSaIOKGkjwvYT4KICAgICAgICA8L2Rpdj4KICAgICAgPC94c2w6Zm9yLWVhY2g+CgogICAgICA8ZGl2IGNsYXNzPSJmb290ZXIiPgogICAgICAgIDxwPuS9v+eUqCBSU1Mg6ZiF6K+75Zmo6K6i6ZiF5q2k5rqQ77yaPGNvZGU+PHhzbDp2YWx1ZS1vZiBzZWxlY3Q9InJzcy9jaGFubmVsL2xpbmsiLz48L2NvZGU+PC9wPgogICAgICAgIDxwPlBvd2VyZWQgYnkgSHVnbyB8IDxhIGhyZWY9Ii8iPui/lOWbnuWNmuWuoummlumhtTwvYT48L3A+CiAgICAgIDwvZGl2PgogICAgPC9ib2R5PgogICAgPC9odG1sPgogIDwveHNsOnRlbXBsYXRlPgo8L3hzbDpzdHlsZXNoZWV0Pgo="?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>{ .Site.Title }</title>
-    <link>{ .Site.BaseURL }</link>
-    <description>{ .Site.Params.description }</description>
-    <language>{ .Site.Language.LanguageCode }</language>
-    <lastBuildDate>{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }</lastBuildDate>
-    <atom:link href="{ .Permalink }" rel="self" type="application/rss+xml"/>
-    {- with .Site.Params.author }<managingEditor>{ . }</managingEditor>{ end }
-    {- range first 100 .Site.RegularPages }
+    <title>{{ .Site.Title }}</title>
+    <link>{{ .Site.BaseURL }}</link>
+    <description>{{ .Site.Params.description }}</description>
+    <language>{{ .Site.Language.LanguageCode }}</language>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml"/>
+    {{- with .Site.Params.author }}<managingEditor>{{ . }}</managingEditor>{{ end }}
+    {{- range first 100 .Site.RegularPages }}
     <item>
-      <title>{ .Title }</title>
-      <link>{ .Permalink }</link>
-      <guid isPermaLink="true">{ .Permalink }</guid>
-      <pubDate>{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }</pubDate>
-      <author>{ with .Params.author }{ . }{ else }{ $.Site.Params.author.name }{ end }</author>
-      <description>{ if .Description }{ .Description }{ else }{ .Summary | html }{ end }</description>
-      {- if .Content }
-      <content:encoded><![CDATA[{ .Content }]]></content:encoded>
-      {- end }
-      {- range first 5 .Keywords }<category>{ . }</category>{ end }
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <author>{{ with .Params.author }}{{ . }}{{ else }}{{ $.Site.Params.author.name }}{{ end }}</author>
+      <description>{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | html }}{{ end }}</description>
+      {{- if .Content }}
+      <content:encoded><![CDATA[{{ .Content }}]]></content:encoded>
+      {{- end }}
+      {{- range first 5 .Keywords }}<category>{{ . }}</category>{{ end }}
     </item>
-    {- end }
+    {{- end }}
   </channel>
 </rss>
