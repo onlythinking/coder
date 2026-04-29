@@ -1,0 +1,46 @@
+# 2026-04-29 Distribution Draft
+# Article: AI生成代码的版权归属：开发者必须知道的法律边界
+# URL: https://www.onlythinking.com/post/2026-04-29-ai-who-owns-ai-generated-code/
+
+## Hacker News 备选标题（80字内）
+
+1. AI编程工具生成的代码，版权归谁？开发者必知的法律边界
+2. Claude Code源代码泄露后：AI代码版权的三大法律风险
+3. 从Anthropic源码泄露看AI代码版权灰色地带
+
+## Twitter/X 草稿
+
+AI生成代码的版权归属问题正在成为每个开发者必须面对的现实问题。
+
+Claude Code、Cursor等工具生成的代码，版权归谁？开源污染、职务作品归属、商业项目风险——本文梳理了开发者必须知道的法律边界。
+
+🔗 https://www.onlythinking.com/post/2026-04-29-ai-who-owns-ai-generated-code/
+
+#AI #编程 #法律 #ClaudeCode #开发者 #开源
+
+## Reddit 草稿（r/programming）
+
+Title: AI编程工具生成的代码到底归谁？一篇开发者的法律风险指南
+
+Body:
+当Claude Code、Cursor等AI工具成为日常工作流的一部分，一个关键问题浮出水面：**AI生成的代码，版权归谁？**
+
+这篇文章从开发者视角分析了三种主要场景：
+
+1. **开源项目中的AI代码** — GPL训练数据污染风险
+2. **商业项目中的职务作品** — 雇佣合同的法律灰色地带
+3. **开源社区贡献** — 各大基金会正在建立的新规范
+
+核心建议：
+- 记录AI工具的使用情况（法律证据）
+- 分层管理代码（核心业务层 vs 脚手架层）
+- 了解你参与项目的AI使用政策
+
+原文：https://www.onlythinking.com/post/2026-04-29-ai-who-owns-ai-generated-code/
+
+## HN Score 评估
+
+当前文章热度：低（发布后需观察）
+阈值：HN Score > 80 时准备提交
+
+建议发布后24小时检查HN提及情况，再决定是否主动提交。

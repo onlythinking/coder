@@ -1,0 +1,44 @@
+===============================================
+文章：DeepSeek V4 Pro 体验：社区第一批吃螃蟹的人怎么说
+URL：https://www.onlythinking.com/post/2026-04-25-ai-deepseek-v4-pro-first-impression/
+日期：2026-04-25
+===============================================
+
+【X / Twitter】
+标题：DeepSeek V4 Pro 真实体验：V2EX/Reddit/HN 首批用户反馈汇总
+正文：V4 Pro 发布一周，社区真实评价来了。好评：512K 上下文、MCP 工具调用提升、中文理解进步；差评：天气卡片不稳定、指令遵循倒退。和 Claude 3.7/GPT-4.1 横向对比数据也有。
+标签：#DeepSeek #LLM #AI #大模型 #Claude #GPT4
+
+【Hacker News 备选标题】
+DeepSeek V4 Pro 体验：社区第一批吃螃蟹的人怎么说（58字）
+
+【Reddit r/LocalLLaMA 草稿】
+Title: DeepSeek V4 Pro First Impressions - Community Roundup (V2EX, Reddit, HN)
+
+Body:
+4月中旬 DeepSeek V4 Pro 上线，本文整理了 V2EX/Reddit r/LocalLLaMA/Hacker News 第一批用户的真实反馈。
+
+Key findings:
+- 512K context window (2x V3)
+- MCP tool calling accuracy: 78% → 89%
+- China-localized Chinese understanding improved significantly
+- Weakness: function calling stability (~85% vs Claude's ~96%)
+- Instruction following regression vs V3
+
+[Link to full article with benchmark comparison table]
+
+【微信公众号摘要】
+标题：DeepSeek V4 Pro 发布一周，开发者社区真实评价出来了
+
+导语：没有发布会，没有通稿。但 V2EX 和 Reddit 的评论区已经吵翻了天。
+
+核心观点：
+1. 性价比依然是最大优势（$0.28/1M tokens）
+2. 512K 上下文是实打实的提升
+3. Function calling 稳定性是硬伤
+4. 适合个人项目，生产环境建议加验证层
+
+结尾金句：V4 Pro 依然是中国开发者最值得拥有的"性价比之王"，但要在生产环境里挑大梁，还得再等等。
+
+【掘金/知乎备选】
+标题：DeepSeek V4 Pro 首批用户体验：好评与差评都整理好了

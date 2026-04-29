@@ -1,0 +1,54 @@
+===============================================
+DISTRIBUTION DRAFT - 2026-04-27
+===============================================
+
+## 文章信息
+标题: SWE-bench Verified不再评测前沿编程能力：AI编码评估体系的一次深度反思
+URL: https://www.onlythinking.com/post/swe-bench-verified-no-longer-frontier-coding/
+Tags: AI, 编程, 评测, SWE-bench, LLM
+
+===============================================
+HACKER NEWS SUBMISSION
+===============================================
+Title (80字符内):
+SWE-bench Verified不再评测前沿编程能力 (AI编码评测反思)
+
+Alternative titles:
+- AI编程评测失效：为什么SWE-bench Verified已不达标
+- 从刷榜到实战：AI编程能力评估体系深度反思
+
+URL: https://www.onlythinking.com/post/swe-bench-verified-no-longer-frontier-coding/
+
+===============================================
+X/Twitter POST
+===============================================
+标题: SWE-bench Verified不再评测前沿编程能力：AI编码评估体系的一次深度反思
+
+Tweet 草稿:
+"SWE-bench Verified被OpenAI官方认定已无法区分前沿编码模型能力。
+
+数据污染、任务粒度错配、评测指标单一——三个核心原因深度解析。
+
+AI编程工具选型，开发者该关注什么？"
+
+Link: https://www.onlythinking.com/post/swe-bench-verified-no-longer-frontier-coding/
+Hashtags: #AI编程 #SWE-bench #LLM #评测基准 #开发者工具
+
+===============================================
+REDDIT (r/programming)
+===============================================
+Title: SWE-bench Verified is no longer a good measure of frontier coding capability - here's why that matters for AI dev tools
+
+Post body:
+OpenAI recently acknowledged that SWE-bench Verified can no longer effectively differentiate between frontier coding models. 
+
+Three key reasons:
+1. Training data contamination / benchmark leakage
+2. Task granularity mismatch (single PR vs. real iterative dev workflow)  
+3. Binary pass/fail metric ignores code quality dimensions
+
+This has major implications for how developers should evaluate AI coding tools. Instead of chasing benchmark scores, focus on real-world task performance.
+
+Full analysis: https://www.onlythinking.com/post/swe-bench-verified-no-longer-frontier-coding/
+
+Cross-post to r/MachineLearning? Yes

@@ -1,0 +1,72 @@
+# 社区分享草稿 — Spinel：Ruby 之父的 AOT 编译器
+
+## 文章信息
+- 标题：Spinel：Ruby 之父的 AOT 编译器 — 写出比 CRuby 快 11.6 倍的程序
+- 链接：https://www.onlythinking.com/post/2026-04-25-tools-spinel-ruby-aot-compiler/
+- 日期：2026-04-25
+
+---
+
+## Hacker News 备选标题（80字内）
+
+1. Spinel: Ruby AOT Compiler by Matz — 11.6x Faster Than CRuby
+2. I built an AOT compiler for Ruby — 86x speedup on Conway's Game of Life
+3. Matz's Spinel: Compile Ruby to Native Binaries with Standard C Toolchain
+4. Ruby Compiled to C then to Machine Code: How Spinel Works
+
+推荐标题（#1，数字驱动 + Matz 背书）：
+> Spinel: Ruby AOT Compiler by Matz — 11.6x Faster Than CRuby
+
+---
+
+## Twitter/X 草稿
+
+🛠️ Ruby 之父 Matz 发布实验性 AOT 编译器 Spinel
+• 将 Ruby 编译为 C 代码，再编译为原生二进制
+• 自举式全程序类型推断
+• 86x 提速（生命游戏）、74x（Ackermann）、34x（递归Fib）
+• 零运行时依赖，产物独立可执行文件
+
+🔗 https://www.onlythinking.com/post/2026-04-25-tools-spinel-ruby-aot-compiler/
+
+#Ruby #AOTCompiler #RubyLang #Matz #Programming
+
+---
+
+## Reddit r/programming 草稿
+
+**Title**: Spinel: Matz's experimental AOT compiler for Ruby achieves 11.6x speedup (GitHub, self-hosting)
+
+**Body**:
+Matz just published Spinel, an experimental Ahead-of-Time compiler for Ruby. It compiles Ruby source → C code → native binary using standard toolchain (gcc/clang), with whole-program type inference and self-hosting compiler backend.
+
+Key results:
+- Conway's Game of Life: 86x faster than CRuby miniruby
+- Ackermann: 74x faster
+- Mandelbrot: 58x faster
+- Self-hosting: compiler written in Ruby, compiles itself to native binary
+
+It's very early (74 tests, 55 benchmarks passing), but the approach is elegant — no custom VM, just Ruby → C → native.
+
+GitHub: https://github.com/matz/spinel
+
+**Relevant subs**: r/ruby, r/ProgrammingLanguages
+
+---
+
+## 微博/微信草稿（中文）
+
+【Ruby 之父发布实验性 AOT 编译器，性能提升最高 86 倍】
+
+Ruby 语言创始人 Matz 近日开源了 Spinel，这是一个将 Ruby 代码 AOT 编译为原生可执行文件的实验性工具链。
+
+核心特点：
+• Ruby → C 代码 → 原生二进制，三阶段编译管线
+• 全程序类型推断 + 自举编译
+• 无运行时依赖，产物可直接分发
+• 对计算密集型任务最高提速 86 倍
+
+GitHub: https://github.com/matz/spinel
+详细解读：https://www.onlythinking.com/post/2026-04-25-tools-spinel-ruby-aot-compiler/
+
+#Ruby #AOT #编译器 #编程 #开源

@@ -1,0 +1,61 @@
+================================================================================
+发布草稿 - 2026-04-26
+文章: Serena MCP工具链深度解析：从协议原理到实战集成
+链接: https://www.onlythinking.com/post/serena-mcp-toolkit-deep-dive/
+================================================================================
+
+## Hacker News 备选标题（80字内）
+
+1. "Serena: 基于MCP协议的23K星AI编程工具链深度解析" (27字)
+2. "MCP协议驱动的AI编程工具: Serena架构与实战" (22字)
+3. "从协议到实战：深入解析23K星MCP编程工具Serena" (22字)
+
+推荐: #1（突出star数+协议标签，HN读者认数据）
+
+--------------------------------------------------------------------------------
+
+## Twitter/X 草稿
+
+🔧 Serena MCP工具链深度解析 | 23K⭐ AI编程工具
+
+MCP协议让AI编程工具"上下文获取"标准化。本文深入解析Serena的语义检索+精准编辑架构，以及与Copilot/Continue的横向对比。
+
+#MCP #AI编程 #ClaudeCode #大语言模型 #工具链
+
+↳ https://www.onlythinking.com/post/serena-mcp-toolkit-deep-dive/
+
+--------------------------------------------------------------------------------
+
+## Reddit 草稿 (r/programming)
+
+**Title**: Serena – A 23K-star MCP-based AI coding toolkit with semantic search and precise editing (deep dive)
+
+**Body**:
+I've been exploring AI coding tools and wanted to share a deep dive into Serena, an MCP (Model Context Protocol) based toolkit that recently hit 23K GitHub stars.
+
+**Key points**:
+- MCP protocol standardizes how AI tools retrieve project context (code search, file reading, tool invocation)
+- Serena provides semantic code search (code embedding-based, not just regex) + AST-aware editing
+- Comparison with Continue and Copilot: MCP-native support is the differentiator
+- Still early stage: large codebase indexing is slow, MCP ecosystem is evolving
+
+**Link**: https://www.onlythinking.com/post/serena-mcp-toolkit-deep-dive/
+
+I'm not affiliated with the project – just sharing because the MCP protocol approach seems more sustainable than proprietary context management.
+
+--------------------------------------------------------------------------------
+
+## 微信朋友圈/公众号草稿
+
+【工具推荐】Serena：一个23K星标的MCP编程工具链
+
+最近在研究AI编程工具的上下文获取方案，发现了Serena这个项目很有意思。
+
+核心亮点：
+• 基于MCP协议，标准化AI与项目代码的交互方式
+• 语义检索（非关键词匹配）+ AST感知编辑
+• 支持Claude Code等主流工具
+
+如果你也在思考"AI编程工具的下一步"，这篇文章值得一读：
+https://www.onlythinking.com/post/serena-mcp-toolkit-deep-dive/
+

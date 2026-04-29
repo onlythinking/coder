@@ -1,0 +1,70 @@
+================================================================================
+发布后分发草稿
+================================================================================
+文章：AI众包平台数据泄露警示：4TB语音样本泄露事件深度剖析
+URL：https://www.onlythinking.com/post/2026-04-28-ai-mercor-ai-voice-data-breach-security-analysis/
+日期：2026-04-28
+Slug: 2026-04-28-ai-mercor-ai-voice-data-breach-security-analysis
+
+================================================================================
+HACKER NEWS 备选标题（80字内）
+================================================================================
+选项1（英文）：Mercor AI Data Breach: 4TB Voice Samples Stolen — Technical Deep Dive
+选项2（中文转译）：AI众包平台4TB语音数据泄露：攻击路径还原与安全实践
+选项3（悬念型）：The 4TB Voice Data Breach That Shook the AI Industry — Here's What Happened
+
+HN 投稿链接：https://news.ycombinator.com/submit
+
+================================================================================
+TWITTER / X 草稿
+================================================================================
+🔐 AI 数据安全警示 | 4TB 语音样本泄露
+
+Mercor 事件还原：攻击者如何通过 S3 配置错误 + 撞库获取 4 万 AI 承包商声纹数据？
+
+🛡️ 零信任 + 数据分类分级 + UEBA 是解法
+
+#AI安全 #数据泄露 #网络安全 #LLM #AIDev
+
+链接：https://www.onlythinking.com/post/2026-04-28-ai-mercor-ai-voice-data-breach-security-analysis/
+
+================================================================================
+REDDIT 草稿（r/programming）
+================================================================================
+Title: AI annotation platform Mercor suffered a data breach — 4TB of voice samples from 40k contractors stolen (April 2026)
+
+Body:
+A detailed technical analysis of the Mercor data breach that exposed voice biometrics of 40,000+ AI contractors.
+
+Key points:
+- 4TB of voice samples + personal data stolen
+- Attack vector: credential stuffing + S3 misconfiguration
+- Biometric voice data is irreversible — no password reset possible
+- Zero Trust architecture and automated data lifecycle management as mitigation
+
+I wrote a deep dive covering the attack path reconstruction, technical analysis of the leaked data's harm potential, and concrete security hardening recommendations for AI data platforms.
+
+Full article: [link above]
+
+Posted from: r/programming
+
+================================================================================
+WEIBO 草稿（中文社交媒体）
+================================================================================
+【AI 平台数据安全警示】
+
+最近 Mercor 平台 4TB 语音数据泄露，4 万 AI 承包商声纹被窃。
+
+这次不是"普通数据泄露"——声纹是生物特征，不可撤销。攻击者可用其做语音合成诈骗、绕过声纹认证。
+
+写了个技术深度分析，涵盖：
+- 攻击路径还原
+- 泄露数据的实际危害
+- AI 数据平台安全加固方案
+
+给 AI 开发者和平台运营者的建议：
+1. 供应商安全评估（SOC 2）
+2. 数据分类分级 + 零信任
+3. 自动化生命周期管理
+
+#AI安全 #数据泄露 #隐私保护
