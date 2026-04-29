@@ -1,0 +1,44 @@
+================================================================================
+X/Twitter 分享草稿
+================================================================================
+
+标题：谁拥有 Claude Code 写的代码？AI 编程工具版权深度分析
+
+正文：
+AI 编程工具生成的代码，版权归属尚处法律灰色地带。
+
+基于 @HackerNews 260+ 热度讨论，深入分析：
+• 美国版权局最新立场
+• Claude Code / Copilot / Cursor 服务条款对比  
+• GPL 污染风险真实案例
+• M&A 尽调正在强制正视这个问题
+
+开发者必读的法律边界指南。
+
+#AI #ClaudeCode #版权 #开发者 #法律
+
+链接：https://www.onlythinking.com/post/ai-who-owns-claude-code-generated-code/
+
+---
+图片：/root/workspace/projects/coder/static/images/covers/ai-who-owns-claude-code-generated-code.png
+
+================================================================================
+Hacker News 分享草稿
+================================================================================
+
+标题：Who owns the code Claude Code wrote? (analysis + HN discussion summary)
+
+正文：
+Based on the viral HN discussion (299 comments, 260+ points), I wrote an analysis covering:
+
+• US Copyright Office stance: AI-generated code without "meaningful human authorship" is not copyrightable
+• Service terms comparison: Claude Code, GitHub Copilot, Cursor
+• GPL contamination risk from training data
+• China is the only major jurisdiction accepting AI output as copyrightable
+• M&A due diligence is forcing the real-world reckoning
+
+Full analysis with practical developer guidelines:
+
+链接：https://www.onlythinking.com/post/ai-who-owns-claude-code-generated-code/
+
+HN 原文：https://news.ycombinator.com/item?id=47932937
