@@ -1,5 +1,5 @@
 ---
-title: "Claude Code 写的代码归谁？AI 编程版权风险全解析"
+title: "用 Claude Code 写代码，可能正在埋雷"
 date: 2026-04-29
 description: "AI编程代码版权归属法律分析，Claude Code/Cursor/GitHub Copilot服务条款对比，开发者必读。"
 tags: ["AI", "法律", "Claude Code", "版权", "开发者"]
@@ -8,7 +8,7 @@ keywords: ["AI生成代码版权", "Claude Code法律问题", "AI编程工具", 
 draft: false
 toc: true
 readingTime: 8 分钟
-cover: /images/covers/ai-who-owns-claude-code-generated-code.png
+cover: /images/covers/ai-who-owns-claude-code-generated-code_blog.png
 ---
 
 ## 背景
