@@ -1,0 +1,44 @@
+# Distribution Draft - 2026-05-01
+
+## Article
+Title: Weft：为AI系统而生的编程语言
+URL: https://www.onlythinking.com/post/weft-ai-systems-programming-language/
+Slug: weft-ai-systems-programming-language
+
+---
+
+## Hacker News Submission
+Title (80 chars): "Weft: A programming language where LLMs, humans, and APIs are first-class primitives"
+Alt Title: "I built a language for AI agents — where 100-node workflows collapse into 5 abstract blocks"
+URL: https://news.ycombinator.com/submit
+
+---
+
+## Twitter/X Draft
+Weft：一种为 AI 系统而生的编程语言。将 LLM、人类、API 作为一级基元，编译器在运行前检查架构正确性。
+
+告别 Python 胶水代码，让 AI 编排像画架构图一样直观。
+
+#AI #编程语言 #Agent #开发者
+
+https://www.onlythinking.com/post/weft-ai-systems-programming-language/
+
+---
+
+## Reddit (r/programming) Draft
+Title: Weft — a new programming language where AI agents, humans, and APIs are first-class citizens (1160 stars GitHub)
+
+Body:
+I came across Weft (https://github.com/WeaveMindAI/weft) today and found the concept interesting — it's a programming language designed specifically for AI system workflows.
+
+Key ideas:
+- LLM, Human, HTTP, Database are all built-in node types (no imports needed)
+- Fully typed connections between nodes — compiler catches mismatches before runtime
+- Programs survive crashes and restarts via Restate (durable execution)
+- Two views: code for AI developers, graph visualization for humans — both stay in sync
+
+Example: a human approval workflow that might take 3 days is the same code as one taking 3 seconds.
+
+Seems like an interesting direction for AI workflow orchestration. Would love to hear thoughts from others building similar systems.
+
+---

@@ -1,0 +1,13 @@
+=== X/Twitter ===
+title: Stack Overflow调查：66%程序员被AI工具"坑"了，返工率比手写还高
+url: https://www.onlythinking.com/post/2026-05-02-ai-stackoverflow-ai-coding-survey/
+hashtags: #AI编程 #Copilot #Cursor #vibecoding #StackOverflow
+
+short version:
+布罗克曼说AI代码占比到80%了，但Stack Overflow五万人调查说出了另一面：66%开发者被AI工具坑得返工率比手写还高。工具进化得快，用工具的人也需要跟上。
+
+=== Hacker News ===
+title: "Stack Overflow Survey: 66% of devs say AI coding tools cause more rework than writing code manually" (80 chars)
+
+=== Reddit (r/programming) ===
+title: Stack Overflow's 2026 survey: 66% of developers report AI-generated code has higher rework rate than handwritten code

@@ -1,0 +1,60 @@
+# 社区分享草稿
+# 生成时间: 2026-05-02
+
+## 文章信息
+标题: Open-Claude-Cowork：一款开源桌面级 AI 编程助手
+URL: https://www.onlythinking.com/post/2026-05-02-ai-open-claude-cowork-desktop-ai-assistant/
+分类: AI
+
+---
+
+## Hacker News 备选标题（80字内）
+1. Open-Claude-Cowork: Open-source desktop AI coding assistant with MCP support
+2. 一款开源桌面 AI 编程助手，支持 MCP 协议和文件自动管理
+3. Open-Claude-Cowork — 用 Claude 技术栈打造的桌面级 AI 编程伙伴
+
+---
+
+## Twitter/X 草稿
+🖥️ 开源桌面 AI 编程助手来了！
+
+Open-Claude-Cowork 将 Claude 的能力封装为桌面应用，支持编程任务自动化、文件管理和 MCP 协议扩展。
+
+GitHub: https://github.com/DevAgentForge/Open-Claude-Cowork
+
+#AI #Claude #编程工具 #开源 #MCP
+
+---
+
+## Reddit 草稿 (r/programming)
+**Title**: Open-Claude-Cowork: An open-source desktop AI coding assistant with MCP protocol support (3.2k stars)
+
+**Body**:
+Open-Claude-Cowork is a recently released open-source project that wraps Claude's capabilities into a desktop application for developers.
+
+Key features:
+- Natural language-driven programming task automation
+- File management and batch operations (rename, reorganize, search & replace)
+- MCP protocol integration for extended tool ecosystem
+- Task chain tracking with version rollback
+
+It's free and open-source, differentiated from GitHub Copilot and Cursor by being fully open with MCP support.
+
+GitHub: https://github.com/DevAgentForge/Open-Claude-Cowork
+
+---
+
+## 微信朋友圈草稿
+【开源项目推荐】Open-Claude-Cowork 🤖
+
+一款基于 Claude 技术栈的桌面 AI 编程助手，开源免费，支持 MCP 协议扩展。
+
+亮点功能：
+✅ 编程任务自动化（多语言代码生成）
+✅ 文件批量管理
+✅ MCP 生态集成
+✅ 任务链路追踪与回滚
+
+👉 https://github.com/DevAgentForge/Open-Claude-Cowork
+
+#AI编程 #开源工具 #Claude #开发者工具

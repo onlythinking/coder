@@ -1,0 +1,63 @@
+================================================================================
+文章发布草稿 - 2026-04-30
+================================================================================
+
+【选题】HERMES.md commit message 路由计费争议
+【URL】https://www.onlythinking.com/post/2026-04-30-ai-hermes-md-commit-routing-billing-trap/
+
+================================================================================
+HACKER NEWS 备选标题（80字内）
+================================================================================
+1. "HERMES.md in commit messages routes to extra usage billing (GitHub Issue #53262)"
+2. "小心HERMES.md路由计费陷阱：commit message中的关键词可能让你的Claude Code账单翻倍"
+3. "HN: HERMES.md关键词触发Claude Code额外计费？开发者报告账单异常"
+
+备选1（英文，直接引用Issue标题，80字以内）：
+HERMES.md in commit messages causes requests to route to extra usage billing
+
+================================================================================
+TWITTER/X 草稿
+================================================================================
+标题长度检查：56字符 ✅
+
+🔥 小心！Claude Code 的 #HERMES.md 关键词可能在悄悄增加你的账单
+
+一名开发者发现 commit message 含 "HERMES" 会触发额外计费路由——无提示，无日志，无文档。
+
+HN 972分热议，附临时规避方案 👇
+https://www.onlythinking.com/post/2026-04-30-ai-hermes-md-commit-routing-billing-trap/
+
+#AI编程 #ClaudeCode #开发者工具 #计费陷阱
+
+================================================================================
+REDDIT 草稿 (r/programming)
+================================================================================
+Title: HERMES.md in commit messages causes requests to route to extra usage billing (GitHub Issue #53262)
+
+Body:
+A developer discovered that Claude Code silently routes requests to a premium billing endpoint when the commit message contains "HERMES" related keywords — no warning, no logs, no documentation.
+
+HN thread: 972 points
+GitHub Issue: https://github.com/anthropics/claude-code/issues/53262
+
+My blog post (Chinese): https://www.onlythinking.com/post/2026-04-30-ai-hermes-md-commit-routing-billing-trap/
+
+Key findings:
+- Trigger keywords: "HERMES", "hermes-gateway", "hermes-config" in commit messages
+- Silent routing with no user notification
+- Workaround: avoid HERMES-related words in commit messages
+
+================================================================================
+WEIBO 草稿
+================================================================================
+【技术警示】
+
+Claude Code 被曝 commit message 含 "HERMES" 关键词时，请求会悄悄路由到额外计费端点——无任何提示。
+
+HN 972分热议，多名开发者报告账单异常。
+
+临时方案：commit message 避免用 HERMES 相关词。
+
+详情（中文）：https://www.onlythinking.com/post/2026-04-30-ai-hermes-md-commit-routing-billing-trap/
+
+#AI编程 #ClaudeCode #开发者工具

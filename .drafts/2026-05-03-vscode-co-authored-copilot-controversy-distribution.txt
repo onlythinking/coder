@@ -1,0 +1,40 @@
+=== Distribution Draft for: VS Code 强制插入 Co-Authored-by Copilot：一场关于代码归属的开源风暴 ===
+Published: 2026-05-03
+URL: https://www.onlythinking.com/post/2026-05-03-ai-vscode-co-authored-copilot-controversy/
+
+--- Hacker News ---
+Primary Title (49 chars):
+VS Code 强制插入 Co-Authored-by Copilot：一场关于代码归属的开源风暴
+
+Alt Title 1 (67 chars):
+VS Code悄悄在所有Git提交里插入Co-Authored-By Copilot，600+ HN讨论炸锅
+
+Alt Title 2 (56 chars):
+Co-Authored-By Copilot：未授权的Git署名引发的开源风暴
+
+HN URL: https://news.ycombinator.com/submit
+
+--- Twitter/X ---
+Tweet (with hashtags):
+VS Code在用户不知情的情况下向Git提交插入Co-Authored-By Copilot签名，引发开源社区激烈争议。这不仅是配置问题，更触及AI工具与开发者之间的信任边界。
+#编程 #AI #VSCode #Copilot #开源
+URL: https://www.onlythinking.com/post/2026-05-03-ai-vscode-co-authored-copilot-controversy/
+
+--- Reddit (r/programming) ---
+Title: VS Code inserting 'Co-Authored-By Copilot' into commits regardless of usage (microsoft/vscode#310226)
+
+Body:
+Share this as a discussion about the recent GitHub PR that revealed VS Code's hidden behavior of auto-inserting Co-Authored-By Copilot signatures in commits even when Copilot is disabled.
+
+Key points:
+- PR: microsoft/vscode#310226
+- Score on HN: 683 (top story)
+- The issue: VS Code's Source Control extension silently adds Co-Authored-By: Copilot to commits even when all Copilot features are disabled
+- No transparent user setting to disable this behavior
+- Community debate centers on code authorship and AI tool transparency
+
+Cross-post to r/programming and r/vscode if relevant.
+
+--- Summary ---
+HN Score: 683 (very high)
+Recommendation: Submit to HN if score maintains > 80 threshold

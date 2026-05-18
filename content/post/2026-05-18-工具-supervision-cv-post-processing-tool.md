@@ -1,5 +1,5 @@
 ---
-title: "supervision: GitHub 日榜第一，月下载 110 万——计算机视觉后处理的"最后一公里"利器"
+title: "supervision: GitHub 日榜第一，月下载 110 万——计算机视觉后处理的'最后一公里'利器"
 date: "2026-05-18"
 description: "supervision 是 Roboflow 出品的计算机视觉后处理工具库，解决 YOLO/SAM 模型跑得好，但 bounding box 标注、多目标追踪、按区域统计、标注视频输出等 300 行胶水代码的重复劳动。本文以农田遥感监测项目为实战案例，展示如何将 300 行压缩到 21 行。"
 tags: ["AI", "计算机视觉", "Python", "开源", "YOLO", "工具库"]
