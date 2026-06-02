@@ -74,6 +74,17 @@
 {{- template "_internal/schema.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
 
+<!-- ==================== 社交分享标题覆盖（可选） ==================== -->
+{{- /* 如果 front matter 设置了 shareTitle，则用同步脚本覆盖 og:title / twitter:title。
+   社交爬虫（Twitterbot / facebookexternalhit / LinkedInBot）会执行 head 中的同步 JS，
+   对同名 meta 标签，后插入的生效，前面的会被忽略。完全不影响 <title>、JSON-LD、itemprop。 */ -}}
+{{- if .Params.shareTitle -}}
+{{- /* base64 编码 shareTitle，前端 atob 解码 → JSON.parse 得到字符串。
+   好处：彻底避免 Hugo 模板/HTTP 服务端对引号、< > 等字符的二次编码问题。 */ -}}
+{{- $shareB64 := .Params.shareTitle | base64Encode -}}
+<script>(function(){var t=JSON.parse(atob("{{ $shareB64 }}"));var s=document.createElement('meta');s.setAttribute('property','og:title');s.setAttribute('content',t);document.head.appendChild(s);var w=document.createElement('meta');w.setAttribute('name','twitter:title');w.setAttribute('content',t);document.head.appendChild(w);})();</script>
+{{- end -}}
+
 <!-- 结构化数据 JSON-LD -->
 {{ if .IsPage }}
 <script type="application/ld+json">

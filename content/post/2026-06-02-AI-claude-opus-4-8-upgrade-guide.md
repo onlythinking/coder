@@ -9,6 +9,7 @@ draft: false
 cover: /images/covers/claude-opus-4-8.png
 readingTime: 9
 toc: true
+shareTitle: "Claude Opus 4.8 上手：要不要升？怎么升？"
 ---
 
 5 月 28 日，Anthropic 毫无预警地把 Claude Opus 升级到 4.8 版本。**没有发布会、没有大张旗鼓的博客，只有一篇官方更新页和一份 System Card**。这种「半夜发版」的作风，反而让整个开发者社区在 Hacker News 和 X 上刷了一整天的屏。
