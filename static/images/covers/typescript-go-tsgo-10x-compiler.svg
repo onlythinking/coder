@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- 深色渐变背景: TS 蓝 → Go 青 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0c4a6e;stop-opacity:1"/>
+    </linearGradient>
+    <!-- 10x 文字的金色渐变 -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1"/>
+    </linearGradient>
+    <!-- 装饰光晕 -->
+    <radialGradient id="glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- 装饰圆点 (仿电路板) -->
+  <circle cx="80" cy="80" r="3" fill="#38bdf8" opacity="0.4"/>
+  <circle cx="180" cy="120" r="2" fill="#38bdf8" opacity="0.3"/>
+  <circle cx="1120" cy="100" r="3" fill="#22d3ee" opacity="0.4"/>
+  <circle cx="1020" cy="160" r="2" fill="#22d3ee" opacity="0.3"/>
+  <circle cx="100" cy="540" r="2" fill="#38bdf8" opacity="0.3"/>
+  <circle cx="1100" cy="520" r="3" fill="#22d3ee" opacity="0.4"/>
+
+  <!-- TS 蓝方块 (左上) -->
+  <rect x="100" y="180" width="80" height="80" rx="14" fill="#3178c6"/>
+  <text x="140" y="238" font-family="-apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="48" font-weight="800" fill="#ffffff" text-anchor="middle">TS</text>
+
+  <!-- Go 青方块 (右上) -->
+  <rect x="1020" y="180" width="80" height="80" rx="14" fill="#00add8"/>
+  <text x="1060" y="238" font-family="-apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="42" font-weight="800" fill="#ffffff" text-anchor="middle">Go</text>
+
+  <!-- 中间箭头 TS → Go -->
+  <text x="600" y="225" font-family="-apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="60" font-weight="700" fill="#94a3b8" text-anchor="middle">→</text>
+
+  <!-- 副标 -->
+  <text x="600" y="310" font-family="-apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="32" font-weight="500" fill="#cbd5e1" text-anchor="middle">微软官方 TypeScript 编译器原生重写</text>
+
+  <!-- 10x 巨大字 (核心) -->
+  <text x="600" y="470" font-family="-apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="220" font-weight="900" fill="url(#goldGrad)" text-anchor="middle">10x</text>
+
+  <!-- 主标 -->
+  <text x="600" y="540" font-family="-apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="40" font-weight="700" fill="#ffffff" text-anchor="middle">编译速度真香 · tsgo 实操指南</text>
+
+  <!-- 底部署名 -->
+  <text x="600" y="595" font-family="-apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20" font-weight="400" fill="#64748b" text-anchor="middle">编程码农 · 2026-06-03</text>
+</svg>
