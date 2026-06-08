@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1530"/>
+      <stop offset="100%" stop-color="#1a0b30"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD86B"/>
+      <stop offset="100%" stop-color="#FF8A3D"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF5577"/>
+      <stop offset="100%" stop-color="#CC1144"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g stroke="#2a3055" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+  </g>
+
+  <g opacity="0.22">
+    <circle cx="1050" cy="180" r="120" fill="url(#goldGrad)"/>
+    <circle cx="1050" cy="180" r="80" fill="#0b1530"/>
+    <text x="1050" y="200" font-family="'Inter','Helvetica',sans-serif" font-size="48" font-weight="700"
+          fill="url(#goldGrad)" text-anchor="middle">$3T</text>
+  </g>
+
+  <g transform="translate(80, 80)">
+    <rect width="240" height="38" rx="6" fill="url(#redGrad)" opacity="0.9"/>
+    <text x="120" y="26" font-family="'Inter','Helvetica',sans-serif" font-size="18" font-weight="600"
+          fill="#fff" text-anchor="middle">FLAGSHIP IPOs · 2026</text>
+  </g>
+
+  <g transform="translate(80, 180)">
+    <text font-family="'WenQuanYi Zen Hei','WenQuanYi Micro Hei','Noto Sans CJK SC','PingFang SC',sans-serif"
+          font-size="62" font-weight="800" fill="#ffffff">
+      <tspan x="0" y="0">3 万亿美元 IPO 来袭</tspan>
+    </text>
+    <text font-family="'WenQuanYi Zen Hei','WenQuanYi Micro Hei','Noto Sans CJK SC','PingFang SC',sans-serif"
+          font-size="44" font-weight="600" fill="url(#goldGrad)">
+      <tspan x="0" y="90">SpaceX · OpenAI · Anthropic</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(80, 380)">
+    <text font-family="'WenQuanYi Zen Hei','WenQuanYi Micro Hei','Noto Sans CJK SC','PingFang SC',sans-serif"
+          font-size="30" font-weight="500" fill="#cfd6ec">
+      <tspan x="0" y="0">不是估值问题，</tspan>
+      <tspan x="200" y="0" fill="#FFD86B" font-weight="700">是流动性大考</tspan>
+    </text>
+    <text font-family="'WenQuanYi Zen Hei','WenQuanYi Micro Hei','Noto Sans CJK SC','PingFang SC',sans-serif"
+          font-size="22" font-weight="400" fill="#8a93b8">
+      <tspan x="0" y="55">$432B Float 需求  vs  十年总融资 $469B</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(80, 555)">
+    <rect width="6" height="32" rx="2" fill="url(#goldGrad)"/>
+    <text x="22" y="24" font-family="'WenQuanYi Zen Hei','WenQuanYi Micro Hei',sans-serif"
+          font-size="22" font-weight="600" fill="#ffffff">编程码农</text>
+    <text x="140" y="24" font-family="'Inter','Helvetica',sans-serif"
+          font-size="18" font-weight="400" fill="#8a93b8">onlythinking.com · 2026-06-08</text>
+  </g>
+</svg>
