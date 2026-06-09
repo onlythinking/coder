@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="50%" stop-color="#1a1f3a"/>
+      <stop offset="100%" stop-color="#0a0e27"/>
+    </linearGradient>
+    <linearGradient id="chat" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10a37f"/>
+      <stop offset="100%" stop-color="#1a7f64"/>
+    </linearGradient>
+    <linearGradient id="codex" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#ee5a52"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- 装饰网格 -->
+  <g opacity="0.1">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#ffffff" stroke-width="1"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#ffffff" stroke-width="1"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#ffffff" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#ffffff" stroke-width="1"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#ffffff" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#ffffff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#ffffff" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- 左侧：ChatGPT 对话框（被"打叉"） -->
+  <g transform="translate(80, 130)">
+    <rect width="320" height="380" rx="16" fill="#1a2f3a" stroke="#10a37f" stroke-width="2" opacity="0.9"/>
+    <text x="160" y="50" text-anchor="middle" fill="#10a37f" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="bold">ChatGPT</text>
+    <line x1="40" y1="80" x2="280" y2="80" stroke="#10a37f" stroke-width="1" opacity="0.3"/>
+
+    <!-- 模拟对话 -->
+    <rect x="40" y="110" width="180" height="40" rx="8" fill="#0e1f29" stroke="#10a37f" stroke-width="1" opacity="0.5"/>
+    <text x="55" y="135" fill="#a0c4c0" font-family="sans-serif" font-size="14">How do I...</text>
+
+    <rect x="80" y="170" width="200" height="80" rx="8" fill="#10a37f" opacity="0.3"/>
+    <text x="95" y="195" fill="#e0f0ec" font-family="sans-serif" font-size="13">To answer your</text>
+    <text x="95" y="215" fill="#e0f0ec" font-family="sans-serif" font-size="13">question, please</text>
+    <text x="95" y="235" fill="#e0f0ec" font-family="sans-serif" font-size="13">note that...</text>
+
+    <rect x="40" y="280" width="180" height="40" rx="8" fill="#0e1f29" stroke="#10a37f" stroke-width="1" opacity="0.5"/>
+    <text x="55" y="305" fill="#a0c4c0" font-family="sans-serif" font-size="14">Thanks, but...</text>
+
+    <!-- 红色删除叉 -->
+    <g transform="translate(280, 30)">
+      <circle r="30" fill="#ff4757"/>
+      <line x1="-15" y1="-15" x2="15" y2="15" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+      <line x1="15" y1="-15" x2="-15" y2="15" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- 中间箭头 -->
+  <g transform="translate(440, 300)">
+    <path d="M 0 30 L 80 30" stroke="#ffd700" stroke-width="4" marker-end="url(#arrowhead)"/>
+    <text x="40" y="10" text-anchor="middle" fill="#ffd700" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="bold">REPLACE</text>
+  </g>
+
+  <!-- 右侧：Codex Agent 平台（新形态） -->
+  <g transform="translate(560, 130)">
+    <rect width="560" height="380" rx="16" fill="#2a1a1f" stroke="#ff6b6b" stroke-width="2"/>
+    <text x="280" y="50" text-anchor="middle" fill="#ff6b6b" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="bold">Codex Agent Platform</text>
+    <line x1="40" y1="80" x2="520" y2="80" stroke="#ff6b6b" stroke-width="1" opacity="0.3"/>
+
+    <!-- 输入框 -->
+    <rect x="40" y="110" width="480" height="50" rx="8" fill="#0e1f29" stroke="#ff6b6b" stroke-width="2"/>
+    <text x="60" y="142" fill="#ffd0d0" font-family="sans-serif" font-size="16">订明天去上海的头等舱，顺便做张海报</text>
+
+    <!-- 调度图标网格 -->
+    <g transform="translate(40, 190)">
+      <!-- 编程 -->
+      <rect width="100" height="80" rx="8" fill="#1a3a4a" stroke="#10a37f" stroke-width="2"/>
+      <text x="50" y="45" text-anchor="middle" fill="#10a37f" font-family="sans-serif" font-size="32">{ }</text>
+      <text x="50" y="68" text-anchor="middle" fill="#a0c4c0" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="11">编程</text>
+
+      <!-- 图片 -->
+      <rect x="120" width="100" height="80" rx="8" fill="#3a2a1a" stroke="#ffaa44" stroke-width="2"/>
+      <text x="170" y="45" text-anchor="middle" fill="#ffaa44" font-family="sans-serif" font-size="32">🎨</text>
+      <text x="170" y="68" text-anchor="middle" fill="#ffd0a0" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="11">图像</text>
+
+      <!-- 第三方 -->
+      <rect x="240" width="100" height="80" rx="8" fill="#2a1a3a" stroke="#aa66ff" stroke-width="2"/>
+      <text x="290" y="45" text-anchor="middle" fill="#aa66ff" font-family="sans-serif" font-size="32">🔌</text>
+      <text x="290" y="68" text-anchor="middle" fill="#d0a0ff" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="11">第三方</text>
+
+      <!-- API -->
+      <rect x="360" width="100" height="80" rx="8" fill="#1a3a1a" stroke="#66ff88" stroke-width="2"/>
+      <text x="410" y="45" text-anchor="middle" fill="#66ff88" font-family="sans-serif" font-size="32">⚡</text>
+      <text x="410" y="68" text-anchor="middle" fill="#a0ffc0" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="11">API</text>
+    </g>
+
+    <!-- 数据流箭头 -->
+    <g transform="translate(40, 290)">
+      <line x1="50" y1="0" x2="50" y2="50" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="4,3"/>
+      <line x1="170" y1="0" x2="170" y2="50" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="4,3"/>
+      <line x1="290" y1="0" x2="290" y2="50" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="4,3"/>
+      <line x1="410" y1="0" x2="410" y2="50" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="4,3"/>
+
+      <rect width="480" height="40" rx="8" fill="#3a1a1a" stroke="#ff6b6b" stroke-width="1" opacity="0.7"/>
+      <text x="240" y="25" text-anchor="middle" fill="#ffd0d0" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="13">Codex Agent 自动调度 + 执行 + 回写</text>
+    </g>
+  </g>
+
+  <!-- 顶部标题 -->
+  <g transform="translate(600, 70)" text-anchor="middle">
+    <text fill="#ffd700" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="44" font-weight="bold" filter="url(#glow)">ChatGPT 史上最大改版</text>
+    <text y="40" fill="#ffffff" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="20" opacity="0.8">OpenAI 把聊天框拆掉，把 Codex 塞进去</text>
+  </g>
+
+  <!-- 底部署名字样 -->
+  <g transform="translate(60, 600)">
+    <text fill="#888888" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="14">编程码农 · 2026-06-09 · Chat is dead</text>
+  </g>
+  <g transform="translate(1140, 600)" text-anchor="end">
+    <text fill="#ffd700" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="14">www.onlythinking.com</text>
+  </g>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ffd700"/>
+    </marker>
+  </defs>
+</svg>
