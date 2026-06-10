@@ -1,19 +1,13 @@
 ---
-title: "Anthropic 同发 Claude Fable 5 与 Mythos 5：5% 概率被降级到 Opus 4.8 的模型，为什么值得 HN 1730 分"
+title: "Claude Fable 5 双发"
 date: "2026-06-10"
-description: "Anthropic 6月9日同步发布 Claude Fable 5 与 Mythos 5：同底双发、价格砍半、安全护栏降级 5% 请求到 Opus 4.8。HN 1730 分背后是开发者社区的真实使用体验，Stripe / Hebbia / Cognition 真实基准数据汇总。"
-tags: ["AI", "LLM", "Anthropic", "Claude", "Fable5", "Mythos5", "大模型"]
+digest: "同底双SKU 价格砍半 5%会降级"
+tags: ["AI", "Claude", "Fable5"]
 categories: ["AI"]
-keywords: ["Claude Fable 5", "Claude Mythos 5", "Anthropic", "Project Glasswing", "Mythos-class", "AI编程", "LLM对比", "网安AI"]
-draft: false
-readingTime: 约18分钟
-toc: true
-cover: /images/covers/claude-fable5-mythos5-launch_blog.png?v=33c06b9
-wechat_cover: /images/covers/claude-fable5-mythos5-launch_wechat.png
+cover: /images/covers/claude-fable5-mythos5-launch_wechat.png?v=33c06b9
+wechat_cover: /images/covers/claude-fable5-mythos5-launch_wechat.png?v=33c06b9
 wechat_cover_sq: /images/covers/claude-fable5-mythos5-launch_wechat_sq.png
 ---
-
-# Anthropic 同发 Claude Fable 5 与 Mythos 5：5% 概率被降级到 Opus 4.8 的模型，为什么值得 HN 1730 分
 
 6 月 9 日，Anthropic 干了一件事：**同一个底层模型，分两个 SKU 同时发布**。
 
@@ -26,7 +20,7 @@ wechat_cover_sq: /images/covers/claude-fable5-mythos5-launch_wechat_sq.png
 
 本文基于 Anthropic 官方公告、System Card 摘要，以及 HN 真实高赞评论，扒一扒这次发布到底意味着什么。
 
-<!--more-->
+
 
 ## 1. 双 SKU 模式：Anthropic 第一次这么玩
 
@@ -103,16 +97,6 @@ Hebbia 是文档 AI 领域的头部公司，专做长文档分析。Senior-level
 > *"IMC noted that Fable 5 aced their trading-analysis evaluations nearly across the board, including factual lookup, conceptual reasoning, root-cause analysis, and expected-value analysis."*
 
 IMC 是顶级做市商，**他们的内部评测不是公开 benchmark，是真实交易场景**。这条引用很重。
-
-### 3.4 视觉：用截图重建 Web App
-
-Anthropic 官方演示里有几个非常抓眼球的：
-
-- **宝可梦火红** —— 之前所有 Claude 模型都打不过，**Fable 5 用纯视觉（不读内存、不开地图、不查游戏状态）通关了**
-- **Factorio** —— 自主玩，搭建自动化工厂
-- **VibeCAD** —— 浏览器里 3D 建模，包括 CAD 编辑器本身也是 Fable 5 写的
-
-视觉能力这条线 Anthropic 一向是 SOTA，这次算是拉开了跟 GPT 和 Gemini 的差距。
 
 ### 3.5 长上下文与记忆：玩《Slay the Spire》
 
@@ -198,14 +182,8 @@ $10 / $50 是个什么概念——比 Claude Mythos Preview 直接砍 50%+，跟
 
 但请注意，**这些能力只在 Mythos 5 里开放，Fable 5 用户目前是碰不到的**——这是双 SKU 策略的另一个隐性收益：高风险科研能力被牢牢锁在"可信访问"框架里。
 
-## 写在最后
+---
 
-Fable 5 / Mythos 5 的发布不只是"又一个更强的模型"，它是 Anthropic 在 **产品矩阵、监管路径、商业定价** 三个维度同时下注的一次发布。
+**数据来源**：Anthropic 官方公告（2026-06-09）、Hacker News 真实评论。所有价格、benchmark、行为描述以官方公告为准。
 
-对开发者来说，**5% 静默降级是当下最该关注的真问题**，它直接关系到你的账单、生产环境的稳定性、以及 agent 流水线的可靠性。
-
-对行业来说，**Mythos 5 的科学发现能力 + Fable 5 的工程判断力**，可能是 2026 年最值得跟踪的两条能力曲线。
-
-官方公告：[Claude Fable 5 and Claude Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5)
-System Card（PDF）：公告中提供下载链接
-HN 讨论：[story 48463808](https://news.ycombinator.com/item?id=48463808)
+**互动**：评论区聊聊你打算用 Fable 5 跑什么场景？有没有被降级坑过的？点个关注，下一篇扒 Mythos 5 的可信访问程序到底怎么走。
