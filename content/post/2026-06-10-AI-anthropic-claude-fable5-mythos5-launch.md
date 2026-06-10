@@ -8,7 +8,7 @@ keywords: ["Claude Fable 5", "Claude Mythos 5", "Anthropic", "Project Glasswing"
 draft: false
 readingTime: 约15分钟
 toc: true
-cover: /images/covers/claude-fable5-mythos5-launch_blog.png?v=33c06b9
+cover: /images/covers/claude-fable5-mythos5-launch_blog.png?v=9a3d07b
 ---
 
 最近一周 AI 圈最大的事，不是 OpenAI、不是 Google，是 Anthropic 6/9 同一天发了两款 Claude。
