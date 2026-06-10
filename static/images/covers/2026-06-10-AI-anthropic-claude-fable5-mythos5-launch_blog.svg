@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="50%" stop-color="#1a1f3a"/>
+      <stop offset="100%" stop-color="#0a0e27"/>
+    </linearGradient>
+    <linearGradient id="fable" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a86ff"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="mythos" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="anthropic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4a574"/>
+      <stop offset="100%" stop-color="#cc785c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- 装饰网格 -->
+  <g opacity="0.08">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#ffffff" stroke-width="1"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#ffffff" stroke-width="1"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#ffffff" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#ffffff" stroke-width="1"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#ffffff" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#ffffff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#ffffff" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- 顶部小标签 -->
+  <g transform="translate(60, 50)">
+    <rect width="180" height="36" rx="18" fill="url(#anthropic)" opacity="0.9"/>
+    <text x="90" y="24" text-anchor="middle" fill="#1a1f3a" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="bold">Anthropic · 6月9日</text>
+  </g>
+
+  <!-- 左侧：Fable 5 卡 -->
+  <g transform="translate(60, 130)">
+    <rect width="280" height="340" rx="16" fill="#1a2f3a" stroke="url(#fable)" stroke-width="2" opacity="0.95"/>
+    <text x="140" y="50" text-anchor="middle" fill="url(#fable)" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="bold">Claude Fable 5</text>
+    <line x1="40" y1="80" x2="240" y2="80" stroke="#3a86ff" stroke-width="1" opacity="0.4"/>
+
+    <!-- 用户图标 -->
+    <circle cx="140" cy="135" r="32" fill="url(#fable)" opacity="0.3"/>
+    <circle cx="140" cy="128" r="10" fill="#3a86ff"/>
+    <path d="M 110 165 Q 140 150 170 165 L 170 175 L 110 175 Z" fill="#3a86ff"/>
+
+    <text x="140" y="210" text-anchor="middle" fill="#a0c4d8" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="14">所有用户</text>
+    <text x="140" y="240" text-anchor="middle" fill="#3a86ff" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="bold">护栏开启</text>
+    <text x="140" y="275" text-anchor="middle" fill="#e0f0ec" font-family="sans-serif" font-size="13">$10 / $50</text>
+    <text x="140" y="295" text-anchor="middle" fill="#7a8a9a" font-family="sans-serif" font-size="12">per million tokens</text>
+
+    <rect x="30" y="310" width="220" height="20" rx="4" fill="#0e1f29" opacity="0.6"/>
+    <text x="140" y="324" text-anchor="middle" fill="#3a86ff" font-family="sans-serif" font-size="12">通用开放</text>
+  </g>
+
+  <!-- 右侧：Mythos 5 卡 -->
+  <g transform="translate(860, 130)">
+    <rect width="280" height="340" rx="16" fill="#2a1f3a" stroke="url(#mythos)" stroke-width="2" opacity="0.95"/>
+    <text x="140" y="50" text-anchor="middle" fill="url(#mythos)" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="bold">Claude Mythos 5</text>
+    <line x1="40" y1="80" x2="240" y2="80" stroke="#ff6b6b" stroke-width="1" opacity="0.4"/>
+
+    <!-- 锁图标 -->
+    <g transform="translate(140, 130)">
+      <rect x="-22" y="-5" width="44" height="38" rx="4" fill="url(#mythos)" opacity="0.3"/>
+      <path d="M -14 -5 L -14 -18 Q -14 -28 0 -28 Q 14 -28 14 -18 L 14 -5" fill="none" stroke="#ff6b6b" stroke-width="4"/>
+      <circle cx="0" cy="14" r="4" fill="#ff6b6b"/>
+    </g>
+
+    <text x="140" y="210" text-anchor="middle" fill="#c4a0a0" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="14">可信访问</text>
+    <text x="140" y="240" text-anchor="middle" fill="#ff6b6b" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="bold">护栏放开</text>
+    <text x="140" y="275" text-anchor="middle" fill="#e0c0c0" font-family="sans-serif" font-size="13">Glasswing 项目</text>
+    <text x="140" y="295" text-anchor="middle" fill="#7a6a6a" font-family="sans-serif" font-size="12">网安 + 关键基础设施</text>
+
+    <rect x="30" y="310" width="220" height="20" rx="4" fill="#1e0f1f" opacity="0.6"/>
+    <text x="140" y="324" text-anchor="middle" fill="#ff6b6b" font-family="sans-serif" font-size="12">同底层模型</text>
+  </g>
+
+  <!-- 中间：5% 大数字 + 同底双发 -->
+  <g transform="translate(600, 315)" filter="url(#glow)">
+    <text x="0" y="-40" text-anchor="middle" fill="#ffffff" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="bold">5% 请求静默降级</text>
+
+    <text x="0" y="40" text-anchor="middle" fill="#fbbf24" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="120" font-weight="bold" letter-spacing="-4">5%</text>
+
+    <text x="0" y="80" text-anchor="middle" fill="#fbbf24" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="bold">到 Opus 4.8</text>
+  </g>
+
+  <!-- 中间箭头连接 -->
+  <g transform="translate(360, 290)" stroke="#fbbf24" stroke-width="2" fill="none" opacity="0.7">
+    <line x1="0" y1="0" x2="40" y2="0"/>
+    <polygon points="40,-5 50,0 40,5" fill="#fbbf24"/>
+  </g>
+  <g transform="translate(800, 290)" stroke="#fbbf24" stroke-width="2" fill="none" opacity="0.7">
+    <line x1="0" y1="0" x2="40" y2="0"/>
+    <polygon points="40,-5 50,0 40,5" fill="#fbbf24"/>
+  </g>
+
+  <!-- 底部主标题 -->
+  <g transform="translate(600, 530)">
+    <text x="0" y="0" text-anchor="middle" fill="#ffffff" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="32" font-weight="bold">Claude Fable 5 与 Mythos 5 双发</text>
+    <text x="0" y="35" text-anchor="middle" fill="#a0aac0" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="16">同底双 SKU · 价格砍半 · HN 1730 分</text>
+  </g>
+
+  <!-- 底部署名 -->
+  <g transform="translate(60, 595)">
+    <text x="0" y="0" fill="#5a6478" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="14">编程码农 · 2026-06-10</text>
+  </g>
+  <g transform="translate(1140, 595)">
+    <text x="0" y="0" text-anchor="end" fill="#5a6478" font-family="'WenQuanYi Zen Hei', 'Noto Sans CJK SC', sans-serif" font-size="14">onlythinking.com</text>
+  </g>
+</svg>
