@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="50%" stop-color="#1a0a2e"/>
+      <stop offset="100%" stop-color="#0a0a1a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4d6d"/>
+      <stop offset="50%" stop-color="#ff8fa3"/>
+      <stop offset="100%" stop-color="#c77dff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff4d6d" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff4d6d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="300" r="400" fill="url(#glow)"/>
+
+  <!-- 网格 -->
+  <g stroke="#2d1b4e" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+  </g>
+
+  <!-- 左侧人形机器人剪影 -->
+  <g transform="translate(120, 130)" stroke="url(#accent)" stroke-width="2" fill="none" opacity="0.7">
+    <!-- 头 -->
+    <ellipse cx="80" cy="40" rx="30" ry="36" fill="url(#accent)" fill-opacity="0.15"/>
+    <!-- 眼睛 -->
+    <circle cx="68" cy="38" r="3" fill="#ff4d6d" stroke="none"/>
+    <circle cx="92" cy="38" r="3" fill="#ff4d6d" stroke="none"/>
+    <!-- 身体 -->
+    <rect x="55" y="80" width="50" height="80" rx="8" fill="url(#accent)" fill-opacity="0.1"/>
+    <!-- 关节标记 -->
+    <circle cx="55" cy="100" r="3" fill="#ff8fa3" stroke="none"/>
+    <circle cx="105" cy="100" r="3" fill="#ff8fa3" stroke="none"/>
+    <circle cx="55" cy="140" r="3" fill="#ff8fa3" stroke="none"/>
+    <circle cx="105" cy="140" r="3" fill="#ff8fa3" stroke="none"/>
+    <!-- 手臂 -->
+    <line x1="55" y1="100" x2="20" y2="160" stroke-width="2"/>
+    <line x1="105" y1="100" x2="140" y2="160" stroke-width="2"/>
+    <!-- 腿 -->
+    <line x1="68" y1="160" x2="55" y2="240" stroke-width="2"/>
+    <line x1="92" y1="160" x2="105" y2="240" stroke-width="2"/>
+  </g>
+
+  <!-- 中间价格阶梯 -->
+  <g transform="translate(310, 250)">
+    <text x="0" y="0" fill="url(#accent)" font-family="ui-sans-serif, system-ui" font-size="14" font-weight="700" letter-spacing="3">UBTECH UWORLD U1</text>
+
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="120" height="60" rx="8" fill="#1a0a2e" stroke="#ff4d6d" stroke-width="1.5"/>
+      <text x="60" y="24" text-anchor="middle" fill="#ff4d6d" font-family="ui-sans-serif, system-ui" font-size="11" font-weight="600">Lite</text>
+      <text x="60" y="48" text-anchor="middle" fill="#f8fafc" font-family="ui-sans-serif, system-ui" font-size="18" font-weight="800">¥11.98万</text>
+    </g>
+
+    <g transform="translate(140, 0)">
+      <rect x="0" y="0" width="130" height="90" rx="8" fill="#1a0a2e" stroke="#ff8fa3" stroke-width="2"/>
+      <text x="65" y="28" text-anchor="middle" fill="#ff8fa3" font-family="ui-sans-serif, system-ui" font-size="11" font-weight="600">Pro</text>
+      <text x="65" y="58" text-anchor="middle" fill="#f8fafc" font-family="ui-sans-serif, system-ui" font-size="20" font-weight="800">¥16.98万</text>
+      <text x="65" y="78" text-anchor="middle" fill="#cbd5e1" font-family="ui-sans-serif, system-ui" font-size="10">走量款</text>
+    </g>
+
+    <g transform="translate(290, -30)">
+      <rect x="0" y="0" width="160" height="120" rx="10" fill="url(#accent)" fill-opacity="0.15" stroke="#c77dff" stroke-width="2"/>
+      <text x="80" y="32" text-anchor="middle" fill="#c77dff" font-family="ui-sans-serif, system-ui" font-size="11" font-weight="700">Ultra 男 / 女</text>
+      <text x="80" y="68" text-anchor="middle" fill="#f8fafc" font-family="ui-sans-serif, system-ui" font-size="22" font-weight="800">¥99万</text>
+      <text x="80" y="92" text-anchor="middle" fill="#cbd5e1" font-family="ui-sans-serif, system-ui" font-size="10">锚定价 · 88万女版</text>
+    </g>
+  </g>
+
+  <!-- 右侧数据 -->
+  <g transform="translate(310, 460)">
+    <rect x="0" y="0" width="180" height="44" rx="22" fill="#0a0a1a" stroke="#ff4d6d" stroke-width="1.5"/>
+    <text x="90" y="29" text-anchor="middle" fill="#ff4d6d" font-family="ui-sans-serif, system-ui" font-size="15" font-weight="700">13,361 台预售</text>
+
+    <rect x="200" y="0" width="180" height="44" rx="22" fill="#0a0a1a" stroke="#ff8fa3" stroke-width="1.5"/>
+    <text x="290" y="29" text-anchor="middle" fill="#ff8fa3" font-family="ui-sans-serif, system-ui" font-size="15" font-weight="700">88 个自由度关节</text>
+  </g>
+
+  <!-- 标题 -->
+  <g transform="translate(310, 200)">
+    <text x="0" y="0" fill="url(#accent)" font-family="ui-sans-serif, system-ui" font-size="13" font-weight="700" letter-spacing="3">AI 情感陪伴 · 2026 拐点</text>
+  </g>
+
+  <!-- 底部 -->
+  <text x="600" y="585" text-anchor="middle" fill="#475569" font-family="ui-sans-serif, system-ui" font-size="14" letter-spacing="2">编程码农 · onlythinking.com</text>
+</svg>
