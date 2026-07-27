@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="50%" stop-color="#1a1f3a"/>
+      <stop offset="100%" stop-color="#0a0e27"/>
+    </linearGradient>
+    <linearGradient id="opus" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cc785c"/>
+      <stop offset="100%" stop-color="#d4a574"/>
+    </linearGradient>
+    <linearGradient id="price" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="fable" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a86ff"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- 装饰光晕 -->
+  <circle cx="950" cy="180" r="180" fill="url(#opus)" opacity="0.12"/>
+  <circle cx="200" cy="500" r="150" fill="url(#price)" opacity="0.10"/>
+
+  <!-- 主标题 -->
+  <text x="80" y="180" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="62" font-weight="700" fill="url(#opus)" filter="url(#glow)">
+    Claude Opus 5
+  </text>
+  <text x="80" y="245" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="32" font-weight="600" fill="#e2e8f0">
+    同价 4.8、半价 Fable 5
+  </text>
+
+  <!-- 分隔线 -->
+  <line x1="80" y1="285" x2="500" y2="285" stroke="url(#opus)" stroke-width="2" opacity="0.5"/>
+
+  <!-- 核心标签 -->
+  <g transform="translate(80, 330)">
+    <!-- 价格标签 -->
+    <rect x="0" y="0" width="180" height="70" rx="8" fill="#0f172a" stroke="url(#price)" stroke-width="2"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="14" fill="#94a3b8">API 价格</text>
+    <text x="20" y="58" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="url(#price)">$5 / $25</text>
+
+    <!-- 上下文窗口 -->
+    <rect x="200" y="0" width="170" height="70" rx="8" fill="#0f172a" stroke="url(#fable)" stroke-width="2"/>
+    <text x="220" y="32" font-family="-apple-system, sans-serif" font-size="14" fill="#94a3b8">Context</text>
+    <text x="220" y="58" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="url(#fable)">1M tokens</text>
+
+    <!-- AAA Index -->
+    <rect x="390" y="0" width="170" height="70" rx="8" fill="#0f172a" stroke="url(#opus)" stroke-width="2"/>
+    <text x="410" y="32" font-family="-apple-system, sans-serif" font-size="14" fill="#94a3b8">AAA Index</text>
+    <text x="410" y="58" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="url(#opus)">61</text>
+  </g>
+
+  <!-- Sub title -->
+  <text x="80" y="475" font-family="-apple-system, sans-serif" font-size="20" fill="#94a3b8">
+    不是 4.8 升级版，而是 Fable 5 的「性价比替代」
+  </text>
+  <text x="80" y="510" font-family="-apple-system, sans-serif" font-size="20" fill="#cbd5e1">
+    HN 1764 分 / 提示词要重新写 / 砍 80% 系统提示
+  </text>
+
+  <!-- 底部日期 + 来源 -->
+  <text x="80" y="580" font-family="-apple-system, sans-serif" font-size="14" fill="#64748b">
+    2026-07-27 · 基于 Anthropic 官方公告 + System Card + HN 社区
+  </text>
+
+  <!-- 右侧品牌 -->
+  <text x="1120" y="580" font-family="-apple-system, sans-serif" font-size="14" fill="#64748b" text-anchor="end">
+    onlythinking.com
+  </text>
+</svg>
