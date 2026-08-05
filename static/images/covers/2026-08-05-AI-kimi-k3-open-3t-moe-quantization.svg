@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="50%" stop-color="#15173a"/>
+      <stop offset="100%" stop-color="#0a0e27"/>
+    </linearGradient>
+    <linearGradient id="kimi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1783ff"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="moe" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="quant" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- 装饰光晕 -->
+  <circle cx="950" cy="180" r="180" fill="url(#kimi)" opacity="0.15"/>
+  <circle cx="200" cy="500" r="150" fill="url(#moe)" opacity="0.12"/>
+  <circle cx="600" cy="600" r="100" fill="url(#quant)" opacity="0.08"/>
+
+  <!-- MoE 专家稀疏网格装饰（暗纹） -->
+  <g opacity="0.08" stroke="#1783ff" stroke-width="1" fill="none">
+    <circle cx="900" cy="80" r="6"/>
+    <circle cx="960" cy="80" r="6"/>
+    <circle cx="1020" cy="80" r="6"/>
+    <circle cx="1080" cy="80" r="6"/>
+    <circle cx="900" cy="130" r="6"/>
+    <circle cx="1020" cy="130" r="6"/>
+    <circle cx="900" cy="180" r="6"/>
+    <circle cx="960" cy="180" r="6"/>
+    <circle cx="1080" cy="180" r="6"/>
+  </g>
+
+  <!-- 主标题 -->
+  <text x="80" y="170" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="68" font-weight="700" fill="url(#kimi)" filter="url(#glow)">
+    Kimi K3
+  </text>
+
+  <!-- 副标题 -->
+  <text x="80" y="225" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="32" font-weight="600" fill="#e2e8f0">
+    拆解国内首个 3T 级开源模型
+  </text>
+
+  <!-- 数据亮点行 -->
+  <g font-family="-apple-system, 'Helvetica Neue', sans-serif" font-weight="600">
+    <!-- 总参 -->
+    <rect x="80" y="290" width="280" height="80" rx="10" fill="url(#kimi)" opacity="0.18"/>
+    <text x="100" y="325" font-size="22" fill="#94a3b8">总参 / 激活</text>
+    <text x="100" y="358" font-size="28" fill="#1783ff" font-weight="700">2.8T / 104B</text>
+
+    <!-- 架构 -->
+    <rect x="380" y="290" width="280" height="80" rx="10" fill="url(#moe)" opacity="0.18"/>
+    <text x="400" y="325" font-size="22" fill="#94a3b8">核心架构</text>
+    <text x="400" y="358" font-size="26" fill="#06b6d4" font-weight="700">KDA + AttnRes</text>
+
+    <!-- 量化 -->
+    <rect x="680" y="290" width="280" height="80" rx="10" fill="url(#quant)" opacity="0.18"/>
+    <text x="700" y="325" font-size="22" fill="#94a3b8">量化方案</text>
+    <text x="700" y="358" font-size="28" fill="#10b981" font-weight="700">MXFP4 / MXFP8</text>
+
+    <!-- 上下文 -->
+    <rect x="980" y="290" width="140" height="80" rx="10" fill="#ffffff" opacity="0.08"/>
+    <text x="1000" y="325" font-size="22" fill="#94a3b8">上下文</text>
+    <text x="1000" y="358" font-size="28" fill="#ffffff" font-weight="700">1M</text>
+  </g>
+
+  <!-- 关键卖点 -->
+  <g font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="22" fill="#cbd5e1">
+    <circle cx="92" cy="445" r="4" fill="#1783ff"/>
+    <text x="110" y="452">Stable LatentMoE：896 专家选 16，2 个共享专家</text>
+    <circle cx="92" cy="490" r="4" fill="#06b6d4"/>
+    <text x="110" y="497">MXFP4 量化感知训练从 SFT 阶段开始</text>
+    <circle cx="92" cy="535" r="4" fill="#10b981"/>
+    <text x="110" y="542">vLLM / SGLang / TokenSpeed 三引擎同步支持</text>
+  </g>
+
+  <!-- 底部品牌行 -->
+  <text x="80" y="600" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="18" fill="#64748b">
+    编程码农 · onlythinking.com · 2026-08-05
+  </text>
+  <text x="1120" y="600" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="18" fill="#64748b" text-anchor="end">
+    Moonshot AI · Open Frontier Intelligence
+  </text>
+</svg>
