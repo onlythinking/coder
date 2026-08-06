@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#1a1f35"/>
+      <stop offset="100%" stop-color="#0f1729"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f6821f"/>
+      <stop offset="100%" stop-color="#faae40"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2540" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#141932" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- decorative grid -->
+  <g opacity="0.08" stroke="#f6821f" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="150" y1="0" x2="150" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
+  </g>
+
+  <!-- CF orange accent bar -->
+  <rect x="60" y="80" width="80" height="6" fill="url(#accent)" rx="3"/>
+
+  <!-- tag -->
+  <g transform="translate(60, 110)">
+    <rect width="180" height="36" rx="18" fill="none" stroke="#f6821f" stroke-width="1.5"/>
+    <text x="90" y="24" font-family="-apple-system, sans-serif" font-size="16" fill="#f6821f" text-anchor="middle" font-weight="600">CLOUDFLARE · AGENT OS</text>
+  </g>
+
+  <!-- main title -->
+  <text x="60" y="220" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">Cloudflare OS</text>
+  <text x="60" y="285" font-family="-apple-system, sans-serif" font-size="38" font-weight="500" fill="#a0aec0">把 Agent 装进 Workers 沙箱</text>
+
+  <!-- subtitle -->
+  <text x="60" y="350" font-family="-apple-system, sans-serif" font-size="22" fill="#8896ab">Gadgets · Gatekeepers · Durable Objects</text>
+
+  <!-- three concept cards -->
+  <g transform="translate(60, 410)">
+    <!-- card 1 -->
+    <rect x="0" y="0" width="350" height="160" rx="12" fill="url(#card)" stroke="#2d3556" stroke-width="1"/>
+    <text x="20" y="35" font-family="monospace" font-size="14" fill="#f6821f" font-weight="700">// GADGETS</text>
+    <text x="20" y="75" font-family="-apple-system, sans-serif" font-size="20" fill="#ffffff" font-weight="600">每人一份的 SaaS</text>
+    <text x="20" y="105" font-family="-apple-system, sans-serif" font-size="14" fill="#8896ab">每个应用跑在独立沙箱</text>
+    <text x="20" y="130" font-family="-apple-system, sans-serif" font-size="14" fill="#8896ab">可以随便改、随便分享</text>
+
+    <!-- card 2 -->
+    <rect x="365" y="0" width="350" height="160" rx="12" fill="url(#card)" stroke="#2d3556" stroke-width="1"/>
+    <text x="385" y="35" font-family="monospace" font-size="14" fill="#f6821f" font-weight="700">// GATEKEEPERS</text>
+    <text x="385" y="75" font-family="-apple-system, sans-serif" font-size="20" fill="#ffffff" font-weight="600">能力安全 + 异步审批</text>
+    <text x="385" y="105" font-family="-apple-system, sans-serif" font-size="14" fill="#8896ab">MCP 的窄进窄出版本</text>
+    <text x="385" y="130" font-family="-apple-system, sans-serif" font-size="14" fill="#8896ab">先模拟执行、再批量批</text>
+
+    <!-- card 3 -->
+    <rect x="730" y="0" width="350" height="160" rx="12" fill="url(#card)" stroke="#2d3556" stroke-width="1"/>
+    <text x="750" y="35" font-family="monospace" font-size="14" fill="#f6821f" font-weight="700">// WORKERS OS</text>
+    <text x="750" y="75" font-family="-apple-system, sans-serif" font-size="20" fill="#ffffff" font-weight="600">OS 范式的再定义</text>
+    <text x="750" y="105" font-family="-apple-system, sans-serif" font-size="14" fill="#8896ab">Agent 当 OS 一等公民</text>
+    <text x="750" y="130" font-family="-apple-system, sans-serif" font-size="14" fill="#8896ab">能力安全 > ACL</text>
+  </g>
+
+  <!-- HN badge -->
+  <g transform="translate(990, 80)">
+    <circle cx="50" cy="30" r="50" fill="#ff6600" opacity="0.15"/>
+    <circle cx="50" cy="30" r="50" fill="none" stroke="#ff6600" stroke-width="2"/>
+    <text x="50" y="22" font-family="-apple-system, sans-serif" font-size="14" fill="#ff6600" text-anchor="middle" font-weight="600">HN</text>
+    <text x="50" y="48" font-family="-apple-system, sans-serif" font-size="22" fill="#ff6600" text-anchor="middle" font-weight="800">482</text>
+  </g>
+
+  <!-- footer domain -->
+  <text x="60" y="605" font-family="monospace" font-size="14" fill="#5a6478">onlythinking.com · 2026-08-06</text>
+</svg>
