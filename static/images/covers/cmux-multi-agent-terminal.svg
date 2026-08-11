@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="50%" stop-color="#1a1f3a"/>
+      <stop offset="100%" stop-color="#0f1530"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4c71f2"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#4c71f2" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4c71f2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- 中心光晕 -->
+  <ellipse cx="600" cy="280" rx="500" ry="280" fill="url(#glow)"/>
+
+  <!-- 装饰：终端窗口轮廓 -->
+  <g transform="translate(80, 120)" opacity="0.85">
+    <rect x="0" y="0" width="1040" height="380" rx="12" fill="none" stroke="url(#accent)" stroke-width="2"/>
+    <!-- 标题栏三个点 -->
+    <circle cx="24" cy="24" r="6" fill="#ff5f57"/>
+    <circle cx="46" cy="24" r="6" fill="#febc2e"/>
+    <circle cx="68" cy="24" r="6" fill="#28c840"/>
+    <!-- sidebar -->
+    <rect x="0" y="48" width="200" height="332" fill="#0a0e27" opacity="0.4"/>
+    <!-- vertical tabs -->
+    <rect x="16" y="68" width="168" height="36" rx="4" fill="#4c71f2" opacity="0.25"/>
+    <rect x="16" y="112" width="168" height="36" rx="4" fill="#06b6d4" opacity="0.18"/>
+    <rect x="16" y="156" width="168" height="36" rx="4" fill="#4c71f2" opacity="0.12"/>
+    <rect x="16" y="200" width="168" height="36" rx="4" fill="#06b6d4" opacity="0.08"/>
+    <!-- 主区 pane 网格 -->
+    <rect x="220" y="68" width="380" height="290" rx="6" fill="none" stroke="#4c71f2" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.5"/>
+    <rect x="610" y="68" width="410" height="140" rx="6" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.5"/>
+    <rect x="610" y="218" width="410" height="140" rx="6" fill="none" stroke="#4c71f2" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.5"/>
+    <!-- notification ring（蓝色光环）-->
+    <circle cx="410" cy="213" r="120" fill="none" stroke="#4c71f2" stroke-width="3" opacity="0.9"/>
+    <circle cx="410" cy="213" r="125" fill="none" stroke="#4c71f2" stroke-width="1" opacity="0.4"/>
+    <!-- 红环（报错）-->
+    <circle cx="815" cy="288" r="65" fill="none" stroke="#ef4444" stroke-width="2.5" opacity="0.85"/>
+    <!-- 灰环（思考中）-->
+    <circle cx="815" cy="138" r="55" fill="none" stroke="#94a3b8" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- 标题文字 -->
+  <text x="80" y="80" font-family="'PingFang SC','Microsoft YaHei','WenQuanYi Zen Hei',sans-serif" font-size="22" font-weight="500" fill="#94a3b8" letter-spacing="2">
+    多 Agent 并行编程时代
+  </text>
+
+  <text x="80" y="565" font-family="'PingFang SC','Microsoft YaHei','WenQuanYi Zen Hei',sans-serif" font-size="56" font-weight="800" fill="#ffffff" letter-spacing="1">
+    跑 5 个 Claude Code session
+  </text>
+  <text x="80" y="615" font-family="'PingFang SC','Microsoft YaHei','WenQuanYi Zen Hei',sans-serif" font-size="40" font-weight="600" fill="url(#accent)" letter-spacing="1">
+    我换上了 cmux
+  </text>
+
+  <!-- 关键数字徽章 -->
+  <g transform="translate(920, 555)">
+    <rect x="0" y="0" width="200" height="55" rx="27" fill="none" stroke="#4c71f2" stroke-width="1.5" opacity="0.6"/>
+    <text x="100" y="36" font-family="'SF Mono','JetBrains Mono',monospace" font-size="20" font-weight="600" fill="#4c71f2" text-anchor="middle">
+      ★ 25.9K · HN 198
+    </text>
+  </g>
+
+  <!-- 底部署名 -->
+  <text x="600" y="615" font-family="'PingFang SC','Microsoft YaHei','WenQuanYi Zen Hei',sans-serif" font-size="14" font-weight="400" fill="#64748b" text-anchor="middle" opacity="0.7">
+    编程码农 · 2026-08-11 · onlythinking.com
+  </text>
+</svg>
