@@ -5,7 +5,7 @@ description: "V4 Pro 0813: MIT 开源 + 1M 上下文 + Pro Max 实战"
 tags: ["DeepSeek", "V4 Pro", "开源大模型", "Hybrid Attention", "AI 编程"]
 categories: ["AI"]
 keywords: ["DeepSeek V4 Pro 0813", "Hybrid Attention", "CSA HCA", "Manifold-Constrained Hyper-Connections", "Muon Optimizer", "1M 上下文", "MIT 开源", "OpenRouter", "Pro Max 推理档位", "code agent"]
-draft: false
+draft: true
 toc: true
 readingTime: 11
 cover: /images/covers/deepseek-v4-pro-0813-architecture-and-integration.svg
