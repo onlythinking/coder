@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="50%" stop-color="#1a1f3a"/>
+      <stop offset="100%" stop-color="#2a1f4a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="50%" stop-color="#34A853"/>
+      <stop offset="100%" stop-color="#EA4335"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#4285F4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4285F4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- decorative grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- tag pill -->
+  <g transform="translate(80, 110)">
+    <rect width="220" height="44" rx="22" fill="none" stroke="url(#accent)" stroke-width="2"/>
+    <text x="110" y="29" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="600" letter-spacing="1">GOOGLE · GEMINI</text>
+  </g>
+
+  <!-- main title -->
+  <text x="80" y="260" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="76" font-weight="800" letter-spacing="-2">Gemini 3.7 Flash</text>
+
+  <!-- subtitle -->
+  <text x="80" y="320" fill="#c8cfe0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="500">最聪明的干活模型 · workhorse model</text>
+
+  <!-- accent line -->
+  <rect x="80" y="360" width="160" height="4" fill="url(#accent)"/>
+
+  <!-- price chip -->
+  <g transform="translate(80, 410)">
+    <rect width="320" height="68" rx="10" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+    <text x="20" y="30" fill="#9aa3bd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="500">Introductory price</text>
+    <text x="20" y="58" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700">$0.75 / $3.75 per 1M tokens</text>
+  </g>
+
+  <!-- benchmark chip -->
+  <g transform="translate(420, 410)">
+    <rect width="320" height="68" rx="10" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+    <text x="20" y="30" fill="#9aa3bd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="500">Target</text>
+    <text x="20" y="58" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700">Coding · Agent workloads</text>
+  </g>
+
+  <!-- footer info -->
+  <text x="80" y="560" fill="#9aa3bd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">2026-08-13 发布 · HN 597 分 · 编程码农</text>
+
+  <!-- right-side abstract logo -->
+  <g transform="translate(900, 110)">
+    <circle cx="100" cy="100" r="100" fill="none" stroke="#4285F4" stroke-width="2" stroke-opacity="0.4"/>
+    <circle cx="100" cy="100" r="70" fill="none" stroke="#34A853" stroke-width="2" stroke-opacity="0.4"/>
+    <circle cx="100" cy="100" r="40" fill="none" stroke="#EA4335" stroke-width="2" stroke-opacity="0.6"/>
+    <circle cx="100" cy="100" r="14" fill="#FBBC04"/>
+    <text x="100" y="240" text-anchor="middle" fill="#9aa3bd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="500">Flash series</text>
+  </g>
+</svg>
