@@ -1,7 +1,7 @@
 ---
 title: "Ultralytics 的相机运动补偿会永久卡死：分辨率一变，BoT-SORT 的 GMC 再也不工作"
 date: 2026-11-19
-description: "PR #27270 用一行条件修复了一个静默失效：GMC 的稀疏光流在帧尺寸变化后抛出 OpenCV 断言，缓存的上一帧永远不更新，此后每一帧都失败，运动补偿永久退化成单位矩阵。本文用真实上游源码在两个 commit 上复现，给出可运行的复现脚本、版本状态与运动分析链路的实际影响。"
+description: "PR #27270 用一行条件修复了一个静默失效：GMC 的稀疏光流在帧尺寸变化后抛出 OpenCV 断言，缓存的上一帧永远不更新，此后每一帧都失败，运动补偿永久退化成单位矩阵。修复已在 2026-11-20 发布的 8.4.216 中进入 PyPI。本文用真实上游源码与两个 PyPI 发布包在修复前后复现，给出可运行的复现脚本、版本状态与运动分析链路的实际影响。"
 tags:
   - Ultralytics
   - BoT-SORT
@@ -167,8 +167,8 @@ PR 说明里提到 "Other GMC methods are unchanged"。我实测确认了这一�
 ## 版本状态
 
 - PR [#27270](https://github.com/ultralytics/ultralytics/pull/27270)「Recover sparse optical flow after frame size changes」，合并于 **2026-11-19 00:55:28 UTC**，提交 `ad8aebe5cd7c`，作者 `AhmetMert01`。
-- **修复只在 `main` 分支上，尚未进入任何已发布版本。** PyPI 上 `ultralytics` 的最新版仍是 **8.4.215**（2026-11-16 01:18:47 UTC 上传），GitHub 最新的 Release 也是 v8.4.215。用 GitHub compare API 核对：`v8.4.215...ad8aebe5cd7c` 的 `ahead_by` 是 **35** 个提交、`behind_by` 是 **0**——修复在这个版本之后。
-- 也就是说：**现在 pip install 装到的任何版本都还有这个 bug。**
+- **修复已在 2026-11-20 进入正式发布版本 8.4.216。** PR 合并后先只在 `main` 分支上（本文最初核对于 11-19，PyPI 最新版是 8.4.215）；**v8.4.216 于 2026-11-20 03:30:18 UTC 发布**，PyPI 同日 03:31:39 上传 `ultralytics-8.4.216-py3-none-any.whl`，现为最新版。用 GitHub compare API 核对 `v8.4.215...v8.4.216`：`ahead_by` 是 **49** 个提交、`behind_by` 是 **0**，其中包含本修复。**现在 `pip install -U ultralytics` 就能拿到修复，不需要从 `main` 分支构建。**
+- 也就是说：**8.4.215 及更早的版本都还有这个 bug，8.4.216 起已修复。**
 
 ## 对运动分析链路意味着什么
 
@@ -180,9 +180,11 @@ PR 说明里提到 "Other GMC methods are unchanged"。我实测确认了这一�
 
 **3. 尺寸不变的常见场景同样要小心。** 我的测试证明了这个 bug 的触发条件**只有尺寸变化**，不是「任何异常」。普通单分辨率视频不受影响。所以它不是日常噪声，而是「特定素材才会踩」的那类问题——恰恰是这类问题最容易在生产里长期潜伏。
 
-**4. 如果要临时绕过。** 三种办法：把 `botsort.yaml` 里的 `gmc_method` 改成 `none`（明确放弃补偿，知道自己在放弃）；改成 `orb` 或 `sift`（不走稀疏光流路径）；或者直接从 `main` 分支构建，打上那一行补丁。第三种最贴近上游行为。
+**4. 如果要临时绕过。** 三种办法：把 `botsort.yaml` 里的 `gmc_method` 改成 `none`（明确放弃补偿，知道自己在放弃）；改成 `orb` 或 `sift`（不走稀疏光流路径）；或者升级到 `ultralytics>=8.4.216`（本文写作时已发布，见「版本状态」）。第三种最贴近上游行为。
 
-**5. 这个失效模式本身值得记住。** 它的通用形状是：**「状态更新写在可能抛异常的调用之后」→ 一次异常让状态永久停在旧值 → 后续每次都撞同一个错**。这不是 Ultralytics 特有的问题，任何带缓存状态的流式处理都有这个坑（GMC 缓存的是上一帧，检测器缓存的是上一次推理的尺寸，编解码器缓存的是上一段的采样率）。审代码时值得专门看一眼：**有没有哪条路径会在异常时跳过状态推进。**
+**5. 同一批修复里还有两个同类的「缓存没跟着输入变」问题。** 8.4.216 同时收录了 PR [#27283](https://github.com/ultralytics/ultralytics/pull/27283)（`Heatmap` 与 `TrackZone` 在帧尺寸变化时因按第一帧尺寸建立的缓冲区不匹配而崩溃，改为尺寸变化时重建缓冲区）和 PR [#27222](https://github.com/ultralytics/ultralytics/pull/27222)（验证时逐图指标用裸文件名做键，同名文件在不同子目录会互相覆盖，改为用相对 `label_root` 的完整路径）。**三个修复的失效条件是同一个形状：某个缓存或键与输入的某个属性绑定，而这个属性变了。** GMC 缓存上一帧、Heatmap 缓存累加器、validator 缓存文件名词典。审这类代码时值得专门看一眼：**有没有哪条路径会在输入属性变化时跳过缓存重建。**
+
+**6. 这个失效模式本身值得记住。** 它的通用形状是：**「状态更新写在可能抛异常的调用之后」→ 一次异常让状态永久停在旧值 → 后续每次都撞同一个错**。这不是 Ultralytics 特有的问题，任何带缓存状态的流式处理都有这个坑（GMC 缓存的是上一帧，检测器缓存的是上一次推理的尺寸，编解码器缓存的是上一段的采样率）。审代码时值得专门看一眼：**有没有哪条路径会在异常时跳过状态推进。**
 
 ## 待验证与局限
 
@@ -190,6 +192,7 @@ PR 说明里提到 "Other GMC methods are unchanged"。我实测确认了这一�
 
 - **没有跑真实的 BoT-SORT 端到端跟踪。** 本机 venv 里没装 `ultralytics`（`/home/hermes/sports-pose-eval/.venv` 只有 numpy/opencv/onnxruntime/scipy 等），也**没有下载 `yolo11n.pt` 权重**（PR 作者用的是它）。我复现的是 GMC 类本身的行为，不是「跟踪器在视频上的表现」。PR 作者自己写了 "Run as a reproduction; the PR adds no test"——上游没有为这个修复加测试。
 - **只测了 OpenCV 5.0.0。** PR 作者在 OpenCV 4.10 上验证。不同 OpenCV 版本的断言触发点和错误信息可能不同（我这里 5.0.0 的报错落在 `lkpyramid.cpp:1185`，另一个测试场景落在 `:1051`，取决于哪一层先检查）。
+- **复现用的是源码 commit，不是发布包。** 上面的对照跑在修复前后的两个 commit 上（`27cf3175a9aff96e12a65b86813d0a98bf7b1b92` 与 `ad8aebe5cd7c`）。**v8.4.216 发布后，我改用 PyPI 上的真实 wheel 重跑了一遍**（`pip download ultralytics==8.4.215` 与 `==8.4.216`，解包后各取 `ultralytics/trackers/utils/gmc.py`，其余不变）：**8.4.215 从第 3 帧起每帧都抛断言、缓存 `prevFrame` 停在 `(120, 160)`；8.4.216 零失败、缓存推进到 `(150, 200)`，平移估计 f3=`-3.02`（真值 `-3.0`）、f4=`0.00`（真值 `0.0`）**。两个 wheel 的 `gmc.py` 之间**只有一处差异**，就是第 316 行新增的 `or self.prevFrame.shape != frame.shape`。这次跑的 OpenCV 是 5.1.0（断言落在 `lkpyramid.cpp:1354`）。
 - **只测了 `downscale=2` 和 `sparseOptFlow`。** 其他 `downscale` 取值、其他 GMC 方法（orb/sift/ecc 我测了「不抛异常」，但没逐一验证估计精度）没有展开。
 - **没有在真实运动素材上量化影响。** 项目自己的 `track_sprint.ogv` 是单分辨率，不会触发这个 bug。要拿到真实数字，需要构造一段**中途变分辨率**的运动视频，量 GMC 失效前后轨迹坐标的偏差——**这一项没做**。
 - **没有验证 GPU / Windows 路径。** 全程 CPU / Linux。
@@ -200,5 +203,6 @@ PR 说明里提到 "Other GMC methods are unchanged"。我实测确认了这一�
 - PR：https://github.com/ultralytics/ultralytics/pull/27270
 - 修复提交：https://github.com/ultralytics/ultralytics/commit/ad8aebe5cd7c
 - 上游文件：https://github.com/ultralytics/ultralytics/blob/main/ultralytics/trackers/utils/gmc.py
-- 最新 Release（尚不含此修复）：https://github.com/ultralytics/ultralytics/releases/tag/v8.4.215
+- 最新 Release（**已含此修复**）：https://github.com/ultralytics/ultralytics/releases/tag/v8.4.216
+- 上一版（尚不含此修复）：https://github.com/ultralytics/ultralytics/releases/tag/v8.4.215
 - BoT-SORT 默认配置：https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/trackers/botsort.yaml
