@@ -191,7 +191,7 @@ PR 说明里提到 "Other GMC methods are unchanged"。我实测确认了这一�
 诚实说明这一轮**没有**做到的部分：
 
 - **没有跑真实的 BoT-SORT 端到端跟踪。** 本机 venv 里没装 `ultralytics`（`/home/hermes/sports-pose-eval/.venv` 只有 numpy/opencv/onnxruntime/scipy 等），也**没有下载 `yolo11n.pt` 权重**（PR 作者用的是它）。我复现的是 GMC 类本身的行为，不是「跟踪器在视频上的表现」。PR 作者自己写了 "Run as a reproduction; the PR adds no test"——上游没有为这个修复加测试。
-- **只测了 OpenCV 5.0.0。** PR 作者在 OpenCV 4.10 上验证。不同 OpenCV 版本的断言触发点和错误信息可能不同（我这里 5.0.0 的报错落在 `lkpyramid.cpp:1185`，另一个测试场景落在 `:1051`，取决于哪一层先检查）。
+- **只测了 OpenCV 5.0.0 与 5.1.0。** PR 作者在 OpenCV 4.10 上验证。不同 OpenCV 版本的断言触发点和错误信息可能不同（5.0.0 下报错落在 `lkpyramid.cpp:1185`，5.1.0 下落在 `:1354`，另一个测试场景落在 `:1051`，取决于哪一层先检查）。
 - **复现用的是源码 commit，不是发布包。** 上面的对照跑在修复前后的两个 commit 上（`27cf3175a9aff96e12a65b86813d0a98bf7b1b92` 与 `ad8aebe5cd7c`）。**v8.4.216 发布后，我改用 PyPI 上的真实 wheel 重跑了一遍**（`pip download ultralytics==8.4.215` 与 `==8.4.216`，解包后各取 `ultralytics/trackers/utils/gmc.py`，其余不变）：**8.4.215 从第 3 帧起每帧都抛断言、缓存 `prevFrame` 停在 `(120, 160)`；8.4.216 零失败、缓存推进到 `(150, 200)`，平移估计 f3=`-3.02`（真值 `-3.0`）、f4=`0.00`（真值 `0.0`）**。两个 wheel 的 `gmc.py` 之间**只有一处差异**，就是第 316 行新增的 `or self.prevFrame.shape != frame.shape`。这次跑的 OpenCV 是 5.1.0（断言落在 `lkpyramid.cpp:1354`）。
 - **只测了 `downscale=2` 和 `sparseOptFlow`。** 其他 `downscale` 取值、其他 GMC 方法（orb/sift/ecc 我测了「不抛异常」，但没逐一验证估计精度）没有展开。
 - **没有在真实运动素材上量化影响。** 项目自己的 `track_sprint.ogv` 是单分辨率，不会触发这个 bug。要拿到真实数字，需要构造一段**中途变分辨率**的运动视频，量 GMC 失效前后轨迹坐标的偏差——**这一项没做**。
