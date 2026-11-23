@@ -230,12 +230,12 @@ ATE 比 DVLT 降 47.2%，CD 降 24.1%，而且六条路线全部跑完。VGGT、
 
 ## 七、一手来源
 
-- 论文：https://arxiv.org/abs/2611.23144 （HTML 版 https://arxiv.org/html/2611.23144v1 ）
-- 代码仓库：https://github.com/yyfz/Pi4
-- 推理文档（硬件、显存、耗时表、输出契约）：https://github.com/yyfz/Pi4/blob/main/docs/inference.md
-- 权重与模型卡：https://huggingface.co/yyfz233/Pi4
-- 项目页与可交互演示：https://yyfz.github.io/pi4
-- 前任 Pi3X 权重：https://huggingface.co/yyfz233/Pi3X
+- [论文 - arXiv:2611.23144](https://arxiv.org/abs/2611.23144)（[HTML 版](https://arxiv.org/html/2611.23144v1)）
+- [代码仓库 - yyfz/Pi4](https://github.com/yyfz/Pi4)
+- [推理文档 - 硬件、显存、耗时表、输出契约](https://github.com/yyfz/Pi4/blob/main/docs/inference.md)
+- [权重与模型卡 - yyfz233/Pi4](https://huggingface.co/yyfz233/Pi4)
+- [项目页与可交互演示](https://yyfz.github.io/pi4)
+- [前任 Pi3X 权重](https://huggingface.co/yyfz233/Pi3X)
 
 ---
 

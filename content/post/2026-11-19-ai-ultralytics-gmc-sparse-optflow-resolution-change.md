@@ -200,9 +200,9 @@ PR 说明里提到 "Other GMC methods are unchanged"。我实测确认了这一�
 
 ## 一手链接
 
-- PR：https://github.com/ultralytics/ultralytics/pull/27270
-- 修复提交：https://github.com/ultralytics/ultralytics/commit/ad8aebe5cd7c
-- 上游文件：https://github.com/ultralytics/ultralytics/blob/main/ultralytics/trackers/utils/gmc.py
-- 最新 Release（**已含此修复**）：https://github.com/ultralytics/ultralytics/releases/tag/v8.4.216
-- 上一版（尚不含此修复）：https://github.com/ultralytics/ultralytics/releases/tag/v8.4.215
-- BoT-SORT 默认配置：https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/trackers/botsort.yaml
+- [PR #27270](https://github.com/ultralytics/ultralytics/pull/27270)
+- [修复提交 ad8aebe5cd7c](https://github.com/ultralytics/ultralytics/commit/ad8aebe5cd7c)
+- [上游文件 gmc.py](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/trackers/utils/gmc.py)
+- [最新 Release v8.4.216（已含此修复）](https://github.com/ultralytics/ultralytics/releases/tag/v8.4.216)
+- [上一版 v8.4.215（尚不含此修复）](https://github.com/ultralytics/ultralytics/releases/tag/v8.4.215)
+- [BoT-SORT 默认配置 botsort.yaml](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/trackers/botsort.yaml)
